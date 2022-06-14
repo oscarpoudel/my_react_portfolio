@@ -10,6 +10,7 @@
     .logo {
         display: block;
         padding: 8px 0;
+        text-decoration: none;
 
         img {
             display: block;
@@ -17,9 +18,19 @@
             width: 24px;
             height: auto;
 
-            &.sub-logo {
-                width: 50px;
-            }
+            
+        }
+        .myName {
+            text-decoration: none;
+            color:white;
+            display: block;
+            margin:8px auto;
+            font-size: 13px;
+            text-align: center;
+            text-transform: uppercase;
+            width: 50px;
+            font-family: Fantasy, Helvetica;
+            font-weight: 200;
         }
     }
 
