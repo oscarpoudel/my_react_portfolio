@@ -5,7 +5,9 @@ import './index.scss'
 import emailjs from '@emailjs/browser'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 const api_key = process.env.REACT_APP_API_KEY;
+
 const position = [27.701325723250072, 85.31485533889544]
+
 const Contact = () => {
     const [letterClass,setLetterClass] =useState('text-animate');
     const refForm = useRef()
@@ -65,6 +67,7 @@ const Contact = () => {
             </form>
         </div>
     </div>
+
     <div className='info-map'>
         Oscar,
         <br/>
@@ -75,7 +78,7 @@ const Contact = () => {
         <span>opoudel27@gmail.com</span>
     </div>
     <div className='map-wrap'>
-    <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
+    <MapContainer center={[27.701325723250072, 85.31485533889544]} zoom={13}>
     <TileLayer
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />

@@ -1,13 +1,17 @@
+.page{
+    overflow: hidden;
+}
 .home-page{
-
+    
     .text-zone{
         position: absolute;
         left:10%;
         top:50%;
         transform: translateY(-50%);
-        width:50%;
+        width:80%;
         max-height: 90%;
         float:left;
+        z-index: 100;
 
     }
 
@@ -17,6 +21,7 @@
         line-height: 53px;
         margin:0;
         font-family: 'CoolVetica';
+        
         font-weight: 400;
 
         &::before{
@@ -61,6 +66,7 @@
         margin:20px 0px 20px ;
         font-weight: 400;
         font-size: 11px;
+        width: 70%;
         font-family: sans-serif;
         letter-spacing:3px;
         animation: fadeIn 1s 1.8s backwards;
@@ -87,17 +93,23 @@
 
     .sideImage{
         width:40%;
+        padding-top:80px;
         float:right;
-        overflow: hidden;
+        z-index: auto;
+        height: auto;
+        display: block;
+       
         
         .image1{
             position: absolute;
             z-index: 1;
+            overflow: hidden;
         }
         .vec{
             position: absolute;
             z-index: 20;
-            margin-top:400px
+            margin-top:400px;
+            overflow: hidden;
         }
 
     }

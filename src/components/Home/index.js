@@ -5,12 +5,12 @@ import React,{useState,useEffect} from 'react';
 import Logo from './Logo';
 import HomeImg from '../../assets/images/home_img.png'
 import vectorforimage from '../../assets/images/blur_vec.png'
-
+// 'C','i','v','i','l',' '
 
 const Home = () => {
     const [letterClass,setLetterClass] = useState('text-animate')
     const nameArray = [' ','O','S','C','A','R']
-    const jobArray =['a',' ', 'c','i','v','i','l',' ','e','n','g','i','n','e','e','r','.']
+    const jobArray =['a','n',' ','E','n','g','i','n','e','e','r','.']
     useEffect(() => {
          setTimeout(() => {
           return setLetterClass('text-animate-hover')

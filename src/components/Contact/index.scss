@@ -79,6 +79,7 @@
     width: 53%;
     height: 115%;
     margin-top: -3%;
+    overflow: hidden;
   }
   
   .leaflet-container {
@@ -92,9 +93,7 @@
   
   .info-map {
     position: absolute;
-    background: #000;
-    top: 50px;
-    right: 30%;
+    background: #000;    
     z-index: 999999;
     width: 267px;
     padding: 20px;
@@ -112,5 +111,29 @@
       span {
         color: #ffd700;
       }
+    }
+  }
+
+
+
+
+
+  @media only screen and (min-width:600px) {
+    
+      .info-map{
+        top: 50px;
+        right: 20%;
+      }
+    
+  }
+
+  @media only screen and (max-width:600px) {
+
+    
+      .info-map{
+        background: black;
+        bottom: 0%;
+        right: 0%;
+        width:40%
     }
   }
