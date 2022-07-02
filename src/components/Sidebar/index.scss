@@ -154,6 +154,7 @@
         margin:0;
         top:0;
         height: 8rem;
+        transition: all .3s ease-in-out;
         .logo{
             justify-content: center;
             align-items: center;
@@ -177,16 +178,28 @@
             align-items: center;
             // background: white;
         }
-        .social-top {
-            display: none;
+        .social-top.open {
+            
+            visibility: visible;
+            animation-name: slideBelow;
+            animation-duration: 2s;
+            transition: all 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
         }
         .social-top.false{
-            transition: all .45 ease-in-out;
+            animation-name: slideAbove;
+            animation-duration: 2s;
+            transition: all 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+            opacity: 0;
+        }
+        
+        .social-top{
+            
                 position: absolute;
                 top:80px;
                 align-items: center;
                 justify-content: center;
                 width:50px;
+                visibility: hidden;
                 display: flex;
                 background-color: #181818;
                 right:10px;
@@ -194,7 +207,7 @@
         ul{
 
             // right:-13%;
-            
+            // transition: all 1s ease-in-out;
             right:0%;
             display: flex;
             flex-direction: column;
@@ -209,7 +222,7 @@
             }
         }
         &::before,&::after{
-            transition: all .45 ease-in-out;
+            // transition: all 1s ease-in-out;
         }
         }
         
@@ -229,6 +242,7 @@
             width:25%;
 
             .social_button{
+                transition: all 1s ease-in-out;
                 background: none ;
                 color:inherit;
                 border:none;
@@ -239,10 +253,10 @@
                 outline: inherit;
               
             }
-            .social_button.false{
+            .social_button.open{
                 svg{
                     color:red;
-                    transition:all 0.3s ease-in-out;
+                    transition:all 0.37 ease-in-out;
                 }
             }
             
@@ -288,3 +302,27 @@
         
         }
     }
+
+@keyframes slideAbove {
+    from{
+        margin-top:0%;
+        width: 50px;
+    }
+
+    to{
+        margin-top: -80px;
+        width:50px
+    }
+    
+}
+@keyframes slideBelow {
+    from{
+        margin-top: -80px;
+        width:50px
+    }
+    to{
+        margin-top:0%;
+        width: 50px;
+    }
+    
+}

@@ -7,7 +7,7 @@ import { faEnvelope,faHome,faPeoplePulling,faSuitcase,faUser, } from '@fortaweso
 import { faLinkedin,faFacebook, faGithub, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => {
-    const [isShown, setIsShown] = useState(true);
+    const [isShown, setIsShown] = useState(false);
     const socialClicked =()=>{
         setIsShown(current => !current);
         console.log('div clicked')
