@@ -1,7 +1,7 @@
 {
     "portfolio":[
         {
-            "cover":"/portfolio/1/one.png",
+            "cover":"public\\portfolio\\1\\one.png",
             "title":"CESS Website",
            "description":"Html, Javascript, CSS, Dynamic wordpress ", 
            "url":"http://cess.pcampus.edu.np" 
