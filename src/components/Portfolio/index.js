@@ -3,14 +3,18 @@ import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import portfolioData from '../../data/portfolio.json';
+import one from '../../assets/port_cover/one.png'
 
 const Portfolio = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
   useEffect(() => {
 
-    setTimeout(() => {
+   const timer =  setTimeout(() => {
       setLetterClass('text-animate-hover')
-    }, 3000)
+    }, 3000);
+    return()=>{
+        clearTimeout(timer);
+    }
   }, [])
 
     const renderPortfolio=(portfolio)=>{
@@ -18,9 +22,13 @@ const Portfolio = () => {
             <div className='images-container'>
                 {
                     portfolio.map((port,idx)=>{
+                       
                         return(
+                            
                             <div className ='image-box' key ={idx}> 
-                                <img src ={port.cover} 
+                            ${console.log(port.cover)}
+                            {/* <img src ={one}  */}
+                                <img src ={`${port.cover}`} 
                                 className='portfolio-image'
                                 alt='portfolio'/>
                                 <div className='content'>

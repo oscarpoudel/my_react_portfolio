@@ -1,19 +1,22 @@
 {
     "portfolio":[
         {
-            "cover":"public\\portfolio\\1\\one.png",
+            "id":"1",
+            "cover":"./1/one.png",
             "title":"CESS Website",
            "description":"Html, Javascript, CSS, Dynamic wordpress ", 
            "url":"http://cess.pcampus.edu.np" 
         },
         {
-            "cover":"/portfolio/1/two.png",
+            "id":"2",
+            "cover":"./1/two.png",
             "title":"Election Campaign Website",
            "description":"Html, Javascript, CSS, Dynamic Wordpress ", 
            "url":"http://www.khildhojformayor.com" 
         },
         {
-            "cover":"/portfolio/1/three.png",
+            "id":"3",
+            "cover":"./1/three.png",
             "title":"NEPSE volume change tracker",
            "description":"Flutter with firebase database", 
            "url":"https://github.com/oscarpoudel/nepse_volumechange_apk" 
