@@ -27,10 +27,8 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "build": "react-scripts build && cp build/index.html build/404.html",
-    "add-domain": "echo \"www.oscarp.com.np\" > build/CNAME",
-    "deploy": "npm run add-domain && gh-pages -d build",
-    "bd": "npm run build && npm run deploy",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
