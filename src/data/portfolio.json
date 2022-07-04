@@ -2,21 +2,21 @@
     "portfolio":[
         {
             "id":"1",
-            "cover":"./1/one.png",
+            "cover":"images/1/one.png",
             "title":"CESS Website",
            "description":"Html, Javascript, CSS, Dynamic wordpress ", 
            "url":"http://cess.pcampus.edu.np" 
         },
         {
             "id":"2",
-            "cover":"./1/two.png",
+            "cover":"images/1/two.png",
             "title":"Election Campaign Website",
            "description":"Html, Javascript, CSS, Dynamic Wordpress ", 
            "url":"http://www.khildhojformayor.com" 
         },
         {
             "id":"3",
-            "cover":"./1/three.png",
+            "cover":"images/1/three.png",
             "title":"NEPSE volume change tracker",
            "description":"Flutter with firebase database", 
            "url":"https://github.com/oscarpoudel/nepse_volumechange_apk" 
