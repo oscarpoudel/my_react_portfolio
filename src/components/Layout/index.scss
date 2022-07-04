@@ -25,10 +25,10 @@
 
 .container{
     width:100%;
-    will-change:contents;
+    padding-top: 81px;
     height: 90%;
     min-height: 566px;
-    position: absolute;
+    
     opacity: 0;
     top: 5%;
     margin: 0 auto;
@@ -40,6 +40,145 @@
 }
 
 .container.about-page,
+.container.contact-page,
+.container.portfolio-page{
+    
+    h1{
+            font-size:53px;
+            font-family: 'Coolvetica';
+            color:#ffd700;
+            font-weight: 400;
+            margin-top: 0;
+            position:relative;
+            margin-bottom: 40px;
+            left:10px;
+            &::before{
+                content:'<h1>';
+                font-family: 'La Belle Aurore';
+                font-size:18px;
+                position: absolute;
+                margin-top: -10px;
+                left:-10px ;
+                opacity: 0.6;
+                line-height: 18px;
+            }
+            &::after{
+                content:'</h1>';
+                font-family: 'La Belle Aurore';
+                font-size:18px;
+                line-height: 18px;
+                position: absolute;
+                margin-left: 20px;
+                left:-30px ;
+                bottom:-20px;
+                opacity: 0.6;
+                
+            }
+        }
+        p{
+            font-size: 14px;
+            color: white;
+            font-family: sans-serif;
+            font-weight: 300;
+            
+            min-width: fit-content;
+           
+            animation: pulse 1s;
+
+            &:nth-of-type(1){
+                animation-delay: 1.1s;
+            }
+            &:nth-of-type(2){
+                animation-delay: 1.2s;
+            }
+            &:nth-of-type(3){
+                animation-delay: 1.3s;
+            }
+
+        }
+        .text-zone{
+            position:absolute;
+            left:5%;
+            
+            transform: translateY(-50%);
+            vertical-align: middle;
+            display: table-cell;
+            max-height: 90%;
+    }
+    .text-animate-hover{
+        &:hover{
+            color:white;
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+            // overflow-y: scroll;
+    }
+    .container.about-page,
+.container.contact-page,
+.container.portfolio-page{
+    display: flex;
+    flex-direction: column;
+    
+}
+   p{
+    margin-right: 10%;
+    text-align: justify;
+
+   }
+   .text-zone{
+    top:40%;
+   }
+
+        
+
+    }
+    @media only screen and (min-width:600px) {
+        .page{
+    width: 100%;
+    height:100%;
+    position: absolute;
+}
+
+.top-tags{
+    bottom:auto;
+    top:35px;
+}
+
+.tags{
+    color:#ffd700;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 0;
+    left:120px;
+    font-size: 18px;
+    font-family: 'La Belle Aurore';
+}
+.bottom-tag-html{
+    margin-left: -20px;
+    
+}
+
+.container{
+    width:100%;
+    
+    height: 90%;
+    min-height: 566px;
+    
+    opacity: 0;
+    top: 5%;
+    margin: 0 auto;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: fadeIn 1s forwards;
+    animation-delay:1s ;
+
+}
+        .container.about-page,
 .container.contact-page,
 .container.portfolio-page{
     
@@ -110,3 +249,5 @@
         }
     }
 }
+        
+    }

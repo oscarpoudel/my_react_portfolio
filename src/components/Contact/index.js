@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <>
     <div className='container contact-page'>
-    <div className='text-zone'>
+    <div className='text-zone contact-top'>
         <h1>
             <AnimatedLetters strArray={['C','o','n','t','a','c','t',' ','m','e'] } idx={15}/>
         </h1>

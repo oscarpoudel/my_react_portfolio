@@ -1,12 +1,10 @@
+
 .stage-cube-cont{
-    width: 50%;
-    height:100%;
-    top:0;
-    padding-top: 18%;
-    margin-left: 0;
-    position:absolute ;
-    right:0;
-    overflow: hidden;
+   
+    
+    position:relative ;
+    
+    
 }
 
 .cubespinner{
@@ -16,7 +14,7 @@
     animation-duration: 12s;
     transform-style: preserve-3d;
     transform-origin: 100px 100px 0;
-    margin-left: calc(50% - 100px);
+   
     div{
         position: absolute;
         width: 200px;
@@ -69,5 +67,41 @@
     }
     83%{
         transform: rotateX(-90deg) rotateZ(90deg);
+    }
+}
+
+@media only screen and (max-width:600px) {
+.abt-pg{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    position:relative;
+}
+
+
+.stage-cube-cont{
+    position: absolute;
+    margin-top: 70%;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding-left: 35%;
+}
+
+}
+@media only screen and (min-width:600px) {
+    .cubespinner{
+        
+        margin-left: calc(50% - 100px);
+    }
+    .stage-cube-cont{
+        width: 50%;
+        height:100%;
+        top:0;
+        padding-top: 18%;
+        margin-left: 0;
+        position:absolute ;
+        right:0;
+        overflow: hidden;
     }
 }

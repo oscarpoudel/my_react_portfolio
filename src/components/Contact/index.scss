@@ -1,6 +1,7 @@
 .contact-form {
     width: 100%;
     margin-top: 20px;
+    z-index: 50000;
   
     ul {
       padding: 0;
@@ -94,7 +95,7 @@
   .info-map {
     position: absolute;
     background: #000;    
-    z-index: 999999;
+    // z-index: 999999;
     width: 267px;
     padding: 20px;
     color: #fff;
@@ -128,12 +129,20 @@
   }
 
   @media only screen and (max-width:600px) {
-
     
+    .contact-top{
+      top:53%;
+    }
+    .map-wrap{
+      display: none;
+    }
       .info-map{
+        display: none;
         background: black;
-        bottom: 0%;
-        right: 0%;
+        bottom: -10%;
+        opacity: 50% !important;
+        border-radius: 20px;
+        left: 0%;
         width:40%
     }
   }

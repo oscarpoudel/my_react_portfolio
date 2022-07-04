@@ -92,7 +92,7 @@
     }
 
     .sideImage{
-        width:40%;
+        
         padding-top:80px;
         float:right;
         z-index: auto;
@@ -113,4 +113,21 @@
         }
 
     }
+}
+
+@media only screen and (max-width:600px) {
+.sideImage{
+    width:60%;
+    margin-left: 40%;
+}
+}
+@media only screen and (min-width:600px) {
+.sideImage{
+    width:40%;
+        padding-top:80px;
+        float:right;
+        z-index: auto;
+        height: auto;
+        display: block;
+}
 }

@@ -2,7 +2,6 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
 import React,{useState,useEffect} from 'react';
-import Logo from './Logo';
 import HomeImg from '../../assets/images/home_img.png'
 import vectorforimage from '../../assets/images/blur_vec.png'
 // 'C','i','v','i','l',' '
@@ -36,7 +35,7 @@ const Home = () => {
                 
                 
             </div>
-            <Logo/>
+           
            
             <div className = 'sideImage'>
                 <div className='image1'>
