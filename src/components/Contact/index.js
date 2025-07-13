@@ -4,9 +4,21 @@ import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import emailjs from '@emailjs/browser'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import { useMap } from 'react-leaflet';
+
+function MapFixer() {
+  const map = useMap();
+  useEffect(() => {
+    setTimeout(() => {
+      map.invalidateSize(); // Forces Leaflet to recalculate tile layout
+    }, 1500); // Delay matches your animation duration
+  }, [map]);
+  return null;
+}
+
 const api_key = process.env.REACT_APP_API_KEY;
 
-const position = [27.701325723250072, 85.31485533889544]
+const position = [40.735657, -74.172363];
 
 const Contact = () => {
     const [letterClass,setLetterClass] =useState('text-animate');
@@ -41,9 +53,9 @@ const Contact = () => {
         <h1>
             <AnimatedLetters strArray={['C','o','n','t','a','c','t',' ','m','e'] } idx={15}/>
         </h1>
-        <p>
-            I am interested in freelancing jobs.If you want any request or question please feel free to contact me.
-        </p>
+        <h2>
+            If you want to discuss any research opportunities or possible collabration/ job opportunities please contact me by filling the form below or any of my social media handle.
+        </h2>
         <div className='contact-form'>
             <form ref={refForm} onSubmit={sendEmail}>
                 <ul>
@@ -71,23 +83,22 @@ const Contact = () => {
     <div className='info-map'>
         Oscar,
         <br/>
-        Nepal,
+        USA,
         <br/>
-        Kathmandu,Bagmati
+        Newark,New Jersey
         <br/>
         <span>opoudel27@gmail.com</span>
     </div>
     <div className='map-wrap'>
-    <MapContainer center={[27.701325723250072, 85.31485533889544]} zoom={13}>
-    <TileLayer
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
-    <Marker position={position}>
-      <Popup>
-        Oscar lives here :)
-      </Popup>
-    </Marker>
-  </MapContainer>
+    {/* <MapContainer center={position} zoom={9}>
+  <TileLayer
+    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  />
+  <Marker position={position}>
+    <Popup>Oscar lives here :)</Popup>
+  </Marker>
+  <MapFixer />
+</MapContainer> */}
     </div>
     </div>
     {/* <Loader type='pacman'></Loader> */}

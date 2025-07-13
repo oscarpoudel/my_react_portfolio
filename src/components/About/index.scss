@@ -1,4 +1,60 @@
 
+ h1{
+        color:#000000;
+        font-size: 56px;
+        line-height: 53px;
+        margin:0;
+        font-family: 'CoolVetica';
+        
+        font-weight: 400;
+
+        &::before{
+            content:'';
+            font-family: 'La Belle Aurore',cursive;
+            color:#3a3a3a;
+            font-size:19px;
+            position: absolute;
+            margin-top: -40px;
+            left: -15px;
+            opacity:0.6;
+
+        }
+
+        &::after{
+            content:'';
+            font-family: 'La Belle Aurore';
+            color:#ffd700;
+            font-size:19px;
+            position: absolute;
+            margin-top: 18px;
+            margin-left:20px;
+            animation:fadeIn 1s 1.7s backwards;
+            
+            opacity:0.6;
+
+        }
+
+        
+        img{
+            width:32px;
+            margin-left:20px;
+            opacity:0;
+            height:auto;
+            animation: rotateIn 1s linear both;
+            animation-delay: 1.4s;
+
+        }
+    }
+    h2{
+        color: #3a3a3a;
+        margin:20px 0px 20px ;
+        font-weight: 400;
+        font-size: 20px;
+        width: 50%;
+        font-family: sans-serif;
+        letter-spacing:3px;
+        animation: fadeIn 1s 1.8s backwards;
+    }
 .stage-cube-cont{
    
     
@@ -87,6 +143,10 @@
     width: 50%;
     padding-left: 35%;
 }
+.sideImage{
+    width:60%;
+    margin-left: 40%;
+}
 
 }
 @media only screen and (min-width:600px) {
@@ -105,3 +165,29 @@
         overflow: hidden;
     }
 }
+
+.sideImage{
+        
+        padding-top:400px;
+        float:right;
+        z-index: auto;
+        height: auto;
+        display: block;
+       
+        
+        .image1{
+            position: absolute;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .vec{
+            position: absolute;
+            z-index: 20;
+            margin-top:400px;
+            overflow: hidden;
+            scale: 1.1;
+        }
+
+    }
+
+

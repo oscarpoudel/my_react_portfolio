@@ -1,0 +1,19 @@
+{
+  "papers": [
+    {
+      "id": 3,
+      "citation": "Poudel, O., & Assaad, R. H. (2025). A Real-Time Intelligent Acoustic IoT-Enabled Embedded Construction Site Monitoring and Alert System: Integrating Deep Learning–Based Machine-Listening Algorithms, Edge Computing, and Cloud Computing. Journal of Construction Engineering and Management, 151(7), 04025075.",
+      "link": "https://doi.org/10.1061/JCEMD4.COENG-15938"
+    },
+    {
+      "id": 2,
+      "citation": "Assaad, R. H., Mohammadi, M., & Poudel, O. (2025). Developing an intelligent IoT-enabled wearable multimodal biosensing device and cloud-based digital dashboard for real-time and comprehensive health, physiological, emotional, and cognitive monitoring using multi-sensor fusion technologies. Sensors and Actuators A: Physical, 381, 116074.",
+      "link": "https://doi.org/10.1061/JCEMD4.COENG-15938"
+    },
+    {
+      "id": 1,
+      "citation": "Poudel, O., & Shrestha, K. C. (2024). Enhancing earthquake resilience with strategically arranged inclined columns in multistoried RCC structures. Innovative Infrastructure Solutions, 9(6), 223.",
+      "link": "https://doi.org/10.1007/s41062-024-01540-3"
+    }
+  ]
+}

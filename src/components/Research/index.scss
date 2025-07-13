@@ -1,0 +1,69 @@
+.research-page {
+    max-width: 80%;
+    margin: 90px auto; // Centers the content and adds top/bottom spacing
+    padding: 0 20px; // Equal left/right spacing for all screen sizes
+
+    .page-title {
+        margin-bottom: 40px;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .research-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .citation-box {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background: #fdfdfd;
+            // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: border-color 0.3s ease;
+
+            &:hover {
+                border-color: #ffd700;
+            }
+
+            .citation-header {
+                display: flex;
+                align-items: center;
+                gap: 10px; // spacing between ID and title
+                margin-bottom: 10px;
+
+                .id-number {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #444;
+                }
+
+                .paper-title {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #222;
+                }
+            }
+
+            .citation-text {
+                font-size: 16px;
+                color: #333;
+                line-height: 1.6;
+            }
+
+            .paper-link {
+                display: inline-block;
+                // margin-top: 10px;
+                font-size: 14px;
+                color: #0056b3;
+                text-decoration: underline;
+                margin-left: 30px;
+
+                &:hover {
+                    color: #003580;
+                }
+            }
+        }
+    }
+}

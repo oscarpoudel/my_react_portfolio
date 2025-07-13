@@ -3,7 +3,7 @@
     
     // height: 100%;
     position: absolute;
-    
+    align-items: center;
     display: flex;
     flex-direction: column;
 
@@ -14,12 +14,12 @@
     .logo {
         display: block;
         text-decoration: none;
-        position: absolute;
+        position: relative;
 
         img {
             display: block;
-            margin: 8px auto;
-            width: 24px;
+            margin: 1px auto;
+            width: 50%;
             height: auto;
 
             
@@ -28,11 +28,13 @@
             text-decoration: none;
             color:white;
             display: block;
-            margin:8px auto;
-            font-size: 13px;
+            // margin-top: 15px;
+            margin:10% auto;
+            font-size: 1.5rem;
+            // font-size: 150%;
             text-align: center;
             text-transform: uppercase;
-            width: 50px;
+            width: 50%;
             font-family: Fantasy, Helvetica;
             font-weight: 200;
         }
@@ -40,23 +42,24 @@
 
     nav {
         display: flex;
-        padding-left: 10px;;
+        // padding-left: 1rem;;
         flex-direction: column;
         text-align: center;
         position: absolute;
         
+        
 
         a{
-            font-size: 22px;
+            font-size: 300%;
             color: #4d4d4e;
             width:100%;
             display: block;
-            line-height: 51px;
-            height: 51px;
+            line-height: 41px;
+            height: 41px;
             position: relative;
             text-decoration: none;
             text-align: center;
-            
+            padding-bottom: 20px;
 
         
 
@@ -80,7 +83,7 @@
 
         &:after {
             content: '';
-            font-size: 9px;
+            font-size: 70%;
             letter-spacing: 2px;
             position: absolute;
             bottom: 0;
@@ -89,6 +92,7 @@
             text-align: center;
             opacity: 0;
             transition: all 0.3s ease-out;
+            padding-bottom: 20px;
         }
 
         &:first-child{
@@ -106,13 +110,23 @@
 
         a.portfolio-link{
             &:after{
-                content:'JOBS';
+                content:'RESEARCH';
             }
         }
 
         a.contact-link{
             &:after{
                 content:'CONTACT';
+            }
+        }
+
+        a.projects-link{
+            &:after{
+                content:'PROJECTS';
+            }}
+        a.skills-link{
+            &:after{
+                content:'SKILLS';
             }
         }
         a.active{
@@ -134,7 +148,7 @@
 
         li{
             a{
-                padding: 7px 0;
+                padding: 15px 0;
                 display: block;
                 
                 line-height: 16px;
@@ -146,6 +160,7 @@
         }
     }
 }
+
 
 @media only screen and (max-width:600px) {
     .nav-bar{
@@ -273,9 +288,9 @@
 
 @media only screen and (min-width:600px) {
     .nav-bar{
-        width: 60px;
+        width: 5%;
         height: 100%;
-
+        padding-top: 20px;
         nav{
         height: 210px;
         top: 50%;
@@ -283,23 +298,25 @@
         width: 100%;
         
         .logo{
-            padding: 8px 0;
+            // padding: 8px 0;
         }
         }
         ul{
-            width:100%;
-            bottom:20px;
+            width:0%;
+            bottom:30px;
+            margin-left: -10px;
             flex-direction: column;
             margin-top: auto;
             li{
                 a{
-                    font-size:15px;
+                    font-size:200%;
                 }
             }
         }
         .social{
             display: none;
             cursor: pointer;
+            // padding-left: -1rem;
         }
         
         }
