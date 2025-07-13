@@ -1,69 +1,67 @@
 .research-page {
-    max-width: 80%;
-    margin: 90px auto; // Centers the content and adds top/bottom spacing
-    padding: 0 20px; // Equal left/right spacing for all screen sizes
+    padding-top: 10%;
+  max-width: 80%;
+  margin: clamp(2rem, 10vh, 5rem) auto; // Responsive top-bottom spacing
+//   padding: 0 clamp(1rem, 5vw, 2rem); // Responsive left-right spacing
 
-    .page-title {
-        margin-bottom: 40px;
-        font-size: 36px;
-        font-weight: bold;
-        text-align: center;
-    }
+  .page-title {
+    margin-bottom: clamp(1rem, 5vh, 2.5rem);
+    font-size: clamp(1.8rem, 5vw, 2.5rem); // Responsive font size
+    font-weight: bold;
+    text-align: center;
+  }
 
-    .research-list {
+  .research-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 1.8rem); // Responsive gap between boxes
+
+    .citation-box {
+      border: 2px solid #ccc;
+      padding: clamp(1rem, 2vw, 1.5rem);
+      background: #fdfdfd;
+      transition: border-color 0.3s ease;
+
+      &:hover {
+        border-color: #ffd700;
+      }
+
+      .citation-header {
         display: flex;
-        flex-direction: column;
-        gap: 25px;
+        align-items: center;
+        gap: clamp(0.5rem, 1vw, 1rem);
+        margin-bottom: clamp(0.5rem, 1vh, 1rem);
 
-        .citation-box {
-            border: 2px solid #ccc;
-            // border-radius: 10px;
-            padding: 20px;
-            background: #fdfdfd;
-            // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            transition: border-color 0.3s ease;
-
-            &:hover {
-                border-color: #ffd700;
-            }
-
-            .citation-header {
-                display: flex;
-                align-items: center;
-                gap: 10px; // spacing between ID and title
-                margin-bottom: 10px;
-
-                .id-number {
-                    font-size: 20px;
-                    font-weight: bold;
-                    color: #444;
-                }
-
-                .paper-title {
-                    font-size: 20px;
-                    font-weight: bold;
-                    color: #222;
-                }
-            }
-
-            .citation-text {
-                font-size: 16px;
-                color: #333;
-                line-height: 1.6;
-            }
-
-            .paper-link {
-                display: inline-block;
-                // margin-top: 10px;
-                font-size: 14px;
-                color: #0056b3;
-                text-decoration: underline;
-                margin-left: 30px;
-
-                &:hover {
-                    color: #003580;
-                }
-            }
+        .id-number {
+          font-size: clamp(1.2rem, 2.2vw, 1.25rem);
+          font-weight: bold;
+          color: #444;
         }
+
+        .paper-title {
+          font-size: clamp(1.2rem, 2.2vw, 1.25rem);
+          font-weight: bold;
+          color: #222;
+        }
+      }
+
+      .citation-text {
+        font-size: clamp(1.1rem, 2vw, 1rem);
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .paper-link {
+        display: inline-block;
+        font-size: clamp(1rem, 1.8vw, 0.95rem);
+        color: #0056b3;
+        text-decoration: underline;
+        margin-left: clamp(1rem, 2vw, 2rem);
+
+        &:hover {
+          color: #003580;
+        }
+      }
     }
+  }
 }

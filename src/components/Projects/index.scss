@@ -3,7 +3,7 @@ max-width: 90%;
 margin: 90px 6%; // Centers the content and adds top/bottom spacing
 padding: 0 20px; 
   .page-title {
-    font-size: 4rem;
+    
     margin-bottom: 2rem;
   }
   .projects-grid {
@@ -54,6 +54,10 @@ padding: 0 20px;
 @media only screen and (max-width:600px) {
 .project-card {
       max-width: 90%;}
+
+h1{
+  font-size: 3rem;
+}
 }
 
 @media only screen and (min-width:600px) {

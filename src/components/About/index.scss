@@ -1,6 +1,6 @@
 h1 {
   color: #000000;
-  font-size: clamp(2rem, 5vw, 3.5rem); // Responsive font size
+  font-size: clamp(3rem, 5vw, 3.5rem); // Responsive font size
   line-height: 1.2;
   margin: 0;
   font-family: 'CoolVetica';
@@ -60,15 +60,14 @@ h2 {
   width: 90%;
   max-width: 100%;
   padding-right: 1rem;
+  margin-top: 3rem;
 
-  h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    line-height: 1.2;
-    margin: 0;
-  }
-
+ 
+ h1{
+    font-size: clamp(2rem, 3vw, 3rem)!important;
+ }
   h2 {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, 1.5rem) ;
     line-height: 1.6;
     width: 100%;
     font-family: sans-serif;
@@ -99,8 +98,10 @@ h2 {
 
   h1,
   h2 {
+    
     width: 100%; // Text should span full width on phone
     text-align: left;
+    font-size: 2rem;
   }
 }
 

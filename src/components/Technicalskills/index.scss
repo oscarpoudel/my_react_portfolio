@@ -1,21 +1,20 @@
 .technical-skills-page {
   width: 80%;
-  // padding: 7vh 1%;
-  color: white; 
-  // min-height: 100vh;
+  padding: clamp(2vh, 5vh, 7vh) clamp(1rem, 5vw, 5rem); // responsive padding
+  color: white;
 
   .page-title {
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: clamp(1rem, 4vh, 40px);
     font-family: 'CoolVetica';
-    font-size: 56px;
+    font-size: clamp(2rem, 6vw, 4rem); // responsive heading
   }
 
   .skills-columns {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 1rem;
+    gap: clamp(0.5rem, 2vw, 2rem);
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
@@ -24,39 +23,34 @@
     .skills-left,
     .skills-right {
       flex: 1;
-    //   max-height: 60%;
     }
 
     .skills-left {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      
+      gap: clamp(0.5rem, 1.5vh, 1rem);
 
       .skill-box {
         border: 2px solid #000000;
         border-radius: 10px;
-        padding: 1px 30px;
+        padding: clamp(0.5rem, 1.5vw, 1.2rem) clamp(1rem, 3vw, 2rem);
         background-color: #1e1e1e;
-        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        max-width: 100%;
 
         h2 {
           color: #ffd700;
-          margin-bottom: 1px;
-          font-size: 2rem;
-          color: #ffd700;
-          
-          white-space: nowrap;      // prevents line break
-          // overflow: hidden;         // optional: hides overflow
+          font-size: clamp(1.2rem, 2.8vw, 2rem);
+          margin-bottom: clamp(0.3rem, 1vh, 1rem);
+          white-space: nowrap;
           text-overflow: ellipsis;
-                  
+          overflow: hidden;
         }
 
         p {
-          font-size: 16px;
+          font-size: clamp(0.9rem, 2vw, 1.1rem);
           display: flex;
           flex-wrap: wrap;
-        //   gap: 10px;
           line-height: 1.6;
 
           svg {
@@ -67,27 +61,25 @@
     }
 
     .skills-right {
-  position: relative;
-//   width: 100%;
-//   height: 100%; // Adjust based on space needed
-  background: transparent;
+      position: relative;
+      background: transparent;
 
-  .floating-icons-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+      .floating-icons-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
 
-  .floating-icon {
-    position: absolute;
-    font-size: 8rem;
-    transition: transform 0.3s ease-in-out;
+      .floating-icon {
+        position: absolute;
+        font-size: clamp(3rem, 8vw, 8rem); // responsive icon size
+        transition: transform 0.3s ease-in-out;
 
-    &:hover {
-      transform: scale(1.3);
-      z-index: 10;
+        &:hover {
+          transform: scale(1.3);
+          z-index: 10;
+        }
+      }
     }
-  }
-}
   }
 }

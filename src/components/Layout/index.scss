@@ -44,7 +44,6 @@
 .container.portfolio-page{
     
     h1{
-            font-size:53px;
             font-family: 'Coolvetica';
             color:#000000;
             font-weight: 400;
@@ -125,6 +124,7 @@
 .container.portfolio-page{
     display: flex;
     flex-direction: column;
+    // font-size: 10rem;
     
 }
    p{

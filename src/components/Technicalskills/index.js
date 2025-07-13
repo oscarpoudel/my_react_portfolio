@@ -32,7 +32,7 @@ const TechnicalSkills = () => {
   return (
     <div className="container technical-skills-page">
       <h1 className="page-title">
-        <AnimatedLetters strArray={'Technical Skills'.split('')} idx={15} letterClass={letterClass} />
+        <AnimatedLetters strArray={'Skills'.split('')} idx={15} letterClass={letterClass} />
       </h1>
 
       <div className="skills-columns">
