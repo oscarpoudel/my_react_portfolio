@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fb4d687e.css",
-    "main.js": "/static/js/main.9764df41.js",
+    "main.css": "/static/css/main.0d4c0773.css",
+    "main.js": "/static/js/main.12e0da29.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/work2_bg.png": "/static/media/work2_bg.bd37705ad1f78b36c24b.png",
     "static/media/trans_logo_black.png": "/static/media/trans_logo_black.9a1117b6dda18fa7857f.png",
@@ -11,12 +11,12 @@
     "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/index.html",
-    "main.fb4d687e.css.map": "/static/css/main.fb4d687e.css.map",
-    "main.9764df41.js.map": "/static/js/main.9764df41.js.map",
+    "main.0d4c0773.css.map": "/static/css/main.0d4c0773.css.map",
+    "main.12e0da29.js.map": "/static/js/main.12e0da29.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb4d687e.css",
-    "static/js/main.9764df41.js"
+    "static/css/main.0d4c0773.css",
+    "static/js/main.12e0da29.js"
   ]
 }
