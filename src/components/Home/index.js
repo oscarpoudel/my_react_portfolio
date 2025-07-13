@@ -22,7 +22,6 @@ const Home = () => {
   'i', 'n',
   ' ',
   'C', 'E',
-  ' '
 ]
     useEffect(() => {
          setTimeout(() => {

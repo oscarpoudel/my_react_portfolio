@@ -1,7 +1,10 @@
 .technical-skills-page {
   width: 80%;
-  padding: clamp(2vh, 5vh, 7vh) clamp(1rem, 5vw, 5rem); // responsive padding
+  padding: clamp(2vh, 6vh, 7vh) clamp(3rem, 6vw, 6rem); // responsive padding
   color: white;
+  height: 80vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 
   .page-title {
     text-align: left;
