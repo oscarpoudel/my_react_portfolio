@@ -1,193 +1,116 @@
+h1 {
+  color: #000000;
+  font-size: clamp(2rem, 5vw, 3.5rem); // Responsive font size
+  line-height: 1.2;
+  margin: 0;
+  font-family: 'CoolVetica';
+  font-weight: 400;
+  position: relative;
 
- h1{
-        color:#000000;
-        font-size: 56px;
-        line-height: 53px;
-        margin:0;
-        font-family: 'CoolVetica';
-        
-        font-weight: 400;
-
-        &::before{
-            content:'';
-            font-family: 'La Belle Aurore',cursive;
-            color:#3a3a3a;
-            font-size:19px;
-            position: absolute;
-            margin-top: -40px;
-            left: -15px;
-            opacity:0.6;
-
-        }
-
-        &::after{
-            content:'';
-            font-family: 'La Belle Aurore';
-            color:#ffd700;
-            font-size:19px;
-            position: absolute;
-            margin-top: 18px;
-            margin-left:20px;
-            animation:fadeIn 1s 1.7s backwards;
-            
-            opacity:0.6;
-
-        }
-
-        
-        img{
-            width:32px;
-            margin-left:20px;
-            opacity:0;
-            height:auto;
-            animation: rotateIn 1s linear both;
-            animation-delay: 1.4s;
-
-        }
-    }
-    h2{
-        color: #3a3a3a;
-        margin:20px 0px 20px ;
-        font-weight: 400;
-        font-size: 20px;
-        width: 50%;
-        font-family: sans-serif;
-        letter-spacing:3px;
-        animation: fadeIn 1s 1.8s backwards;
-    }
-.stage-cube-cont{
-   
-    
-    position:relative ;
-    
-    
+  img {
+    width: 32px;
+    margin-left: 20px;
+    opacity: 0;
+    height: auto;
+    animation: rotateIn 1s linear both;
+    animation-delay: 1.4s;
+  }
 }
 
-.cubespinner{
-    animation-name:spincube;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 12s;
-    transform-style: preserve-3d;
-    transform-origin: 100px 100px 0;
-   
-    div{
-        position: absolute;
-        width: 200px;
-        height:200px;
-        border: 1px solid #ccc;
-        background: rgba(255,255,255,0.4);
-        font-size: 100px;
-        display: flex;
-        justify-content:center ;
-        align-items: center;
-        box-shadow: 0 0 20px 0px lightyellow;
-    }
-    .face1{
-        transform: translateZ(100px)
-    }
-    .face2{
-        transform: rotateY(90deg) translateZ(100px)
-    }
-    .face3{
-        transform:rotateY(90deg) rotateX(90deg) translateZ(100px)
-    }
-    .face4{
-        transform:rotateY(180deg) rotateZ(90deg) translateZ(100px)
-    }
-    .face5{
-        transform:rotateY(-90deg) rotateZ(90deg) translateZ(100px)
-    }
-    .face6{
-        transform:rotateX(-90deg) translateZ(100px)
-    }
+h2 {
+  color: #3a3a3a;
+  margin: 20px 0;
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.5rem); // Responsive font size
+  width: 100%;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  animation: fadeIn 1s 1.8s backwards;
 }
 
-@keyframes spincube {
-    from,
-    to{
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-
-    }
-    16%{
-        transform: rotateY(-90deg);
-    }
-    33%{
-        transform: rotateY(-90deg) rotateZ(90deg);
-    }
-    50%{
-        transform: rotateY(-180deg) rotateZ(90deg);
-    }
-    66%{
-        transform: rotateY(-270deg) rotateZ(90deg);
-    }
-    83%{
-        transform: rotateX(-90deg) rotateZ(90deg);
-    }
+.stage-cube-cont {
+  position: relative;
 }
 
-@media only screen and (max-width:600px) {
-.abt-pg{
+.sideImage {
+  padding-top: 200px;
+  float: right;
+  z-index: auto;
+  height: auto;
+  display: block;
+
+  .image1 {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .vec {
+    position: absolute;
+    z-index: 20;
+    margin-top: 400px;
+    overflow: hidden;
+    scale: 1.1;
+  }
+}
+
+// MOBILE STYLES
+@media only screen and (max-width: 600px) {
+    .text-zone {
+  width: 90%;
+  max-width: 100%;
+  padding-right: 1rem;
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    line-height: 1.6;
+    width: 100%;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #3a3a3a;
+    margin-top: 1rem;
+  }
+}
+  .abt-pg {
     display: flex;
     flex-direction: column;
-    gap:50px;
-    position:relative;
-}
+    gap: 50px;
+    position: relative;
+  }
 
-
-.stage-cube-cont{
+  .stage-cube-cont {
     position: absolute;
     margin-top: 70%;
     align-items: center;
     justify-content: center;
     width: 50%;
     padding-left: 35%;
-}
-.sideImage{
-    width:60%;
-    margin-left: 40%;
+  }
+
+  .sideImage {
+    display: none; // Hide image on phone
+  }
+
+  h1,
+  h2 {
+    width: 100%; // Text should span full width on phone
+    text-align: left;
+  }
 }
 
-}
-@media only screen and (min-width:600px) {
-    .cubespinner{
-        
-        margin-left: calc(50% - 100px);
-    }
-    .stage-cube-cont{
-        width: 50%;
-        height:100%;
-        top:0;
-        padding-top: 18%;
-        margin-left: 0;
-        position:absolute ;
-        right:0;
-        overflow: hidden;
-    }
+// DESKTOP-ONLY SIDE IMAGE STYLING (optional if using breakpoint split)
+@media only screen and (min-width: 600px) {
+  .sideImage {
+    display: block;
+  }
 }
 
-.sideImage{
-        
-        padding-top:400px;
-        float:right;
-        z-index: auto;
-        height: auto;
-        display: block;
-       
-        
-        .image1{
-            position: absolute;
-            z-index: 1;
-            overflow: hidden;
-        }
-        .vec{
-            position: absolute;
-            z-index: 20;
-            margin-top:400px;
-            overflow: hidden;
-            scale: 1.1;
-        }
 
-    }
 
 

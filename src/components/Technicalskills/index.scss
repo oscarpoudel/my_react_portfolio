@@ -1,18 +1,21 @@
 .technical-skills-page {
   width: 80%;
-  padding: 20vh 5%;
-  color: white;
+  // padding: 7vh 1%;
+  color: white; 
+  // min-height: 100vh;
 
   .page-title {
     text-align: left;
     margin-bottom: 40px;
+    font-family: 'CoolVetica';
+    font-size: 56px;
   }
 
   .skills-columns {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
@@ -21,12 +24,13 @@
     .skills-left,
     .skills-right {
       flex: 1;
+    //   max-height: 60%;
     }
 
     .skills-left {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 10px;
       
 
       .skill-box {
@@ -34,20 +38,25 @@
         border-radius: 10px;
         padding: 1px 30px;
         background-color: #1e1e1e;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 
         h2 {
           color: #ffd700;
-          margin-bottom: 10px;
-          font-size: 22px;
+          margin-bottom: 1px;
+          font-size: 2rem;
+          color: #ffd700;
           
+          white-space: nowrap;      // prevents line break
+          // overflow: hidden;         // optional: hides overflow
+          text-overflow: ellipsis;
+                  
         }
 
         p {
           font-size: 16px;
           display: flex;
           flex-wrap: wrap;
-          gap: 10px;
+        //   gap: 10px;
           line-height: 1.6;
 
           svg {

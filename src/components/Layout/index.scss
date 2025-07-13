@@ -46,14 +46,14 @@
     h1{
             font-size:53px;
             font-family: 'Coolvetica';
-            color:#ffd700;
+            color:#000000;
             font-weight: 400;
             margin-top: 0;
             position:relative;
             margin-bottom: 40px;
             left:10px;
             &::before{
-                content:'<h1>';
+                content:'';
                 font-family: 'La Belle Aurore';
                 font-size:18px;
                 position: absolute;
@@ -63,7 +63,7 @@
                 line-height: 18px;
             }
             &::after{
-                content:'</h1>';
+                content:'';
                 font-family: 'La Belle Aurore';
                 font-size:18px;
                 line-height: 18px;
@@ -107,7 +107,7 @@
     }
     .text-animate-hover{
         &:hover{
-            color:white;
+            color:rgb(255, 196, 0);
         }
     }
 }
@@ -116,6 +116,8 @@
     .container{
         display: flex;
         flex-direction: column;
+        margin-top:10%;
+        // padding-top: 50px;
             // overflow-y: scroll;
     }
     .container.about-page,

@@ -14,7 +14,7 @@ padding: 0 20px;
     .project-card {
       border: 1px solid #ccc;
       padding: 1rem;
-      background-color: #f3f4f5;
+      background-color: #ffffff;
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -48,4 +48,15 @@ padding: 0 20px;
       }
     }
   }
+}
+
+
+@media only screen and (max-width:600px) {
+.project-card {
+      max-width: 90%;}
+}
+
+@media only screen and (min-width:600px) {
+  .project-card {
+      max-width: 30%;}
 }

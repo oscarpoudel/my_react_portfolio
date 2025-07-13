@@ -39,13 +39,14 @@ const TechnicalSkills = () => {
         {/* Left Column - Skill Cards */}
         <div className="skills-left">
           <div className="skill-box">
+            <h2>Civil Engieering-Softwares</h2>
+            <p>ETABS, RAM, Rhino, Revit, Robot, Microsoft Project, Primavera </p>
+          </div>
+          <div className="skill-box">
             <h2>AI Programming </h2>
             <p><SiPytorch /> PyTorch &nbsp;&nbsp; <SiTensorflow /> TensorFlow &nbsp;&nbsp; <SiScikitlearn /> scikit-learn</p>
           </div>
-          <div className="skill-box">
-            <h2>LLM-Related Skills</h2>
-            <p>RAG, Vector DBs, Semantic Search</p>
-          </div>
+          
           <div className="skill-box">
             <h2>Programming Languages</h2>
             <p><FaPython /> Python &nbsp;&nbsp; <FaCuttlefish /> C/C++ &nbsp;&nbsp; <FaJava /> Java</p>
@@ -60,7 +61,7 @@ const TechnicalSkills = () => {
           </div>
           <div className="skill-box">
             <h2>Technical Software</h2>
-            <p>Simulink, OrCAD, AutoCAD, LabVIEW</p>
+            <p>Simulink, AutoCAD, Fusion360,</p>
           </div>
           <div className="skill-box">
             <h2>Professional Skills</h2>

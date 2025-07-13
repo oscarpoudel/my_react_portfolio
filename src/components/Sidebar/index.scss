@@ -1,6 +1,7 @@
 .nav-bar {
     background: #181818;
-    
+      font-size: clamp(0.6rem, 1vw, 1.2rem); // scales with viewport width
+
     // height: 100%;
     position: absolute;
     align-items: center;
@@ -30,11 +31,11 @@
             display: block;
             // margin-top: 15px;
             margin:10% auto;
-            font-size: 1.5rem;
+            font-size: 1.5em;
             // font-size: 150%;
             text-align: center;
             text-transform: uppercase;
-            width: 50%;
+            // width: 50%;
             font-family: Fantasy, Helvetica;
             font-weight: 200;
         }
@@ -50,7 +51,7 @@
         
 
         a{
-            font-size: 300%;
+            font-size: 2.5em;
             color: #4d4d4e;
             width:100%;
             display: block;
@@ -83,7 +84,7 @@
 
         &:after {
             content: '';
-            font-size: 70%;
+            font-size: 1em;
             letter-spacing: 2px;
             position: absolute;
             bottom: 0;
@@ -98,12 +99,15 @@
         &:first-child{
             &:after{
                 content:'HOME';
+                font-size: 0.5em;
             }
         }
     }
         a.about-link{
             &:after{
                 content:'ABOUT';
+                font-size: 0.5em;
+
                
             }
         }
@@ -111,22 +115,30 @@
         a.portfolio-link{
             &:after{
                 content:'RESEARCH';
+                font-size: 0.5em;
+
             }
         }
 
         a.contact-link{
             &:after{
                 content:'CONTACT';
+                font-size: 0.5em;
+
             }
         }
 
         a.projects-link{
             &:after{
                 content:'PROJECTS';
+                font-size: 0.5em;
+
             }}
         a.skills-link{
             &:after{
                 content:'SKILLS';
+                font-size: 0.5em;
+
             }
         }
         a.active{
@@ -150,7 +162,7 @@
             a{
                 padding: 15px 0;
                 display: block;
-                
+                font-size: 2em;
                 line-height: 16px;
                 
                 &:hover svg{
@@ -182,7 +194,9 @@
             width:25%;
             position: relative;
 
-          
+        .myName{
+            display: none;
+        }
             
         }
         nav{
@@ -309,7 +323,7 @@
             margin-top: auto;
             li{
                 a{
-                    font-size:200%;
+                    font-size:1.7em;
                 }
             }
         }

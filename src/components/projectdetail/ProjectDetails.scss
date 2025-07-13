@@ -3,8 +3,7 @@
   margin-top: 3vh;
   flex-direction: column;
   height: 100vh;
-  padding: 1rem 3rem;
-  box-sizing: border-box;
+  // padding: 1rem ;
 
   .back-button {
     position: relative;
@@ -23,12 +22,12 @@
     margin-bottom: 1.5rem;
 
     .project-title {
-      font-size: 3rem;
+      font-size: 4rem;
       color: Black;
     }
 
     .project-subtitle {
-      font-size: 1.3rem;
+      font-size: 2.3rem;
       color: #555;
     }
   }
@@ -39,14 +38,14 @@
     overflow: hidden;
     gap: 2rem;
 
-    .sidebar {
-      width: 25%;
-      padding-right: 1rem;
-      border-right: 1px solid #ccc;
-      position: sticky;
-      top: 100px;
-      align-self: flex-start;
-    }
+    // .sidebar {
+    //   width: 25%;
+    //   padding-right: 1rem;
+    //   border-right: 1px solid #ccc;
+    //   position: sticky;
+    //   top: 100px;
+    //   align-self: flex-start;
+    // }
 
     .project-content {
       width: 100%;
@@ -71,4 +70,15 @@
       }
     }
   }
+}
+
+@media only screen and (max-width:600px) {
+
+}
+
+@media only screen and (min-width:600px) {
+  .project-detail-page {
+  
+  padding: 1rem 3rem;
+}
 }

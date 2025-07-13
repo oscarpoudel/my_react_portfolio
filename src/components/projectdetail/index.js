@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import './ProjectDetails.scss'
 import projectData from '../../data/projects.json'
-import Project1 from './project1'  // example dynamic project
+import Project1 from '../Detailslist/Project1'  // example dynamic project
 
 const componentMap = {
   '1': Project1,
