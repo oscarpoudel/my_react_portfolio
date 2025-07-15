@@ -60,7 +60,6 @@
             position: relative;
             text-decoration: none;
             text-align: center;
-            padding-bottom: 20px;
 
         
 
@@ -304,17 +303,21 @@
     .nav-bar{
         width: 5%;
         height: 100%;
+        // display:flex;
         padding-top: 20px;
+        // flex-direction: column;
+        // justify-content: center ;
         nav{
-        height: 210px;
-        top: 50%;
-        margin-top: -120px;
-        width: 100%;
-        
-        .logo{
-            // padding: 8px 0;
-        }
-        }
+          height: 210px;
+            bottom: 50%;
+            margin-top: -120px;
+            width: 100%;
+            // padding-top: 40px;
+            a{
+                padding-bottom: 30px;
+            }
+
+                }
         ul{
             width:0%;
             bottom:30px;
