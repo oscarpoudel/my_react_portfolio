@@ -40,6 +40,15 @@
     }
   }
 
+.scaled-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
   strong {
     color: #222;
   }

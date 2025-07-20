@@ -8,7 +8,7 @@
   scroll-behavior: smooth;
   .page-title {
     margin-bottom: clamp(1rem, 5vh, 2.5rem);
-    font-size: clamp(1.8rem, 5vw, 2.5rem); // Responsive font size
+    font-size: clamp(2rem, 5vw, 3rem); // Responsive font size
     font-weight: bold;
     text-align: center;
   }
@@ -16,7 +16,7 @@
   .research-list {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 2vw, 1.8rem); // Responsive gap between boxes
+    gap: clamp(2rem, 2vw, 1.8rem); // Responsive gap between boxes
 
     .citation-box {
       border: 2px solid #ccc;
@@ -48,7 +48,7 @@
       }
 
       .citation-text {
-        font-size: clamp(1.1rem, 2vw, 1rem);
+        font-size: clamp(1.5rem, 2vw, 1rem);
         color: #333;
         line-height: 1.6;
       }
@@ -58,7 +58,7 @@
         font-size: clamp(1rem, 1.8vw, 0.95rem);
         color: #0056b3;
         text-decoration: underline;
-        margin-left: clamp(1rem, 2vw, 2rem);
+        margin-left: clamp(2rem, 2vw, 2rem);
 
         &:hover {
           color: #003580;
