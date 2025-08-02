@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.7325e88b.css",
-    "main.js": "/static/js/main.ca7d4b70.js",
+    "main.js": "/static/js/main.1e5cf302.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
+    "static/media/6_gaze_pid.png": "/static/media/6_gaze_pid.c2a5ad172f1a0aa0e37c.png",
     "static/media/2_simulation_setup.png": "/static/media/2_simulation_setup.52658b8ebd288749b112.png",
     "static/media/3_target_system.png": "/static/media/3_target_system.8ebf5742d9a0dd541ff7.png",
     "static/media/4_res1.png": "/static/media/4_res1.22ccff3b3a967cbc343d.png",
@@ -17,11 +18,11 @@
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/index.html",
     "main.7325e88b.css.map": "/static/css/main.7325e88b.css.map",
-    "main.ca7d4b70.js.map": "/static/js/main.ca7d4b70.js.map",
+    "main.1e5cf302.js.map": "/static/js/main.1e5cf302.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7325e88b.css",
-    "static/js/main.ca7d4b70.js"
+    "static/js/main.1e5cf302.js"
   ]
 }
