@@ -4,7 +4,7 @@ import envImage from "../../assets/research_images/proj_1/2_simulation_setup.png
 import tarImage from "../../assets/research_images/proj_1/3_target_system.png"
 import res1Image from "../../assets/research_images/proj_1/4_res1.png"
 import res2Image from "../../assets/research_images/proj_1/5_res2.png"
-
+import gazeImage from "../../assets/research_images/proj_1/6_gaze_pid.png"
 import "./Project1.scss"
 const Project2 = () => {
   return (
@@ -51,7 +51,7 @@ const Project2 = () => {
 
       <h4>Target System</h4>
       <img src={tarImage} alt="Target System" className="scaled-image" />
-
+      <img src={gazeImage} alt="Gaze to PID mapping" className="scaled-image" />
       <h4>Key Metrics</h4>
       <ul>
         <li><strong>Task Completion Time:</strong> ~12% faster with gaze-assisted control</li>
