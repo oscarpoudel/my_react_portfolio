@@ -1,18 +1,53 @@
 {
   "papers": [
     {
+      "id": 10,
+      "citation": "[C7.] Poudel, O., Assaad, R. H., & Awada, M. (2025, Accepted/In-press). Visio-GEN: A Wireless Gaze-Assisted and Voice-Controlled Generative AI System Leveraging Stable Diffusion for Real-Time Image Generation for Civil Engineering Design and Visualization. In Computing in Civil Engineering 2025",
+      "link": ""
+    },
+    {
+      "id": 9,
+      "citation": "[C6.] Poudel, O., Assaad, R. H., & Awada, M. (2025, Accepted/In-press). Integrating Large Language Models (LLMs) with Autonomous Aerial Drone Robotics and Computer Vision for Contextual Adaptive Construction Site Safety Management and Risk Assessment. In Computing in Civil Engineering 2025.",
+      "link": ""
+    },
+    {
+      "id": 8,
+      "citation": "[C5.] Poudel, O., Assaad, R. H., & Awada, M. (2025, Accepted/In-press). SLAM assisted Transformers-Based TD3 Deep Reinforcement Learning for Adaptive Navigation and Mapping and Dynamic Obstacle Avoidance in Autonomous Construction Robotics. In Computing in Civil Engineering 2025",
+      "link": ""
+    },
+    {
+      "id": 7,
+      "citation": "[C4.] Mohammadi, M., Poudel, O., Assaad, R. H., Awada, M. & Assaf, G. (2025, Accepted/In-press). Integration of Large Language Models (LLMs) and Augmented Reality (AR) to Enhance Human-Building Interaction During Building Operations and Maintenance Procedures. In Computing in Civil Engineering 2025.",
+      "link": ""
+    },
+    {
+      "id": 6,
+      "citation": "[C3.] Mohammadi, M., Poudel, O., Assaad, R. H., Awada, M. & Assaf, G. (2025, Accepted/In-press). Integrating Large Language Models (LLMs), IoT Wireless Sensor Networks, and Augmented Reality for Real-Time Indoor Environmental Quality Improvement and Automated HVAC Control in Smart Buildings. In Computing in Civil Engineering 2025.",
+      "link": ""
+    },
+    {
+      "id": 5,
+      "citation": "[C2.] Poudel, O., & Assaad, R. H. (Accepted/In-press). Developing Real-Time Acoustic Technologies for Enhancing Safety and Efficiency on Construction Job Sites using Deep Learning Algorithms: Moving Towards Automated Construction Site Monitoring. In ASCE Computing in Civil Engineering 2024. [View]",
+      "link": ""
+    },
+    {
+      "id": 4,
+      "citation": "[C1.] Poudel, O., & Assaad, R. H. (Accepted/In-press). Advancing Sound Level Localization through Innovative Integration and Fusion of Remote Sensing and Reality Captured LiDAR-based Digital Twins, Auditory Devices, and IoT Technologies. In ASCE Computing in Civil Engineering 2024. [View]",
+      "link": ""
+    },
+    {
       "id": 3,
-      "citation": "Poudel, O., & Assaad, R. H. (2025). A Real-Time Intelligent Acoustic IoT-Enabled Embedded Construction Site Monitoring and Alert System: Integrating Deep Learning–Based Machine-Listening Algorithms, Edge Computing, and Cloud Computing. Journal of Construction Engineering and Management, 151(7), 04025075.",
+      "citation": "[J3.] Poudel, O., & Assaad, R. H. (2025). A Real-Time Intelligent Acoustic IoT-Enabled Embedded Construction Site Monitoring and Alert System: Integrating Deep Learning–Based Machine-Listening Algorithms, Edge Computing, and Cloud Computing. Journal of Construction Engineering and Management, 151(7), 04025075.",
       "link": "https://doi.org/10.1061/JCEMD4.COENG-15938"
     },
     {
       "id": 2,
-      "citation": "Assaad, R. H., Mohammadi, M., & Poudel, O. (2025). Developing an intelligent IoT-enabled wearable multimodal biosensing device and cloud-based digital dashboard for real-time and comprehensive health, physiological, emotional, and cognitive monitoring using multi-sensor fusion technologies. Sensors and Actuators A: Physical, 381, 116074.",
+      "citation": "[J2.] Assaad, R. H., Mohammadi, M., & Poudel, O. (2025). Developing an intelligent IoT-enabled wearable multimodal biosensing device and cloud-based digital dashboard for real-time and comprehensive health, physiological, emotional, and cognitive monitoring using multi-sensor fusion technologies. Sensors and Actuators A: Physical, 381, 116074.",
       "link": "https://doi.org/10.1016/j.sna.2024.116074"
     },
     {
       "id": 1,
-      "citation": "Poudel, O., & Shrestha, K. C. (2024). Enhancing earthquake resilience with strategically arranged inclined columns in multistoried RCC structures. Innovative Infrastructure Solutions, 9(6), 223.",
+      "citation": "[J1.] Poudel, O., & Shrestha, K. C. (2024). Enhancing earthquake resilience with strategically arranged inclined columns in multistoried RCC structures. Innovative Infrastructure Solutions, 9(6), 223.",
       "link": "https://doi.org/10.1007/s41062-024-01540-3"
     }
   ]
