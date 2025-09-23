@@ -1,11 +1,11 @@
 .research-page {
-    padding-top: 10%;
-    margin-bottom: 10%;
+    // padding-top: 10%;
+    // margin-bottom: 10%;
   max-width: 80%;
   // margin: clamp(2rem, 10vh, 5rem) auto; // Responsive top-bottom spacing
 //   padding: 0 clamp(1rem, 5vw, 2rem); // Responsive left-right spacing
-  // height: 50vh;
-  overflow-y: auto;
+  height: 80vh;
+  overflow-y: scroll;
   scroll-behavior: smooth;
   .page-title {
     margin-bottom: clamp(1rem, 5vh, 2.5rem);
@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     gap: clamp(2rem, 2vw, 1.8rem); // Responsive gap between boxes
-
+    // margin-bottom: 10%;
     .citation-box {
       border: 2px solid #ccc;
       padding: clamp(1rem, 2vw, 1.5rem);
