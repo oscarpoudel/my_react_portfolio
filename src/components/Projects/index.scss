@@ -13,7 +13,7 @@ margin: 90px 8%; // Centers the content and adds top/bottom spacing
 
     .project-card {
       border: 1px solid #ccc;
-      padding: 1rem;
+      padding: 4rem;
       background-color: #ffffff;
       border-radius: 8px;
       cursor: pointer;
@@ -35,8 +35,9 @@ margin: 90px 8%; // Centers the content and adds top/bottom spacing
       }
 
       h2 {
+        
         width: 100%;
-        margin: 1rem 1rem 0.5rem;
+        // margin: 1rem 1rem 0.5rem;
         font-size: 3rem;
       }
 
@@ -62,5 +63,5 @@ h1{
 
 @media only screen and (min-width:600px) {
   .project-card {
-      max-width: 30%;}
+      max-width: 80%;}
 }

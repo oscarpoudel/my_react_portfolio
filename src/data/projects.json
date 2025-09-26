@@ -4,7 +4,15 @@
       "id": 1,
       "title": "Gaze-Assisted Teleoperation for Precision UAV Navigation",
       "description": "A Comparison of Traditional vs. Gaze-Assisted Teleoperation",
-      "image": "images/research_images/gaze_tel.png"
+      "image": "images/research_images/gaze_tel.png",
+      "URL":"https://github.com/oscarpoudel/Eye-Tracking-drone-control"
+    },
+    {
+      "id": 2,
+      "title": "Virtual Force-driven Coachbot Swarm Navigation around a Nucleus Point",
+      "description": "Exploration of Different Swarm algorithms;",
+      "URL" :"https://github.com/oscarpoudel/swarm-robot-coordination",
+      "image": "images/research_images/swarm.png"
     }
   ]
 }
