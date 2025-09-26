@@ -20,9 +20,10 @@
     gap: clamp(2rem, 2vw, 1.8rem); // Responsive gap between boxes
     // margin-bottom: 10%;
     .citation-box {
-      border: 2px solid #ccc;
+      border: 2px solid #000000;
+      border-radius: 8px;
       padding: clamp(1rem, 2vw, 1.5rem);
-      background: #fdfdfd;
+      background:#bbd1c5;
       transition: border-color 0.3s ease;
 
       &:hover {

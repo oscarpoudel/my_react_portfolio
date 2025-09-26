@@ -1,6 +1,9 @@
 .projects-page {
 max-width: 80%;
-margin: 90px 8%; // Centers the content and adds top/bottom spacing
+margin: 90px auto; // Centers the content and adds top/bottom spacing
+overflow-y: scroll;
+scroll-behavior: smooth;
+height: 80vh;
 // padding: 0 20px; 
   .page-title {
     
@@ -12,9 +15,9 @@ margin: 90px 8%; // Centers the content and adds top/bottom spacing
     gap: 2rem;
 
     .project-card {
-      border: 1px solid #ccc;
+      border: 1px solid #000000;
       padding: 4rem;
-      background-color: #ffffff;
+      background-color: #bbd1c5;
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -38,14 +41,14 @@ margin: 90px 8%; // Centers the content and adds top/bottom spacing
         
         width: 100%;
         // margin: 1rem 1rem 0.5rem;
-        font-size: 3rem;
+        font-size: clamp(2rem, 5vw, 2rem);
       }
 
       
 
       p {
-        font-size: 2rem;
-        color: #555;
+        font-size: clamp(1.5rem, 5vw, 1.5rem);
+        color: #000000;
       }
     }
   }

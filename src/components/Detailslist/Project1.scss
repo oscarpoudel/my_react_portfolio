@@ -1,8 +1,11 @@
 .styled-project {
   max-width: 80%;
   margin: 0 auto;
-  background-color: white;
+  background-color: #bbd1c5;
+  border: 1px solid black;
   padding: clamp(3rem, 4vw, 2rem);
+  border-radius: 8px;
+  
 
   h2, h3 {
     text-align: center;
