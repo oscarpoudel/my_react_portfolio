@@ -1,3 +1,6 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
 h1 {
   color: #000000;
   font-size: clamp(3rem, 5vw, 3.5rem); // Responsive font size
@@ -23,7 +26,7 @@ h2 {
   font-weight: 400;
   font-size: clamp(1rem, 2.5vw, 1.5rem); // Responsive font size
   width: 100%;
-  font-family: sans-serif;
+  // font-family: ar-serif ;
   letter-spacing: 3px;
   animation: fadeIn 1s 1.8s backwards;
 }
@@ -68,7 +71,7 @@ h2 {
  }
   h2 {
     font-size: clamp(1rem, 2.5vw, 1.5rem) ;
-    line-height: 1.6;
+    // line-height: 1.6;
     width: 100%;
     font-family: sans-serif;
     font-weight: 400;
@@ -109,7 +112,9 @@ h2 {
 @media only screen and (min-width: 600px) {
   .sideImage {
     display: block;
+    
   }
+
 }
 
 
