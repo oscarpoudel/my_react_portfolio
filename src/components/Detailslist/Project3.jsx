@@ -42,8 +42,8 @@ const ProjectRecyclingRobot = () => {
         </li>
         <li><strong>Transition Probabilities:</strong> α (stay in high), β (return to high from low)</li>
       </ul>
-      <img src={graph1} alt="Transition Graph" className="scaled-image" />
-      <img src={graph2} alt="MDP State Diagram" className="scaled-image" />
+      {/* <img src={graph1} alt="Transition Graph" className="scaled-image" />
+      <img src={graph2} alt="MDP State Diagram" className="scaled-image" /> */}
 
       <h4>Methodology</h4>
       <p>
@@ -77,8 +77,8 @@ const ProjectRecyclingRobot = () => {
           </ul>
         </li>
       </ul>
-      <img src={"https://github.com/oscarpoudel/cleaning_robot_RL_VI-PI/blob/main/pictures/res_1.png"} alt="Value Iteration Convergence" className="scaled-image" />
-      <img src={"https://github.com/oscarpoudel/cleaning_robot_RL_VI-PI/blob/main/pictures/res_2.png"} alt="Policy Iteration Convergence" className="scaled-image" />
+      <img src={"https://raw.githubusercontent.com/oscarpoudel/cleaning_robot_RL_VI-PI/main/pictures/res_1.png"} alt="Value Iteration Convergence" className="scaled-image" />
+      <img src={"https://raw.githubusercontent.com/oscarpoudel/cleaning_robot_RL_VI-PI/main/pictures/res_2.png"} alt="Policy Iteration Convergence" className="scaled-image" />
 
       <h4>Key Insights</h4>
       <ul>
