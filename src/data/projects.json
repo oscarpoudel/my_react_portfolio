@@ -13,6 +13,13 @@
       "description": "Exploration of Different Swarm algorithms;",
       "URL" :"https://github.com/oscarpoudel/swarm-robot-coordination",
       "image": "images/research_images/swarm.png"
+    },
+    {
+      "id": 3,
+      "title": "Recycling Robot MDP: Solving with Value Iteration and Policy Iteration",
+      "description": "",
+      "URL" :"https://github.com/oscarpoudel/cleaning_robot_RL_VI-PI",
+      "image": "images/research_images/res_rbot.png" 
     }
   ]
 }
