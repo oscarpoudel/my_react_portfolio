@@ -159,72 +159,127 @@
 
 
 }
-
+/* ========= MOBILE ========= */
 @media (max-width: 600px) {
+  /* Page spacing */
+  .page { padding-top: 0; }
   .home-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: clamp(8px, 2.5vw, 16px);
+    margin-top: 0;
+    padding-top: clamp(4px, 1.2vw, 10px);
   }
 
-  /* --- IMAGE BLOCK (TOP) --- */
+  /* --- IMAGE/VECTOR BLOCK (TOP) --- */
   .home-page .sideImage {
     order: 1;
-    display: grid;               /* layer children without absolute */
+    display: grid;                  /* stack children without absolute */
     grid-template-areas: "stack";
     place-items: start center;
-    // width: clamp(220px, 60vw, 320px); /* smaller image */
-    // margin: 8px auto 0;
+    // width: clamp(220px, 22vw, 200px); /* <— controls overall size */
+    margin: 0 auto;
     padding: 0;
     float: none;
     position: static;
-    z-index: auto;               /* same plane as text */
+    z-index: auto;
     overflow: visible;
-    scale: 0.3;                    /* kill desktop scale-ups */
+    transform: none;
+    scale: 0.5;          
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: -40%;
+            /* kill desktop upscaling */
   }
 
-  h1{
-    font-size: clamp(2rem, 8vw, 3.5rem);
-  }
-
-  /* both elements share the same grid cell */
+  /* both elements share the same grid cell, no absolute */
   .home-page .sideImage .image1,
   .home-page .sideImage .vec {
     grid-area: stack;
-    position: static;            /* <-- critical: no absolute */
+    position: static;
     z-index: auto;
     width: 100%;
-    height: auto;
-    transform: none;
+    // height: auto;
+    // max-width: 160px;
+    object-fit: contain;
+    // transform: sca;
   }
 
-  /* nudge the paint/vector to overlap the photo, but keep it in flow */
-  .home-page .sideImage {
-    margin-top: -70%;
-    margin-bottom: -70%;            /* adjust overlap (-10% to -30%) */
-    /* optional: slightly smaller overlay */
-    /* transform: scale(0.95); */
-  }
-  .vec {
-    margin-top:10;
+  /* overlap the paint slightly while staying in flow */
+  .home-page .sideImage .vec {
+    // margin-top: clamp(%, -8vw, -12%);  /* tune overlap */
+     transform: scale(0.96);      
+     margin-top: 300px;    /* optional tiny shrink */
   }
 
   /* --- TEXT BLOCK (BOTTOM) --- */
   .home-page .text-zone {
     order: 2;
-    position: static;            /* no absolute */
+    position: static;
     transform: none;
     left: auto; top: auto;
-    // width: min(92%, 680px);
-    margin: 6px auto 20px;
+    width: min(92%, 680px);
+    margin: clamp(6px, 2vw, 14px) auto clamp(18px, 5vw, 28px);
     float: none;
-    z-index: auto;               /* same plane */
+    z-index: auto;
     text-align: left;
   }
 
-  /* keep pseudo-elements scoped so they don't float over the image */
-  .home-page h1 { position: relative; margin-top: 0; }
+  /* Fluid type */
+  .home-page h1 {
+    position: relative;      /* keeps ::before/after scoped */
+    margin-top: 0;
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: clamp(32px, 8.6vw, 44px);
+  }
+  .home-page h1::before,
+  .home-page h1::after { z-index: auto; }
+
+  .home-page h2 {
+    font-size: clamp(14px, 4.2vw, 18px);
+    letter-spacing: clamp(1px, 0.5vw, 2px);
+    width: 100%;
+    margin: clamp(8px, 2vw, 12px) 0;
+  }
+
+  /* Body text (in your paragraphs under h2) */
+  .home-page .text-zone p {
+    font-size: clamp(13px, 3.8vw, 16px);
+    line-height: clamp(18px, 5.6vw, 24px);
+    margin: 0 0 clamp(8px, 2.2vw, 12px);
+  }
+
+  /* Social icons scale */
+  .home-page .social-mid-page ul {
+    gap: clamp(10px, 4vw, 18px);
+    justify-content: left;
+  }
+  .home-page .social-mid-page svg {
+    font-size: clamp(18px, 7vw, 26px);
+  }
+
+  /* Fluid buttons */
+  .home-page .flat-button {
+    font-size: clamp(13px, 4.2vw, 16px);
+    letter-spacing: clamp(1px, 0.7vw, 2.5px);
+    padding: clamp(8px, 2.8vw, 12px) clamp(14px, 4.5vw, 18px);
+    border-width: 1px;
+    border-radius: clamp(6px, 2vw, 10px);
+    white-space: normal;                 /* allow wrap on tiny screens */
+    line-height: 1.1;
+  }
+
+  /* Make the pair of buttons behave nicely on wrap */
+  .home-page .flat-button + .flat-button {
+    margin-left: clamp(8px, 2.5vw, 14px);
+  }
+
+  /* Ensure no stray absolute/scale or huge negative margins conflict */
+  .home-page h1,
+  .home-page .sideImage,
+  .home-page .text-zone { z-index: auto; }
 }
 
 
