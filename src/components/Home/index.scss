@@ -24,17 +24,17 @@
         
         font-weight: 400;
 
-        &::before{
-            content:'(-_-)';
-            font-family: 'La Belle Aurore',cursive;
-            color:#000000;
-            font-size:19px;
-            position: absolute;
-            margin-top: -40px;
-            left: -15px;
-            opacity:0.6;
+        // &::before{
+        //     content:'(-_-)';
+        //     font-family: 'La Belle Aurore',cursive;
+        //     color:#000000;
+        //     font-size:19px;
+        //     position: absolute;
+        //     margin-top: -40px;
+        //     left: -15px;
+        //     opacity:0.6;
 
-        }
+        // }
 
         &::after{
             content:'';
@@ -186,11 +186,12 @@
     z-index: auto;
     overflow: visible;
     transform: none;
+    height:200px ;   
     scale: 0.5;          
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: -40%;
+    // margin-bottom: -40%;
             /* kill desktop upscaling */
   }
 
@@ -217,11 +218,11 @@
   /* --- TEXT BLOCK (BOTTOM) --- */
   .home-page .text-zone {
     order: 2;
-    position: static;
+    position: relative  ;
     transform: none;
     left: auto; top: auto;
     width: min(92%, 680px);
-    margin: clamp(6px, 2vw, 14px) auto clamp(18px, 5vw, 28px);
+    margin: clamp(200px, 2vw, 14px) auto clamp(18px, 5vw, 28px);
     float: none;
     z-index: auto;
     text-align: left;
