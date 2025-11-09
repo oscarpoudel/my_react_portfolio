@@ -5,7 +5,7 @@
   // margin: clamp(2rem, 10vh, 5rem) auto; // Responsive top-bottom spacing
 //   padding: 0 clamp(1rem, 5vw, 2rem); // Responsive left-right spacing
   // height: 80vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-behavior: smooth;
   .page-title {
     margin-bottom: clamp(1rem, 5vh, 2.5rem);
@@ -79,7 +79,7 @@
     margin-top: 15%;
     /* Ensure the page can scroll when content overflows */
     min-height: 80vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     padding: 2rem 1rem 2rem; /* top padding so title sits a bit below */
   }
