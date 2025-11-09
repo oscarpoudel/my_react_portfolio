@@ -47,7 +47,8 @@
           margin-bottom: clamp(0.3rem, 1vh, 1rem);
           white-space: normal;    // allow wrapping
           text-overflow: unset;   // no ellipsis
-          overflow: visible;      // show entire text
+          overflow: visible;  
+          width: 100%;    // show entire text
         }
 
         p {
@@ -82,6 +83,76 @@
         &:hover {
           transform: scale(1.3);
           z-index: 10;
+        }
+      }
+    }
+  }
+}
+
+
+/* Mobile adjustments for Technical Skills page */
+@media only screen and (max-width: 768px) {
+  .technical-skills-page {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 15%;
+    padding: clamp(3vh, 4vh, 4vh) 1.25rem; /* smaller side padding */
+    height: auto; /* allow natural page height */
+    min-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .page-title {
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: clamp(0.75rem, 3vh, 1.25rem);
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+    }
+
+    .skills-columns {
+      flex-direction: column;
+      gap: clamp(0.75rem, 2.5vw, 1.25rem);
+
+      .skills-left,
+      .skills-right {
+        width: 100%;
+      }
+
+      .skills-left {
+        .skill-box {
+          width: 95%;
+          padding: clamp(0.6rem, 2vw, 0.9rem) clamp(0.8rem, 3vw, 1rem);
+
+          h2 {
+            font-size: clamp(1.2rem, 4.5vw, 1.6rem);
+          }
+
+          p {
+            font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+          }
+        }
+      }
+
+      .skills-right {
+        position: relative;
+
+        .floating-icons-container {
+          position: relative;
+          width: 100%;
+          height: auto; /* allow icons to flow */
+          display: flex;
+          gap: clamp(0.5rem, 3vw, 1rem);
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          padding-top: 0.75rem;
+          padding-bottom: 0.5rem;
+        }
+
+        .floating-icon {
+          position: relative; /* remove absolute positioning on small screens */
+          font-size: clamp(2.2rem, 6.5vw, 4rem);
+          margin: 0.25rem;
         }
       }
     }

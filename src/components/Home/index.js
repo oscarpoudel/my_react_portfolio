@@ -24,6 +24,14 @@ const Home = () => {
     return (
         <>
         <div className='container home-page'>
+          <div className = 'sideImage'>
+                <div className='image1'>
+                    <img src ={HomeImg}/>
+                    </div>
+                  <div className='vec'>
+                <img  src = {vectorforimage}/>
+                    </div>  
+            </div>
             <div className='text-zone'>
                 <h1>
                     {/* <span className='letterClass'>H</span> */}
@@ -106,14 +114,7 @@ const Home = () => {
             </div>
            
            
-            <div className = 'sideImage'>
-                <div className='image1'>
-                    <img src ={HomeImg}/>
-                    </div>
-                  <div className='vec'>
-                <img  src = {vectorforimage}/>
-                    </div>  
-            </div>
+            
         </div>
        
         </>

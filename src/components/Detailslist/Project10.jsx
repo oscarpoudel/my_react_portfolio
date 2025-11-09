@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Project1.scss" 
-const Project9 = () => {
+const Project10 = () => {
   // Path to your PDF file in the public folder
-  const pdfPath = '/images/1/DL_crack_segmentation.pdf#zoom=100';
+  const pdfPath = '/images/1/NLP_project.pdf#zoom=100';
 
   return (
     <div className="project-details-content styled-project" style={{ width: '100%', height: 'calc(100vh - 100px)', display: 'flex', flexDirection: 'column' }}>
@@ -22,5 +22,5 @@ const Project9 = () => {
   )
 }
 
-export default Project9
+export default Project10
 

@@ -38,8 +38,9 @@ const Project2 = () => {
         <li>PID controller integration</li>
         <li>Metrics: Task time, accuracy, latency, success rate</li>
       </ul>
+      <div className="image-row">
       <img src={envImage} alt="Simulation Environment" className="scaled-image" />
-
+      </div>
       <h4>Methodology</h4>
       <ul>
         <li>Webots simulator with an indoor environment</li>
@@ -50,8 +51,10 @@ const Project2 = () => {
       <img src={metodologyImage} alt="Methodology Diagram" className="scaled-image" />
 
       <h4>Target System</h4>
+      <div className="image-row">
       <img src={tarImage} alt="Target System" className="scaled-image" />
       <img src={gazeImage} alt="Gaze to PID mapping" className="scaled-image" />
+      </div>
       <h4>Key Metrics</h4>
       <ul>
         <li><strong>Task Completion Time:</strong> ~12% faster with gaze-assisted control</li>

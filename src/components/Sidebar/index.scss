@@ -55,7 +55,7 @@
             color: #4d4d4e;
             width:100%;
             display: block;
-            line-height: 61px;
+            line-height: 51px;
             height: 41px;
             position: relative;
             text-decoration: none;
@@ -206,7 +206,12 @@
             justify-content: space-evenly;
             width:50%;
             align-items: center;
+            
             // background: white;
+        }
+        .nav-bar nav a {
+             line-height: 50px !important;
+            
         }
         .social-top.open {
             
@@ -247,7 +252,7 @@
             position: relative;
             justify-content: space-evenly;
             a{
-                font-size: 20px;
+                font-size: 30px;
 
             }
         }

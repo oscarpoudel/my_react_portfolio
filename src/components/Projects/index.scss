@@ -1,5 +1,5 @@
 .projects-page {
-max-width: 80%;
+
 margin: 90px auto; // Centers the content and adds top/bottom spacing
 overflow-y: scroll;
 scroll-behavior: smooth;
@@ -7,6 +7,7 @@ height: 80vh;
 // padding: 0 20px; 
   .page-title {
     
+    margin: 0 auto; 
     margin-bottom: 2rem;
   }
   .projects-grid {
@@ -28,7 +29,7 @@ height: 80vh;
         align-items: flex-start;
     
       &:hover {
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 15px 22px rgba(0, 0, 0, 0.15);
       }
 
       img {
@@ -56,15 +57,44 @@ height: 80vh;
 
 
 @media only screen and (max-width:600px) {
-.project-card {
-      max-width: 90%;}
 
-h1{
-  font-size: 3rem;
-}
+  .projects-grid {
+    /* Force a single column and center grid items so smaller cards sit centered */
+    grid-template-columns: 1fr;
+    
+    justify-items: center;
+    padding: 0 1rem;
+  }
+  .page-title {
+    max-width: 90%;}
+  .project-card {
+    max-width: 90%;
+    margin: 0 auto; /* centers the card */
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
 }
 
 @media only screen and (min-width:600px) {
+  .projects-page {
+max-width: 85%;
+  }
+  .page-title {
+    max-width: 100%;
+  }
+
+  .projects-grid {
+    /* Force a single column and center grid items so smaller cards sit centered */
+    grid-template-columns: 1fr;
+    
+    justify-items: center;
+    padding: 0 1rem;
+  }
+  
   .project-card {
-      max-width: 80%;}
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
