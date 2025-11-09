@@ -174,7 +174,7 @@
 
   /* --- IMAGE/VECTOR BLOCK (TOP) --- */
   .home-page .sideImage {
-    order: 2;
+    order: 1;
     display: grid;                  /* stack children without absolute */
     grid-template-areas: "stack";
     place-items: start center;
@@ -186,12 +186,13 @@
     z-index: auto;
     overflow: visible;
     transform: none;
-    height:200px ;   
-    scale: 0.5;          
+    height:15% ;   
+    scale: 0.3;          
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    // margin-bottom: -40%;
+    margin-top: 10%;
+    margin-bottom: -10%;
             /* kill desktop upscaling */
   }
 
@@ -217,7 +218,7 @@
 
   /* --- TEXT BLOCK (BOTTOM) --- */
   .home-page .text-zone {
-    order: 1;
+    order: 2;
     position: relative  ;
     transform: none;
     left: auto; top: auto;
