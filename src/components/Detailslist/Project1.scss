@@ -5,7 +5,19 @@
   border: 1px solid black;
   padding: clamp(3rem, 4vw, 2rem);
   border-radius: 8px;
+  
+.project-content-centered {
+  width: 80%;
+  // height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   // vertical centering
+  align-items: center;       // horizontal centering
+  margin: 0 auto;      
+  height: auto;      // centers container horizontally
+}
 
+  
   h2, h3 {
     text-align: center;
     margin-bottom: clamp(0.5rem, 2vh, 1rem);
@@ -97,4 +109,5 @@
       min-height: 180px;
     }
   }
+  
 }

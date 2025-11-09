@@ -56,6 +56,13 @@
       "description": "Natural language control for ROS2 robots using multimodal LLMs with ROS2 CLI commands through Streamlit or CLI.",
       "URL": "https://github.com/oscarpoudel/LLM_ROS2_agent",
       "image":  "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/6.moving_robot-based_on_symantic_locaiton_eg_firehydrant.png"
+    },
+    {
+      "id": 9,
+      "title": "Crack Segmentation Using Vision Transformers",
+      "description": "Training Vits for Crack Segmentation and Applicibality test",
+      "URL": "https://github.com/oscarpoudel/DL_VitCrackSeg",
+      "image":  "https://raw.githubusercontent.com/oscarpoudel/DL_VitCrackSeg/main/images/image.jpg"
     }
 
 

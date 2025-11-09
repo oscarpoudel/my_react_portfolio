@@ -35,6 +35,15 @@
 
     }
     
+    
+    
+     .flat-button:hover {
+    background: #115173;
+    color: #fff;
+    border: 1px solid #115173;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
     input[type='text']::placeholder,
     input[type='email']::placeholder,textarea::placeholder {
       font-size: 20px;
