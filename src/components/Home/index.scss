@@ -202,7 +202,7 @@
     grid-area: stack;
     position: static;
     z-index: auto;
-    width: 100%;
+    // width: 100%;
     // height: auto;
     // max-width: 160px;
     object-fit: contain;
@@ -213,7 +213,8 @@
   .home-page .sideImage .vec {
     // margin-top: clamp(%, -8vw, -12%);  /* tune overlap */
      transform: scale(0.96);      
-     margin-top: 300px;    /* optional tiny shrink */
+     margin-top: 400px;  
+     margin-left: 100px;  /* optional tiny shrink */
   }
 
   /* --- TEXT BLOCK (BOTTOM) --- */
