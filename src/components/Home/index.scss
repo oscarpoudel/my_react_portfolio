@@ -17,7 +17,7 @@
 
     h1{
         color:#000000;
-        font-size: 56px;
+        font-size: 50px;
         line-height: 53px;
         margin:0;
         font-family: 'CoolVetica';
@@ -183,8 +183,9 @@
     overflow: visible;
     scale: 0.3;                    /* kill desktop scale-ups */
   }
-  .h1{
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
+
+  h1{
+    font-size: clamp(2rem, 8vw, 3.5rem);
   }
 
   /* both elements share the same grid cell */
@@ -200,8 +201,8 @@
 
   /* nudge the paint/vector to overlap the photo, but keep it in flow */
   .home-page .sideImage {
-    margin-top: -65%;
-    margin-bottom: -60%;            /* adjust overlap (-10% to -30%) */
+    margin-top: -70%;
+    margin-bottom: -70%;            /* adjust overlap (-10% to -30%) */
     /* optional: slightly smaller overlay */
     /* transform: scale(0.95); */
   }
@@ -238,4 +239,7 @@
         height: auto;
         display: block;
 }
+h1{
+        color:#000000;
+        font-size: 56px;}
 }
