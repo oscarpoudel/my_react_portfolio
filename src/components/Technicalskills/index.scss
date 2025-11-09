@@ -3,7 +3,7 @@
   padding: clamp(2vh, 6vh, 7vh) clamp(3rem, 6vw, 6rem);
   color: white;
   height: 80vh;
-  overflow-y: auto;
+  overflow-y: scroll;
   scroll-behavior: smooth;
 
   .page-title {
