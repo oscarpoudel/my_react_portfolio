@@ -4,7 +4,7 @@
   max-width: 80%;
   // margin: clamp(2rem, 10vh, 5rem) auto; // Responsive top-bottom spacing
 //   padding: 0 clamp(1rem, 5vw, 2rem); // Responsive left-right spacing
-  height: 80vh;
+  // height: 80vh;
   overflow-y: scroll;
   scroll-behavior: smooth;
   .page-title {
@@ -45,13 +45,13 @@
         .paper-title {
           font-size: clamp(1.2rem, 2.2vw, 2rem);
           font-weight: bold;
-          color: #222;
+          color: #000000;
         }
       }
 
       .citation-text {
         font-size: clamp(1.5rem, 2vw, 2rem);
-        color: #333;
+        color: #000000;
         line-height: 1.6;
       }
 

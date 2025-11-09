@@ -7,6 +7,10 @@ import { FaPython, FaJava, FaCuttlefish, FaLinux, FaWindows } from 'react-icons/
 import {
   SiPytorch, SiTensorflow, SiScikitlearn, SiApachehadoop, SiApachespark,
   SiArduino, SiLatex,
+  SiPydantic,
+  SiLangchain,
+  SiJavascript,
+  SiUnity,
 } from 'react-icons/si'
 
 const randomIcons = [
@@ -43,21 +47,21 @@ const TechnicalSkills = () => {
             <p>ETABS, RAM, Rhino, Revit, Robot, Microsoft Project, Primavera </p>
           </div>
           <div className="skill-box">
-            <h2>AI Programming </h2>
-            <p><SiPytorch /> PyTorch &nbsp;&nbsp; <SiTensorflow /> TensorFlow &nbsp;&nbsp; <SiScikitlearn /> scikit-learn</p>
+            <h2>AI/GenAI and Agent Orchestration </h2>
+            <p><SiPytorch /> PyTorch &nbsp;&nbsp; <SiTensorflow /> TensorFlow &nbsp;&nbsp; <SiScikitlearn /> scikit-learn &nbsp;&nbsp; <SiPydantic /> Pydantic AI  &nbsp;&nbsp; <SiLangchain /> Langchain</p>
           </div>
           
           <div className="skill-box">
             <h2>Programming Languages</h2>
-            <p><FaPython /> Python &nbsp;&nbsp; <FaCuttlefish /> C/C++ &nbsp;&nbsp; <FaJava /> Java</p>
+            <p><FaPython /> Python &nbsp;&nbsp; <FaCuttlefish /> C/C++ &nbsp;&nbsp; <SiUnity/> C-Sharp &nbsp;&nbsp; <SiJavascript/> Javascript </p>
           </div>
           <div className="skill-box">
             <h2>Cluster Computing</h2>
             <p><SiApachehadoop /> Hadoop &nbsp;&nbsp; <SiApachespark /> Spark, HPC (Slurm)</p>
           </div>
           <div className="skill-box">
-            <h2>Embedded Systems</h2>
-            <p><SiArduino /> Arduino, Microcontrollers</p>
+            <h2>Embedded and Robotics Systems</h2>
+            <p><SiArduino /> Arduino, Microcontrollers, ROS2, Gazebo, Unity XR/AR & Robotics simulation</p>
           </div>
           <div className="skill-box">
             <h2>Technical Software</h2>

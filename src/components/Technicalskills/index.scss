@@ -1,6 +1,6 @@
 .technical-skills-page {
   width: 80%;
-  padding: clamp(2vh, 6vh, 7vh) clamp(3rem, 6vw, 6rem); // responsive padding
+  padding: clamp(2vh, 6vh, 7vh) clamp(3rem, 6vw, 6rem);
   color: white;
   height: 80vh;
   overflow-y: auto;
@@ -10,7 +10,7 @@
     text-align: left;
     margin-bottom: clamp(1rem, 4vh, 40px);
     font-family: 'CoolVetica';
-    font-size: clamp(2rem, 6vw, 4rem); // responsive heading
+    font-size: clamp(2.2rem, 6vw, 3.6rem); // slightly reduced
   }
 
   .skills-columns {
@@ -43,18 +43,19 @@
 
         h2 {
           color: #ffd700;
-          font-size: clamp(1.2rem, 2.8vw, 2rem);
+          font-size: clamp(2rem, 2.2vw, 1.5rem); // smaller and now unclipped
           margin-bottom: clamp(0.3rem, 1vh, 1rem);
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
+          white-space: normal;    // allow wrapping
+          text-overflow: unset;   // no ellipsis
+          overflow: visible;      // show entire text
         }
 
         p {
-          font-size: clamp(0.9rem, 2vw, 1.1rem);
+          font-size: clamp(1.2rem, 1.4vw, 1.15rem); // smaller
           display: flex;
           flex-wrap: wrap;
           line-height: 1.6;
+          margin-bottom: 0.5rem;
 
           svg {
             vertical-align: middle;
@@ -75,7 +76,7 @@
 
       .floating-icon {
         position: absolute;
-        font-size: clamp(3rem, 8vw, 8rem); // responsive icon size
+        font-size: clamp(3.5rem, 7vw, 7rem); // slightly reduced
         transition: transform 0.3s ease-in-out;
 
         &:hover {

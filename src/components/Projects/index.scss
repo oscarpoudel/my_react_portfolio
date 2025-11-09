@@ -11,12 +11,12 @@ height: 80vh;
   }
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
 
     .project-card {
       border: 1px solid #000000;
-      padding: 4rem;
+      padding: 2rem;
       background-color: #bbd1c5;
       border-radius: 8px;
       cursor: pointer;
@@ -28,7 +28,7 @@ height: 80vh;
         align-items: flex-start;
     
       &:hover {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
       }
 
       img {

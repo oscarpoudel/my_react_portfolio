@@ -17,9 +17,49 @@
     {
       "id": 3,
       "title": "Recycling Robot MDP: Solving with Value Iteration and Policy Iteration",
-      "description": "",
+      "description": "Foundational Reinforcement learning Policy comparing value iteration and policy iteration;",
       "URL" :"https://github.com/oscarpoudel/cleaning_robot_RL_VI-PI",
       "image": "images/research_images/res_rbot.png" 
+    },
+    {
+      "id": 4,
+      "title": "VSLAM_light: Lightweight Monocular Visual Odometry with Kalman Smoothing",
+      "description": "vSLAM pipeline with Shi–Tomasi features, LK optical flow,, and  Kalman filter",
+      "URL": "https://github.com/oscarpoudel/VSLAM_light",
+      "image": "https://raw.githubusercontent.com/oscarpoudel/VSLAM_light/main/image/2.png"
+    },
+    {
+    "id": 5,
+    "title": "ArUco Pose Detector  with ROS 2 and opencv",
+    "description": "ROS 2 package for real-time detection of ArUco markers, 6-DoF pose estimation with OpenCV, and broadcasting into the ROS TF tree",
+    "URL": "https://github.com/oscarpoudel/aruco_pose_detector",
+    "image": "https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/2.aruco_postion_wr_robot.png"
+    },
+    
+    {
+    "id": 6,
+    "title": "Camera Calibration Toolkit (ROS 2)",
+    "description": "A ROS 2 package with USB and IP camera streaming and camera calibration.",
+    "URL": "https://github.com/oscarpoudel/get_calibrate_camera",
+    "image": "https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/sample_image.png"
+    },
+    {
+      "id": 7,
+      "title": "Semantic Object Detection & Spatial Memory with YOLOv8 on TurtleBot3 (ROS 2)",
+      "description": " object detection (YOLOv8), robot localization, and Qdrant vector storage for mobile robotic agents.",
+      "URL": "https://github.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8",
+      "image": "https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/4_object_detection_placement_1.png"
+    },
+    {
+      "id": 8,
+      "title": "ROS-LM: Natural Language Robot Assistant with ROS2 and OLLAMA",
+      "description": "Natural language control for ROS2 robots using multimodal LLMs with ROS2 CLI commands through Streamlit or CLI.",
+      "URL": "https://github.com/oscarpoudel/LLM_ROS2_agent",
+      "image":  "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/6.moving_robot-based_on_symantic_locaiton_eg_firehydrant.png"
     }
+
+
+
+
   ]
 }
