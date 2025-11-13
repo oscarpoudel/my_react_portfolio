@@ -93,8 +93,8 @@
 /* Mobile adjustments for Technical Skills page */
 @media only screen and (max-width: 600px) {
   .technical-skills-page {
-    width: 95%;
-    margin: 0 auto;
+    width: 92%;
+    margin:  auto;
     margin-top: 15%;
     padding: clamp(3vh, 4vh, 4vh) 1.25rem; /* smaller side padding */
     height: 80vh; /* allow natural page height */
@@ -150,9 +150,7 @@
         }
 
         .floating-icon {
-          position: relative; /* remove absolute positioning on small screens */
-          font-size: clamp(2.2rem, 6.5vw, 4rem);
-          margin: 0.25rem;
+          display:none;
         }
       }
     }
