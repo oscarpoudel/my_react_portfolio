@@ -3,7 +3,7 @@
   padding: clamp(2vh, 6vh, 7vh) clamp(3rem, 6vw, 6rem);
   color: white;
   height: 80vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-behavior: smooth;
 
   .page-title {
@@ -91,15 +91,15 @@
 
 
 /* Mobile adjustments for Technical Skills page */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .technical-skills-page {
     width: 95%;
     margin: 0 auto;
     margin-top: 15%;
     padding: clamp(3vh, 4vh, 4vh) 1.25rem; /* smaller side padding */
-    height: auto; /* allow natural page height */
-    min-height: 100vh;
-    overflow-y: auto;
+    height: 80vh; /* allow natural page height */
+    min-height: 80vh;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 
     .page-title {

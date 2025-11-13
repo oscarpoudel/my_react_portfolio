@@ -98,14 +98,14 @@
         &:first-child{
             &:after{
                 content:'HOME';
-                font-size: 0.5em;
+                font-size: clamp(0.1rem, 1vw, 2rem);
             }
         }
     }
         a.about-link{
             &:after{
                 content:'ABOUT';
-                font-size: 0.5em;
+                font-size: clamp(0.1rem, 1vw, 2rem);
 
                
             }
@@ -114,7 +114,7 @@
         a.portfolio-link{
             &:after{
                 content:'RESEARCH';
-                font-size: 0.5em;
+                font-size: clamp(0.1rem, 1vw, 2rem);
 
             }
         }
@@ -122,7 +122,7 @@
         a.contact-link{
             &:after{
                 content:'CONTACT';
-                font-size: 0.5em;
+                font-size: clamp(0.1rem, 1vw, 2rem);
 
             }
         }
@@ -130,13 +130,13 @@
         a.projects-link{
             &:after{
                 content:'PROJECTS';
-                font-size: 0.5em;
+                font-size: clamp(0.1rem, 1vw, 2rem);
 
             }}
         a.skills-link{
             &:after{
                 content:'SKILLS';
-                font-size: 0.5em;
+                font-size: clamp(0.1rem, 1vw, 2rem);
 
             }
         }
@@ -254,12 +254,15 @@
             a{
                 font-size: 30px;
 
+                
             }
+            
         }
         &::before,&::after{
             // transition: all 1s ease-in-out;
         }
         }
+        
         
 
         .social{
@@ -301,17 +304,33 @@
 
     }
 
+     
+  .nav-bar,
+  .nav-bar nav a,
+  .nav-bar ul li a {
+    font-size: clamp(1.2rem, 4vw, 2rem) !important;
+  }
+
+  .nav-bar .logo .myName {
+    font-size: clamp(1rem, 3.5vw, 1.8rem) !important;
+  }
+
+  .nav-bar nav a:after {
+    font-size: clamp(0.9rem, 3vw, 1.6rem) !important;
+  }
+
+
     
 }
 
 @media only screen and (min-width:600px) {
     .nav-bar{
-        width: 5%;
-        height: 100%;
-        // display:flex;
-        padding-top: 20px;
-        // flex-direction: column;
-        // justify-content: center ;
+        width: 6vw;
+        min-width: 70px;
+        max-width: 120px;
+        height: 100vh;
+        box-sizing: border-box;
+        overflow-x: hidden;
         nav{
           height: 210px;
             bottom: 50%;
@@ -320,7 +339,13 @@
             // padding-top: 40px;
             a{
                 padding-bottom: 30px;
-            }
+                font-size: clamp(3rem, 1.7vw, 2rem);
+                //  &:after{
+                //     font-size: clamp(1.7rem, 1.7vw, 2rem);
+                //  }
+        width: 95%;
+        // overflow: hidden;
+                }
 
                 }
         ul{
@@ -329,6 +354,7 @@
             margin-left: -10px;
             flex-direction: column;
             margin-top: auto;
+            
             li{
                 a{
                     font-size:1.7em;
@@ -342,6 +368,21 @@
         }
         
         }
+
+//         .nav-bar,
+//   .nav-bar nav a,
+//   .nav-bar ul li a {
+//     font-size: clamp(1.2rem, 4vw, 2rem) !important;
+//   }
+
+//   .nav-bar .logo .myName {
+//     font-size: clamp(1rem, 3.5vw, 1.8rem) !important;
+//   }
+
+  .nav-bar nav a:after {
+    font-size: clamp(0.5rem, 0.7vw, 1.7rem) !important;
+    // max-width: 95%;
+  }
     }
 
 @keyframes slideAbove {
@@ -365,5 +406,6 @@
         margin-top:0%;
         width: 50px;
     }
+    
     
 }

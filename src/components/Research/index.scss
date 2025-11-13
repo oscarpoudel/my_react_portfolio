@@ -75,18 +75,18 @@
 @media only screen and (max-width: 600px) {
   .research-page {
     max-width: 95%;
-    margin: 0 auto;
-    margin-top: 15%;
+    margin:  auto;
+    // margin-top: 15%;
     /* Ensure the page can scroll when content overflows */
-    min-height: 80vh;
-    overflow-y: scroll;
+    height: 95%;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding: 2rem 1rem 2rem; /* top padding so title sits a bit below */
   }
 
   .page-title {
     font-size: clamp(1.6rem, 5vw, 2.4rem);
-    margin-top: 0.6rem; /* push the title a bit lower */
+    margin-top: 10rem; /* push the title a bit lower */
     margin-bottom: 1rem;
     text-align: center;
   }
