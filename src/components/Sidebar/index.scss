@@ -1,6 +1,6 @@
 .nav-bar {
     background: #181818;
-      font-size: clamp(0.6rem, 1vw, 1.2rem); // scales with viewport width
+    font-size: clamp(0.6rem, 1vw, 1.2rem); // scales with viewport width
 
     // height: 100%;
     position: absolute;
@@ -10,7 +10,7 @@
 
     top: 0;
     z-index: 3;
-    
+
 
     .logo {
         display: block;
@@ -23,14 +23,15 @@
             width: 50%;
             height: auto;
 
-            
+
         }
+
         .myName {
             text-decoration: none;
-            color:white;
+            color: white;
             display: block;
             // margin-top: 15px;
-            margin:10% auto;
+            margin: 10% auto;
             font-size: 1.5em;
             // font-size: 150%;
             text-align: center;
@@ -47,13 +48,13 @@
         flex-direction: column;
         text-align: center;
         position: absolute;
-        
-        
 
-        a{
+
+
+        a {
             font-size: 2.5em;
             color: #4d4d4e;
-            width:100%;
+            width: 100%;
             display: block;
             line-height: 51px;
             height: 41px;
@@ -61,110 +62,115 @@
             text-decoration: none;
             text-align: center;
 
-        
 
-        i{
-            transition: all 0.3s ease-out;
-        }
 
-        &:hover {
-            color: #ffd700;
-
-            svg {
-                opacity: 0;
+            i {
+                transition: all 0.3s ease-out;
             }
+
+            &:hover {
+                color: #ffd700;
+
+                svg {
+                    opacity: 0;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+
 
             &:after {
-                opacity: 1;
+                content: '';
+                font-size: 1em;
+                letter-spacing: 2px;
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transition: all 0.3s ease-out;
+                padding-bottom: 20px;
+            }
+
+            &:first-child {
+                &:after {
+                    content: 'HOME';
+                    font-size: clamp(0.1rem, 1vw, 2rem);
+                }
             }
         }
 
-
-
-        &:after {
-            content: '';
-            font-size: 1em;
-            letter-spacing: 2px;
-            position: absolute;
-            bottom: 0;
-            display: block;
-            width: 100%;
-            text-align: center;
-            opacity: 0;
-            transition: all 0.3s ease-out;
-            padding-bottom: 20px;
-        }
-
-        &:first-child{
-            &:after{
-                content:'HOME';
-                font-size: clamp(0.1rem, 1vw, 2rem);
-            }
-        }
-    }
-        a.about-link{
-            &:after{
-                content:'ABOUT';
+        a.about-link {
+            &:after {
+                content: 'ABOUT';
                 font-size: clamp(0.1rem, 1vw, 2rem);
 
-               
+
             }
         }
 
-        a.portfolio-link{
-            &:after{
-                content:'RESEARCH';
+        a.portfolio-link {
+            &:after {
+                content: 'RESEARCH';
                 font-size: clamp(0.1rem, 1vw, 2rem);
 
             }
         }
 
-        a.contact-link{
-            &:after{
-                content:'CONTACT';
+        a.contact-link {
+            &:after {
+                content: 'CONTACT';
                 font-size: clamp(0.1rem, 1vw, 2rem);
 
             }
         }
 
-        a.projects-link{
-            &:after{
-                content:'PROJECTS';
-                font-size: clamp(0.1rem, 1vw, 2rem);
-
-            }}
-        a.skills-link{
-            &:after{
-                content:'SKILLS';
+        a.projects-link {
+            &:after {
+                content: 'PROJECTS';
                 font-size: clamp(0.1rem, 1vw, 2rem);
 
             }
         }
-        a.active{
-            svg{
-                color:#ffd700;
+
+        a.skills-link {
+            &:after {
+                content: 'SKILLS';
+                font-size: clamp(0.1rem, 1vw, 2rem);
+
+            }
+        }
+
+        a.active {
+            svg {
+                color: #ffd700;
             }
         }
 
     }
-    ul{
+
+    ul {
         position: absolute;
         display: flex;
-        
+
         padding: 0;
         list-style: none;
         text-align: center;
-        
+
         // margin:0;
 
-        li{
-            a{
+        li {
+            a {
                 padding: 15px 0;
                 display: block;
                 font-size: 2em;
                 line-height: 16px;
-                
-                &:hover svg{
+
+                &:hover svg {
                     color: #ffd700;
                 }
             }
@@ -174,187 +180,258 @@
 
 
 @media only screen and (max-width:600px) {
-  .nav-bar {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    top: 0;
-    height: 8rem;
-    transition: all 0.3s ease-in-out;
+    .nav-bar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        top: 0;
+        height: 8rem;
+        transition: all 0.3s ease-in-out;
 
-    .logo {
-      justify-content: center;
-      align-items: center;
-      padding-top: 15px;
-      display: block;
-      height: 100%;
-      width: 25%;
-      position: relative;
+        .logo {
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+            display: block;
+            height: 100%;
+            width: 25%;
+            position: relative;
 
-      .myName {
-        display: none;
-      }
+            .myName {
+                display: none;
+            }
+        }
+
+        nav {
+            flex-direction: row;
+            position: relative;
+            height: 100%;
+            justify-content: space-evenly;
+            width: 50%;
+            align-items: center;
+        }
+
+        /* --- ICON + TEXT ADJUSTMENT --- */
+        nav a {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 50px !important;
+
+            /* move text slightly ABOVE the icon */
+            &:after {
+                position: absolute;
+                top: -3rem;
+                height:3rem;
+                /* distance above the icon */
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                width: max-content;
+                padding: 0;
+                opacity: 0;
+                transition: all 0.3s ease-out;
+            }
+
+            &:hover:after,
+            &.active:after {
+                opacity: 1;
+            }
+        }
+
+        /* --- SOCIAL ICON MENU FIX --- */
+        .social-top.open {
+            visibility: visible;
+            animation-name: slideBelow;
+            animation-duration: 2s;
+            transition: all 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+
+        .social-top.false {
+            animation-name: slideAbove;
+            animation-duration: 2s;
+            transition: all 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            opacity: 0;
+        }
+
+        .social-top {
+            position: absolute;
+            top: 80px;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            visibility: hidden;
+            display: flex;
+            background-color: #181818;
+            right: 10px;
+            border-radius: 0 0 20px 20px;
+
+            ul {
+                right: -13%;
+                transition: all 1s ease-in-out;
+                right: 0%;
+                display: flex;
+                flex-direction: column;
+                background: black;
+                align-items: center;
+                position: relative;
+                justify-content: space-evenly;
+
+                a {
+                    font-size: 30px;
+                }
+            }
+
+            &::before,
+
+            &::after {
+                // transition: all 1s ease-in-out; 
+            }
+        }
+
+        .social {
+            color: white;
+            display: block;
+            position: relative;
+            line-height: 80px;
+            align-items: center;
+            text-align: right;
+            padding-right: 20px;
+            margin: auto;
+            font-size: 25px;
+            right: 0;
+            width: 25%;
+
+            .social_button {
+                transition: all 1s ease-in-out;
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+            }
+
+            .social_button.open {
+                svg {
+                    color: red;
+                    transition: all 0.37 ease-in-out;
+                }
+            }
+        }
     }
 
-    nav {
-      flex-direction: row;
-      position: relative;
-      height: 100%;
-      justify-content: space-evenly;
-      width: 50%;
-      align-items: center;
+    /* --- FONT SCALING --- */
+    .nav-bar,
+    .nav-bar nav a,
+    .nav-bar ul li a {
+        font-size: clamp(1.2rem, 4vw, 2rem) !important;
     }
 
-    /* --- ICON + TEXT ADJUSTMENT --- */
-    nav a {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      line-height: 50px !important;
-
-      /* move text slightly ABOVE the icon */
-      &:after {
-        position: absolute;
-        top: -3rem;              /* distance above the icon */
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        width: max-content;
-        padding: 0;
-        opacity: 0;
-        transition: all 0.3s ease-out;
-      }
-
-      &:hover:after,
-      &.active:after {
-        opacity: 1;
-      }
+    .nav-bar .logo .myName {
+        font-size: clamp(1rem, 3.5vw, 1.8rem) !important;
     }
 
-    /* --- SOCIAL ICON MENU FIX --- */
-    .social-top.open { visibility: visible; animation-name: slideBelow; animation-duration: 2s; 
-        transition: all 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) ; } .social-top.false{ 
-            animation-name: slideAbove; animation-duration: 2s; transition: all 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
-             opacity: 0; } .social-top{ position: absolute; top:80px; align-items: center; justify-content: center; width:50px;
-                 visibility: hidden; display: flex; background-color: #181818; right:10px; border-radius: 0 0 20px 20px; 
-                 ul{ 
-                     right:-13%; 
-                      transition: all 1s ease-in-out; 
-                      right:0%; display: flex; flex-direction: column; 
-                      background:black; 
-                      align-items: center; position: relative; justify-content: space-evenly; a{ font-size: 30px; } } 
-                      &::before,&::after{ // transition: all 1s ease-in-out; 
-                        } } 
-                        .social{ color:white; display: block; position: relative; line-height: 80px; align-items: center; 
-                            text-align: right; padding-right: 20px; margin:auto; font-size: 25px; right: 0; width:25%; .social_button{
-                                 transition: all 1s ease-in-out; background: none ; color:inherit; border:none; padding:0; font:inherit; 
-                                 cursor: pointer; outline: inherit; } .social_button.open{ svg{ color:red; transition:all 0.37 ease-in-out; } } }
-  }
-
-  /* --- FONT SCALING --- */
-  .nav-bar,
-  .nav-bar nav a,
-  .nav-bar ul li a {
-    font-size: clamp(1.2rem, 4vw, 2rem) !important;
-  }
-
-  .nav-bar .logo .myName {
-    font-size: clamp(1rem, 3.5vw, 1.8rem) !important;
-  }
-
-  .nav-bar nav a:after {
-    font-size: clamp(0.9rem, 3vw, 1.6rem) !important;
-  }
+    .nav-bar nav a:after {
+        font-size: clamp(0.9rem, 3vw, 1.6rem) !important;
+    }
 }
 
 
 @media only screen and (min-width:600px) {
-    .nav-bar{
+    .nav-bar {
         width: 6vw;
         min-width: 70px;
         max-width: 120px;
         height: 100vh;
         box-sizing: border-box;
         overflow-x: hidden;
-        nav{
-          height: 210px;
+
+        nav {
+            height: 210px;
             bottom: 50%;
             margin-top: -120px;
             width: 100%;
+
             // padding-top: 40px;
-            a{
+            a {
                 padding-bottom: 30px;
                 font-size: clamp(3rem, 1.7vw, 2rem);
                 //  &:after{
                 //     font-size: clamp(1.7rem, 1.7vw, 2rem);
                 //  }
-        width: 95%;
-        // overflow: hidden;
-                }
+                width: 95%;
+                // overflow: hidden;
+            }
 
-                }
-        ul{
-            width:0%;
-            bottom:30px;
+        }
+
+        ul {
+            width: 0%;
+            bottom: 30px;
             margin-left: -10px;
             flex-direction: column;
             margin-top: auto;
-            
-            li{
-                a{
-                    font-size:1.7em;
+
+            li {
+                a {
+                    font-size: 1.7em;
                 }
             }
         }
-        .social{
+
+        .social {
             display: none;
             cursor: pointer;
             // padding-left: -1rem;
         }
-        
-        }
 
-//         .nav-bar,
-//   .nav-bar nav a,
-//   .nav-bar ul li a {
-//     font-size: clamp(1.2rem, 4vw, 2rem) !important;
-//   }
-
-//   .nav-bar .logo .myName {
-//     font-size: clamp(1rem, 3.5vw, 1.8rem) !important;
-//   }
-
-  .nav-bar nav a:after {
-    font-size: clamp(0.5rem, 0.7vw, 1.7rem) !important;
-    // max-width: 95%;
-  }
     }
+
+    //         .nav-bar,
+    //   .nav-bar nav a,
+    //   .nav-bar ul li a {
+    //     font-size: clamp(1.2rem, 4vw, 2rem) !important;
+    //   }
+
+    //   .nav-bar .logo .myName {
+    //     font-size: clamp(1rem, 3.5vw, 1.8rem) !important;
+    //   }
+
+    .nav-bar nav a:after {
+        font-size: clamp(0.5rem, 0.7vw, 1.7rem) !important;
+        // max-width: 95%;
+    }
+}
 
 @keyframes slideAbove {
-    from{
-        margin-top:0%;
+    from {
+        margin-top: 0%;
         width: 50px;
     }
 
-    to{
+    to {
         margin-top: -80px;
-        width:50px
+        width: 50px
     }
-    
+
 }
+
 @keyframes slideBelow {
-    from{
+    from {
         margin-top: -80px;
-        width:50px
+        width: 50px
     }
-    to{
-        margin-top:0%;
+
+    to {
+        margin-top: 0%;
         width: 50px;
     }
-    
-    
+
+
 }
