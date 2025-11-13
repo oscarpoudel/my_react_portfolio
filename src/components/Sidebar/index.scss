@@ -174,137 +174,88 @@
 
 
 @media only screen and (max-width:600px) {
-    .nav-bar{
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;  
-        margin:0;
-        top:0;
-        height: 8rem;
-        transition: all .3s ease-in-out;
-        .logo{
-            justify-content: center;
-            align-items: center;
-            padding-top:15px;
-            display: block;
-            height: 100%;
-            align-items: left;
-            width:25%;
-            position: relative;
+  .nav-bar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    top: 0;
+    height: 8rem;
+    transition: all 0.3s ease-in-out;
 
-        .myName{
-            display: none;
-        }
-            
-        }
-        nav{
-            flex-direction: row;
-            position: relative;
-            // width:100%;
-            height: 100%;
-            justify-content: space-evenly;
-            width:50%;
-            align-items: center;
-            
-            // background: white;
-        }
-        .nav-bar nav a {
-             line-height: 50px !important;
-            
-        }
-        .social-top.open {
-            
-            visibility: visible;
-            animation-name: slideBelow;
-            animation-duration: 2s;
-            transition: all 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
-        }
-        .social-top.false{
-            animation-name: slideAbove;
-            animation-duration: 2s;
-            transition: all 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
-            opacity: 0;
-        }
-        
-        .social-top{
-            
-                position: absolute;
-                top:80px;
-                align-items: center;
-                justify-content: center;
-                width:50px;
-                visibility: hidden;
-                display: flex;
-                background-color: #181818;
-                right:10px;
-                border-radius: 0 0 20px 20px;
-        ul{
+    .logo {
+      justify-content: center;
+      align-items: center;
+      padding-top: 15px;
+      display: block;
+      height: 100%;
+      width: 25%;
+      position: relative;
 
-            // right:-13%;
-            // transition: all 1s ease-in-out;
-            right:0%;
-            display: flex;
-            flex-direction: column;
-           
-            //background:black;
-            align-items: center;
-            position: relative;
-            justify-content: space-evenly;
-            a{
-                font-size: 30px;
-
-                
-            }
-            
-        }
-        &::before,&::after{
-            // transition: all 1s ease-in-out;
-        }
-        }
-        
-        
-
-        .social{
-            color:white;
-            display: block;
-            position: relative;
-            line-height: 80px;
-            
-            align-items: center;
-            text-align: right;
-            padding-right: 20px;
-            margin:auto;
-            font-size: 25px;
-            right: 0;
-            width:25%;
-
-            .social_button{
-                transition: all 1s ease-in-out;
-                background: none ;
-                color:inherit;
-                border:none;
-                
-                padding:0;
-                font:inherit;
-                cursor: pointer;
-                outline: inherit;
-              
-            }
-            .social_button.open{
-                svg{
-                    color:red;
-                    transition:all 0.37 ease-in-out;
-                }
-            }
-            
-        
-        }
-        
-
+      .myName {
+        display: none;
+      }
     }
 
-     
+    nav {
+      flex-direction: row;
+      position: relative;
+      height: 100%;
+      justify-content: space-evenly;
+      width: 50%;
+      align-items: center;
+    }
+
+    /* --- ICON + TEXT ADJUSTMENT --- */
+    nav a {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 50px !important;
+
+      /* move text slightly ABOVE the icon */
+      &:after {
+        position: absolute;
+        top: -3rem;              /* distance above the icon */
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: max-content;
+        padding: 0;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover:after,
+      &.active:after {
+        opacity: 1;
+      }
+    }
+
+    /* --- SOCIAL ICON MENU FIX --- */
+    .social-top.open { visibility: visible; animation-name: slideBelow; animation-duration: 2s; 
+        transition: all 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) ; } .social-top.false{ 
+            animation-name: slideAbove; animation-duration: 2s; transition: all 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+             opacity: 0; } .social-top{ position: absolute; top:80px; align-items: center; justify-content: center; width:50px;
+                 visibility: hidden; display: flex; background-color: #181818; right:10px; border-radius: 0 0 20px 20px; 
+                 ul{ 
+                     right:-13%; 
+                      transition: all 1s ease-in-out; 
+                      right:0%; display: flex; flex-direction: column; 
+                      background:black; 
+                      align-items: center; position: relative; justify-content: space-evenly; a{ font-size: 30px; } } 
+                      &::before,&::after{ // transition: all 1s ease-in-out; 
+                        } } 
+                        .social{ color:white; display: block; position: relative; line-height: 80px; align-items: center; 
+                            text-align: right; padding-right: 20px; margin:auto; font-size: 25px; right: 0; width:25%; .social_button{
+                                 transition: all 1s ease-in-out; background: none ; color:inherit; border:none; padding:0; font:inherit; 
+                                 cursor: pointer; outline: inherit; } .social_button.open{ svg{ color:red; transition:all 0.37 ease-in-out; } } }
+  }
+
+  /* --- FONT SCALING --- */
   .nav-bar,
   .nav-bar nav a,
   .nav-bar ul li a {
@@ -318,10 +269,8 @@
   .nav-bar nav a:after {
     font-size: clamp(0.9rem, 3vw, 1.6rem) !important;
   }
-
-
-    
 }
+
 
 @media only screen and (min-width:600px) {
     .nav-bar{
