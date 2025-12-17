@@ -319,7 +319,7 @@
 
             .social_button.open {
                 svg {
-                    color: red;
+                    color: #ffd700;
                     transition: all 0.37 ease-in-out;
                 }
             }
@@ -436,22 +436,20 @@
 
 }
 
-@media only screen and (min-width: 600px) and (max-height: 900px) {
+@media only screen and (min-width: 600px) and (max-height: 920px) {
   .nav-bar {
     position: fixed;
     top: 0;
     left: 0;
-    overflow-x: visible !important; /* overrides the desktop overflow-x hidden */
+    overflow-x: visible !important;
     overflow-y: visible !important;
     z-index: 3;
   }
 
-  /* hide the desktop stacked social list */
   .nav-bar > ul {
     display: none !important;
   }
 
-  /* unified bottom icon */
   .nav-bar .social {
     display: flex !important;
     justify-content: center;
@@ -461,28 +459,47 @@
     left: 0;
     width: 100%;
     z-index: 10;
-   
   }
-  
+
   .nav-bar .social .social_button {
     width: 46px;
     height: 46px;
     padding: 0;
     border-radius: 50%;
-    // background: black;
-    border: none;
+
+    background: rgb(233, 231, 231);
+    border: 2px solid transparent;
+
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: border-color 0.25s ease, background-color 0.25s ease;
   }
 
-  /* horizontal bar anchored to the button center line */
+//   .nav-bar .social .social_button.open{
+//     border-color: #ffd700;
+//   }
+
+//   .nav-bar .social .social_button.open svg{
+//     color: #ffd700 !important;
+//   }
+
+  .nav-bar .social .social_button.open {
+    background: rgb(24, 24, 24);
+    border-color: #ffd700;
+  }
+
+  .nav-bar .social .social_button.open svg {
+    color: #ffd700 !important;
+  }
+
   .nav-bar .social-top {
     position: absolute;
     left: 80%;
-    bottom: calc(20px + 23px); /* button bottom + half button height */
-    transform: translateY(50%) translateX(18px); /* closed state is slightly to the right */
+    bottom: calc(20px + 23px);
+    transform: translateY(50%) translateX(18px);
     background: black;
     border-radius: 8px;
     padding: 6px 10px;
@@ -500,10 +517,9 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateY(50%) translateX(0); /* slides left into place */
+    transform: translateY(50%) translateX(0);
   }
 
-  /* critical overrides so this ul does NOT inherit .nav-bar ul desktop rules */
   .nav-bar .social-top ul {
     position: relative !important;
     width: auto !important;
@@ -527,5 +543,12 @@
     padding: 6px;
     line-height: 1;
   }
-}
 
+  .nav-bar .social-top ul li a svg {
+    color: white !important;
+  }
+
+  .nav-bar .social-top ul li a:hover svg {
+    color: #ffd700 !important;
+  }
+}

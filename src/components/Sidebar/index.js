@@ -90,7 +90,7 @@ const Sidebar = () => {
 
         <div className ='social'  >
             <button className={`social_button ${isShown && "open"}`} onClick={socialClicked}>
-            <FontAwesomeIcon icon={faPeoplePulling} color = '#4d4d4e'/>
+            <FontAwesomeIcon icon={faPeoplePulling} />
             </button>
         </div>
     </div>
