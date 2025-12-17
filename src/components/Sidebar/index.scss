@@ -435,3 +435,97 @@
 
 
 }
+
+@media only screen and (min-width: 600px) and (max-height: 900px) {
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: visible !important; /* overrides the desktop overflow-x hidden */
+    overflow-y: visible !important;
+    z-index: 3;
+  }
+
+  /* hide the desktop stacked social list */
+  .nav-bar > ul {
+    display: none !important;
+  }
+
+  /* unified bottom icon */
+  .nav-bar .social {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+   
+  }
+  
+  .nav-bar .social .social_button {
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border-radius: 50%;
+    // background: black;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* horizontal bar anchored to the button center line */
+  .nav-bar .social-top {
+    position: absolute;
+    left: 80%;
+    bottom: calc(20px + 23px); /* button bottom + half button height */
+    transform: translateY(50%) translateX(18px); /* closed state is slightly to the right */
+    background: black;
+    border-radius: 8px;
+    padding: 6px 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: transform 0.35s ease, opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 9;
+    white-space: nowrap;
+  }
+
+  .nav-bar .social-top.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(50%) translateX(0); /* slides left into place */
+  }
+
+  /* critical overrides so this ul does NOT inherit .nav-bar ul desktop rules */
+  .nav-bar .social-top ul {
+    position: relative !important;
+    width: auto !important;
+    bottom: auto !important;
+    margin-left: 0 !important;
+
+    list-style: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 14px;
+
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .nav-bar .social-top ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    line-height: 1;
+  }
+}
+
