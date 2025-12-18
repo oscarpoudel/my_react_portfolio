@@ -5,7 +5,7 @@ h1 {
   color: #000000;
   font-size: clamp(3rem, 5vw, 3.5rem); // Responsive font size
   line-height: 1.2;
-  margin: 0;
+  margin: -10px;
   font-family: 'CoolVetica';
   font-weight: 400;
   position: relative;
@@ -29,6 +29,7 @@ h2 {
   // font-family: ar-serif ;
   letter-spacing: 3px;
   animation: fadeIn 1s 1.8s backwards;
+  text-align: justify !important;
 }
 
 .stage-cube-cont {
@@ -120,3 +121,67 @@ h2 {
 
 
 
+@media only screen and (min-width: 700px) and (max-height: 950px) {
+  .text-zone {
+  width: 80% !important;
+  left :15%;
+  max-width: 80%;
+  // padding-right: 2rem;
+  margin-top: 0rem;
+
+ 
+//  h1{
+//     font-size: clamp(2rem, 3vw, 3rem)!important;
+//  }
+  h2 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem) ;
+    // line-height: 1.6;
+    width: 100%;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 1rem;
+    justify-items: auto;
+      
+
+  }
+}
+  .abt-pg {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+  }
+
+  .stage-cube-cont {
+    position: absolute;
+    margin-top: 70%;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding-left: 35%;
+  }
+
+  .sideImage {
+    display: none !important; // Hide image on phone
+  }
+
+  h1,
+  h2 {
+    
+    width: 100%; // Text should span full width on phone
+    text-align: left;
+    font-size: 2rem;
+  }
+}
+
+// DESKTOP-ONLY SIDE IMAGE STYLING (optional if using breakpoint split)
+@media only screen and (min-width: 600px) {
+  .sideImage {
+    display: block;
+    
+  }
+  // body{
+  // overflow-y: scroll;
+  // }
+}
