@@ -70,6 +70,13 @@
        "description": "A comprehensive study comparing Seq2Seq with Attention, Transformer Seq2Seq, and fine-tuned BERT",
       "URL": "",
       "image":  "images/research_images/comp_plot_pro10.png"
+    },
+    {
+      "id": 11,
+       "title": "Musslti-Agent LLM Framework for Automated Construction Monitoring and Documentation",
+       "description": " support multimodal reasoning over visual inputs and text context, while maintaining an interaction trace through database logging and test utilities.",
+      "URL": "https://github.com/oscarpoudel/multiagent_LLM_for_construction",
+      "image":  "images/research_images/Multiagent_LLM.png"
     }
 
 
