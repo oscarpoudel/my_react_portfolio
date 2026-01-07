@@ -7,11 +7,14 @@
   box-sizing: border-box;
 
   .project-header {
-    text-align: center;
-    margin-top: clamp(1rem, 4vh, 1rem);
+    text-align: center !important;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: clamp(3rem, 4vh, 1rem);
     margin-bottom: clamp(1rem, 3vh, 1.5rem);
 
     .project-title {
+           
       font-size: clamp(2rem, 5vw, 4rem);
       color: black;
     }
