@@ -113,9 +113,7 @@ const Home = () => {
                   <div className='vec'>
                 <img  src = {vectorforimage}/>
                     </div>  
-            </div>
-           
-            
+            </div>           
         </div>
        
         </>
