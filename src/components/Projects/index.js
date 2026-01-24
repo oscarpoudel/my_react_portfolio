@@ -3,10 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import './index.scss'
 import projectData from '../../data/projects.json'
 import AnimatedLetters from '../AnimatedLetters'
+import useScrollNavigation from '../../hooks/useScrollNavigation'
 
 const Projects = () => {
   const navigate = useNavigate()
   const [letterClass, setLetterClass] = useState('text-animate')
+  // Next: Research, Prev: About
+  useScrollNavigation('/technicalskills', '/research', true)
 
   useEffect(() => {
     const timeout = setTimeout(() => {

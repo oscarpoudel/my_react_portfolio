@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
+import useScrollNavigation from '../../hooks/useScrollNavigation'
 
 // Icons for cards
 import { FaPython, FaJava, FaCuttlefish, FaLinux, FaWindows } from 'react-icons/fa'
@@ -27,6 +28,8 @@ const getRandomPositionStyle = () => ({
 
 const TechnicalSkills = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  // Next: Contact, Prev: Research
+  useScrollNavigation('/contact', '/projects', true)
 
   useEffect(() => {
     const timer = setTimeout(() => setLetterClass('text-animate-hover'), 3000)

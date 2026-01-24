@@ -1,5 +1,5 @@
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
 }
 h1 {
   color: #000000;
@@ -29,7 +29,7 @@ h2 {
   // font-family: ar-serif ;
   letter-spacing: 3px;
   animation: fadeIn 1s 1.8s backwards;
-  text-align: justify !important;
+  // text-align: justify !important;
 }
 
 .stage-cube-cont {
@@ -74,7 +74,7 @@ h2 {
     font-size: clamp(1rem, 2.5vw, 1.5rem) ;
     // line-height: 1.6;
     width: 100%;
-    font-family: sans-serif;
+    font-family: Helvetica;
     font-weight: 400;
     color: #000000;
     margin-top: 1rem;
@@ -139,7 +139,7 @@ h2 {
     font-size: clamp(1rem, 2.5vw, 1.5rem) ;
     // line-height: 1.6;
     width: 100%;
-    font-family: sans-serif;
+    font-family: Helvetica;
     font-weight: 400;
     color: #000000;
     margin-top: 1rem;

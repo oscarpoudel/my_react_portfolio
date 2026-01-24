@@ -8,9 +8,12 @@ import { faGraduationCap,faHome,faPeoplePulling,faSuitcase,faUser, } from '@fort
 import { faOrcid,faLinkedin,faFacebook, faGithub, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 // 'C','i','v','i','l',' '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useScrollNavigation from '../../hooks/useScrollNavigation';
 
 const Home = () => {
     const [letterClass,setLetterClass] = useState('text-animate')
+    // Next: About, Prev: none (first page)
+    useScrollNavigation('/about', null, true)
     const nameArray = [' ','O','S','C','A','R',' ',]
     const jobArray =[
   "An",' ','Engineer'

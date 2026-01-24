@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react'
 import './index.scss'
 import researchData from '../../data/research.json'
 import AnimatedLetters from '../AnimatedLetters'
+import useScrollNavigation from '../../hooks/useScrollNavigation'
 
 const Portfolio = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
+    // Next: Technical Skills, Prev: Projects
+    useScrollNavigation('/projects', '/about', true)
 
     useEffect(() => {
         const timer = setTimeout(() => {

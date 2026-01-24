@@ -6,9 +6,12 @@ import { faCss3, faGitAlt, faJsSquare, faPython, faReact } from '@fortawesome/fr
 import { faBuilding, faHelmetSafety } from '@fortawesome/free-solid-svg-icons';
 import Loader from 'react-loaders';
 import workImg from '../../assets/images/work2_bg.png';
+import useScrollNavigation from '../../hooks/useScrollNavigation';
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  // Next: research, Prev: Home
+  useScrollNavigation('/research', '/', true)
   useEffect(() => {
 
     setTimeout(() => {

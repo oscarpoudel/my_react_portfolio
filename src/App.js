@@ -8,9 +8,12 @@ import Research from './components/Research/index.js';
 import Projects from './components/Projects/index.js';
 import ProjectDetail from './components/projectdetail/index.js';
 import Skills from './components/Technicalskills'
+import ScrollIndicator from './components/ScrollIndicator/ScrollIndicator';
+
 function App() {
   return (
     <>
+    <ScrollIndicator />
     <Routes>
       <Route path='/' element={<Layout/>}>
       <Route index element ={<Home/>}/>

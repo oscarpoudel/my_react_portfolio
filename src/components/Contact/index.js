@@ -5,6 +5,7 @@ import './index.scss'
 import emailjs from '@emailjs/browser'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import { useMap } from 'react-leaflet';
+import useScrollNavigation from '../../hooks/useScrollNavigation';
 
 function MapFixer() {
   const map = useMap();
@@ -23,6 +24,8 @@ const position = [40.735657, -74.172363];
 const Contact = () => {
     const [letterClass,setLetterClass] =useState('text-animate');
     const refForm = useRef()
+    // Next: none (last page), Prev: Technical Skills
+    useScrollNavigation(null, '/technicalskills', true);
     useEffect(()=>{
          setTimeout(()=>{
             setLetterClass('text-animate-hover')
