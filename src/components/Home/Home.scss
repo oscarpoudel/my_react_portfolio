@@ -68,7 +68,7 @@
         font-size: 20px;
         width: 70%;
         font-family: Helvetica;
-        letter-spacing:3px;
+        // letter-spacing:3px;
         animation: fadeIn 1s 1.8s backwards;
     }
 
@@ -242,7 +242,7 @@
 
   .home-page h2 {
     font-size: clamp(14px, 5vw, 18px);
-    letter-spacing: clamp(1px, 0.5vw, 2px);
+    // letter-spacing: clamp(1px, 0.5vw, 2px);
     width: 100%;
     margin: clamp(8px, 2vw, 12px) 0;
     font-weight: 400;
