@@ -18,11 +18,14 @@ const useScrollNavigation = (nextPagePath, prevPagePath = null, enabled = true) 
   const scrollDirection = useRef(null);
   const mouseX = useRef(0);
   const mouseY = useRef(0);
+  const wheelEventCount = useRef(0);
+  const wheelEventResetTimeout = useRef(null);
 
   const debounceDelay = 1000;
-  const scrollWaitTime = 500;
-  const boundaryThreshold = 40; // Show indicator at 70%
-  const navigationThreshold = 75; // Trigger bounce/navigate at 85% (earlier)
+  const scrollWaitTime = 3000;
+  const boundaryThreshold = 60; // Show indicator at 60%
+  const navigationThreshold = 90; // Trigger bounce/navigate at 90%
+  const wheelEventsRequired = 5; // Require 5 wheel events to navigate
 
   /**
    * Check if element at cursor position is scrollable
@@ -68,9 +71,21 @@ const useScrollNavigation = (nextPagePath, prevPagePath = null, enabled = true) 
       return; // Let scrollable content work normally
     }
 
-    // Over non-scrollable area - allow wheel navigation
-    if (now - lastNavigationTime.current >= debounceDelay) {
+    // Increment wheel event counter
+    wheelEventCount.current += 1;
+
+    // Clear the reset timeout and set a new one
+    if (wheelEventResetTimeout.current) {
+      clearTimeout(wheelEventResetTimeout.current);
+    }
+    wheelEventResetTimeout.current = setTimeout(() => {
+      wheelEventCount.current = 0;
+    }, 1500); // Reset counter after 1.5 seconds of no wheel events
+
+    // Over non-scrollable area - require multiple wheel events
+    if (wheelEventCount.current >= wheelEventsRequired && now - lastNavigationTime.current >= debounceDelay) {
       lastNavigationTime.current = now;
+      wheelEventCount.current = 0;
       
       setScrollState({
         direction: wheelDirection,
@@ -261,6 +276,9 @@ const useScrollNavigation = (nextPagePath, prevPagePath = null, enabled = true) 
       window.removeEventListener('scroll', handleScroll);
       if (scrollTimeout.current) {
         clearTimeout(scrollTimeout.current);
+      }
+      if (wheelEventResetTimeout.current) {
+        clearTimeout(wheelEventResetTimeout.current);
       }
       clearTimeout(welcomeBounceTimeout);
     };

@@ -1,6 +1,6 @@
-import './index.scss';
+import './Home.scss';
 import { Link } from 'react-router-dom';
-import AnimatedLetters from '../AnimatedLetters';
+import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import React,{useState,useEffect} from 'react';
 import HomeImg from '../../assets/images/home_img_upd.png'
 import vectorforimage from '../../assets/images/blur_vec.png'

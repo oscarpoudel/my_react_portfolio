@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import './index.scss'
-import AnimatedLetters from '../AnimatedLetters'
+import './Technicalskills.scss';
+import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import useScrollNavigation from '../../hooks/useScrollNavigation'
 
 // Icons for cards

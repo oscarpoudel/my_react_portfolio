@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import './index.scss'
+import './Research.scss';
 import researchData from '../../data/research.json'
-import AnimatedLetters from '../AnimatedLetters'
+import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import useScrollNavigation from '../../hooks/useScrollNavigation'
 
 const Portfolio = () => {
@@ -30,21 +30,9 @@ const Portfolio = () => {
             <div className="research-list">
                 {sortedPapers.map((paper) => (
                     <div key={paper.id} className="citation-box">
-                        <div className="citation-header">
-                            <div className="id-number">{paper.id}.</div>
-                            <div className="paper-title">{paper.title}</div>
-                        <div className="citation-text">{paper.citation}</div>
-                        </div>
-                        {paper.link && (
-                            <a
-                                href={paper.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="paper-link"
-                            >
-                                [View Paper]
-                            </a>
-                        )}
+                        <div className="id-number">{paper.id}.</div>
+                        <div className="paper-title">{paper.title}</div>
+                        <span className="citation-text">{paper.citation}</span>{paper.link && (<a href={paper.link} target="_blank" rel="noopener noreferrer" className="paper-link">[View Paper]</a>)}
                     </div>
                 ))}
             </div>

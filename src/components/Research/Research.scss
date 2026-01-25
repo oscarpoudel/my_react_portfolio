@@ -9,7 +9,7 @@
   scroll-behavior: smooth;
   .page-title {
     margin-bottom: clamp(1rem, 5vh, 2.5rem);
-    font-size: clamp(2rem, 5vw, 3rem); // Responsive font size
+    // font-size: clamp(2rem, 5vw, 3rem); // Responsive font size
     font-weight: bold;
     text-align: center;
   }
@@ -25,42 +25,42 @@
       padding: clamp(1rem, 2vw, 1.5rem);
       background:#bbd1c5;
       transition: border-color 0.3s ease;
+      display: block;
 
       &:hover {
         border-color: #ffd700;
       }
 
-      .citation-header {
-        display: flex;
-        align-items: center;
-        gap: clamp(0.5rem, 1vw, 1rem);
-        margin-bottom: clamp(0.5rem, 1vh, 2.5rem);
+      .id-number {
+        font-size: clamp(1.2rem, 2.2vw, 2rem);
+        font-weight: bold;
+        color: #444;
+        display: inline;
+        margin-right: clamp(0.5rem, 1vw, 1rem);
+      }
 
-        .id-number {
-          font-size: clamp(1.2rem, 2.2vw, 2rem);
-          font-weight: bold;
-          color: #444;
-        }
-
-        .paper-title {
-          font-size: clamp(1.2rem, 2.2vw, 2rem);
-          font-weight: bold;
-          color: #000000;
-        }
+      .paper-title {
+        font-size: clamp(1.2rem, 2.2vw, 2rem);
+        font-weight: bold;
+        color: #000000;
+        display: inline;
+        margin-right: clamp(0.5rem, 1vw, 1rem);
       }
 
       .citation-text {
         font-size: clamp(1.5rem, 2vw, 2rem);
         color: #000000;
         line-height: 1.6;
+        display: inline;
+        word-wrap: break-word;
       }
 
       .paper-link {
-        display: inline-block;
+        display: inline;
         font-size: clamp(1rem, 1.8vw, 2rem);
         color: #0056b3;
         text-decoration: underline;
-        margin-left: clamp(2rem, 2vw, 2rem);
+        margin-left: 0;
 
         &:hover {
           color: #003580;

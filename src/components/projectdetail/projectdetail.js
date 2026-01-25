@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react'
 import { useParams } from 'react-router-dom'
-import './ProjectDetails.scss'
+import './projectdetail.scss'
 import projectData from '../../data/projects.json'
 
 // Dynamic import function

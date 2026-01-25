@@ -241,10 +241,11 @@
   .home-page h1::after { z-index: auto; }
 
   .home-page h2 {
-    font-size: clamp(14px, 4.2vw, 18px);
+    font-size: clamp(14px, 5vw, 18px);
     letter-spacing: clamp(1px, 0.5vw, 2px);
     width: 100%;
     margin: clamp(8px, 2vw, 12px) 0;
+    font-weight: 400;
   }
 
   /* Body text (in your paragraphs under h2) */

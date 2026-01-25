@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './index.scss'
+import './Projects.scss';
 import projectData from '../../data/projects.json'
-import AnimatedLetters from '../AnimatedLetters'
+import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import useScrollNavigation from '../../hooks/useScrollNavigation'
 
 const Projects = () => {

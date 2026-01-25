@@ -1,13 +1,13 @@
 import './App.scss';
-import Layout from './components/Layout';
+import Layout from './components/Layout/Layout';
 import { Route,Routes } from 'react-router-dom';
-import Home from './components/Home'
-import About from './components/About';
-import Contact from './components/Contact';
-import Research from './components/Research/index.js';
-import Projects from './components/Projects/index.js';
-import ProjectDetail from './components/projectdetail/index.js';
-import Skills from './components/Technicalskills'
+import Home from './components/Home/Home'
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import Research from './components/Research/Research.js';
+import Projects from './components/Projects/Projects.js';
+import ProjectDetail from './components/projectdetail/projectdetail.js';
+import Skills from './components/Technicalskills/Technicalskills'
 import ScrollIndicator from './components/ScrollIndicator/ScrollIndicator';
 
 function App() {

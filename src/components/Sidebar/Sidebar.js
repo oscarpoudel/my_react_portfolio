@@ -1,4 +1,4 @@
-import './index.scss';
+import './Sidebar.scss';
 import LogoS from '../../assets/images/trans_logo_black.png';
 import React,{useState} from 'react'
 import { Link,NavLink } from 'react-router-dom';

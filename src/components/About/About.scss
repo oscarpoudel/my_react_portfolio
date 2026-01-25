@@ -24,7 +24,7 @@ h2 {
   color: #000000;
   margin: 20px 0;
   font-weight: 400;
-  font-size: clamp(1rem, 2.5vw, 1.5rem); // Responsive font size
+  font-size: clamp(1rem, 5vw, 1.5rem); // Responsive font size
   width: 100%;
   // font-family: ar-serif ;
   letter-spacing: 3px;
@@ -71,7 +71,7 @@ h2 {
 //     font-size: clamp(2rem, 3vw, 3rem)!important;
 //  }
   h2 {
-    font-size: clamp(1rem, 2.5vw, 1.5rem) ;
+    font-size: clamp(1rem, 5vw, 1.5rem) ;
     // line-height: 1.6;
     width: 100%;
     font-family: Helvetica;
@@ -136,7 +136,7 @@ h2 {
 //     font-size: clamp(2rem, 3vw, 3rem)!important;
 //  }
   h2 {
-    font-size: clamp(1rem, 2.5vw, 1.5rem) ;
+    font-size: clamp(1rem, 5vw, 1.5rem) ;
     // line-height: 1.6;
     width: 100%;
     font-family: Helvetica;
