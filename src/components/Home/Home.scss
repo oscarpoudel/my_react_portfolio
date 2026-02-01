@@ -65,7 +65,7 @@
         color: #000000;
         margin:20px 0px 20px ;
         font-weight: 400;
-        font-size: 20px;
+        // font-size: 20px;
         width: 70%;
         font-family: Helvetica;
         // letter-spacing:3px;
@@ -131,9 +131,9 @@
         }
 
 
-    .sideImage{
+    .sideImage_home{
         
-        padding-top:80px;
+        // padding-top:50rem;
         float:right;
         z-index: auto;
         height: auto;
@@ -144,11 +144,12 @@
             position: absolute;
             z-index: 1;
             overflow: hidden;
+            // margin-top: 6em;
         }
         .vec{
             position: absolute;
             z-index: 20;
-            margin-top:400px;
+            margin-top:40em;
             overflow: hidden;
             scale: 1.1;
         }
@@ -173,7 +174,7 @@
   }
 
   /* --- IMAGE/VECTOR BLOCK (TOP) --- */
-  .home-page .sideImage {
+  .home-page .sideImage_home {
     order: 1;
     display: grid;                  /* stack children without absolute */
     grid-template-areas: "stack";
@@ -197,8 +198,8 @@
   }
 
   /* both elements share the same grid cell, no absolute */
-  .home-page .sideImage .image1,
-  .home-page .sideImage .vec {
+  .home-page .sideImage_home .image1,
+  .home-page .sideImage_home .vec {
     grid-area: stack;
     position: static;
     z-index: auto;
@@ -210,7 +211,7 @@
   }
 
   /* overlap the paint slightly while staying in flow */
-  .home-page .sideImage .vec {
+  .home-page .sideImage_home .vec {
     // margin-top: clamp(%, -8vw, -12%);  /* tune overlap */
      transform: scale(0.96);      
      margin-top: 400px;  
@@ -282,14 +283,14 @@
 
   /* Ensure no stray absolute/scale or huge negative margins conflict */
   .home-page h1,
-  .home-page .sideImage,
+  .home-page .sideImage_home,
   .home-page .text-zone { z-index: auto; }
 }
 
 
 
 @media only screen and (min-width:600px) {
-.sideImage{
+.sideImage_home{
     scale: 1.3;
     width:40%;
         padding-top:80px;
@@ -300,5 +301,5 @@
 }
 h1{
         color:#000000;
-        font-size: 56px;}
+        font-size: 50px;}
 }

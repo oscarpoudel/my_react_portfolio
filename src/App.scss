@@ -33,3 +33,18 @@ textarea{
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
 }
+h1{
+  font-size: clamp(3rem, 3vw, 3.5rem);
+}
+h2 {
+  font-family: 'Helvetica';
+  font-size: clamp(1.7rem, 2.5vw, 1.8rem);
+  letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 0px;
+}

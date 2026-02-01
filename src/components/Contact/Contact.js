@@ -57,7 +57,7 @@ const Contact = () => {
             <AnimatedLetters strArray={['C','o','n','t','a','c','t',' ','m','e'] } idx={15}/>
         </h1>
         <h2>
-            If you want to discuss any research opportunities or possible collabration/ job opportunities please contact me by filling the form below or any of my social media handle.
+            If you want to discuss any research opportunities or possible collaboration/ job opportunities please contact me by filling the form below or any of my social media handle.
         </h2>
         <div className='contact-form'>
             <form ref={refForm} onSubmit={sendEmail}>

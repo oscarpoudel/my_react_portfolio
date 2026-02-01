@@ -109,7 +109,7 @@ const Home = () => {
                 <Link to='/contact' className='flat-button'>Contact</Link>
             </div>
            
-            <div className = 'sideImage'>
+            <div className = 'sideImage_home'>
                 <div className='image1'>
                     <img src ={HomeImg}/>
                     </div>

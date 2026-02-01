@@ -1,9 +1,11 @@
+.about-page {
+
 body{
   font-family: Helvetica;
 }
 h1 {
   color: #000000;
-  font-size: clamp(3rem, 3vw, 3.5rem); // Responsive font size
+
   line-height: 1.2;
   margin: -10px;
   margin-bottom: 1rem !important;
@@ -26,8 +28,8 @@ h2 {
   margin-bottom: 1rem;
   margin-top: 1rem !important;
   font-weight: 400;
-  font-size: clamp(1rem, 3vw, 1.5rem); // Responsive font size
-  width: 100%;
+  font-size: clamp(1.7rem, 2.5vw, 1.5rem); // Responsive font size
+  width: 70%;
   // font-family: ar-serif ;
   letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
   // letter-spacing: 4px;
@@ -39,32 +41,69 @@ p {
   text-align: justify;
 }
 
+/* Layout: place text and image side-by-side with flexible sizing */
+.abt-pg {
+  display: flex;
+  gap: 2rem;
+  align-items: center; /* vertically center the image */
+} 
 
-.stage-cube-cont {
-  position: relative;
+.text-zone {
+  flex: 1 1 0;
+  min-width: 0; /* allows content to wrap instead of overflowing */
 }
 
 .sideImage {
-  padding-top: 100px;
-  float: right;
-  z-index: auto;
-  height: auto;
-  display: block;
+    // flex: 0 0 clamp(240px, 28vw, 360px);
+    width: clamp(340px, 39vw, 400px);
+    // height: clamp(240px, 28vw, 360px);
+    max-width: 55%;
+    margin-left: auto;
 
-  .image1 {
     position: absolute;
-    z-index: 1;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    // display: block;
+  }
+
+  .sideImage .image1,
+  .sideImage .vec {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     overflow: hidden;
   }
 
-  .vec {
-    position: absolute;
+  .sideImage .vec {
     z-index: 20;
-    margin-top: 400px;
-    overflow: hidden;
-    scale: 1.1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .sideImage .image1 {
+    z-index: 1;
+  }
+
+  .sideImage img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }
+/* Reduce image size on medium screens and ensure text has space */
+@media (max-width: 1000px) {
+  .sideImage {
+    flex-basis: 240px;
+    max-width: 30%;
+  }
+  .text-zone {
+    max-width: calc(100% - 240px);
+  }
+}
+
+
+
 
 // MOBILE STYLES
 @media only screen and (max-width: 600px) {
@@ -82,6 +121,7 @@ p {
     font-size: clamp(1rem, 3vw, 1.5rem) ;
     // line-height: 1.6;
     width: 100%;
+    text-align: justify;
     font-family: Helvetica;
     font-weight: 400;
     color: #000000;
@@ -95,20 +135,19 @@ p {
     position: relative;
   }
 
-  .stage-cube-cont {
-    position: absolute;
-    margin-top: 70%;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    padding-left: 35%;
-  }
+  // .stage-cube-cont {
+  //   position: absolute;
+  //   margin-top: 70%;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 50%;
+  //   padding-left: 35%;
+  // }
 
   .sideImage {
     display: none; // Hide image on phone
   }
 
-  h1,
   h2 {
     
     width: 100%; // Text should span full width on phone
@@ -133,20 +172,15 @@ p {
 @media only screen and (min-width: 700px) and (max-height: 550px) {
   
   .text-zone {
-  width: 80% !important;
   left :15%;
   max-width: 80%;
-  // padding-right: 2rem;
-  margin-top: 0rem;
 
  
-//  h1{
-//     font-size: clamp(2rem, 3vw, 3rem)!important;
-//  }
+
   h2 {
     font-size: clamp(1rem, 3vw, 1.5rem) ;
     // line-height: 1.6;
-    width: 100%;
+    
     font-family: Helvetica;
     font-weight: 400;
     color: #000000;
@@ -163,21 +197,21 @@ p {
     position: relative;
   }
 
-  .stage-cube-cont {
-    position: absolute;
-    margin-top: 70%;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    padding-left: 35%;
-  }
+  // .stage-cube-cont {
+  //   position: absolute;
+  //   margin-top: 70%;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 50%;
+  //   padding-left: 35%;
+  // }
 
   
-  h1,
+ 
   h2 {
     
-    width: 100%; // Text should span full width on phone
-    text-align: left;
+    width: 100% !important; // Text should span full width on phone
+    
     font-size: 2rem;
   }
   .sideImage {

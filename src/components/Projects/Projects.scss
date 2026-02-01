@@ -1,13 +1,15 @@
 .projects-page {
 
-margin: 40px auto; // Centers the content and adds top/bottom spacing
+// margin: 40px auto; // Centers the content and adds top/bottom spacing
 overflow-y: scroll;
 scroll-behavior: smooth;
-height: 90vh;
-// padding: 0 20px; 
+width: 95%;
+margin-left: 5%;
+height: 100vh;
+margin-bottom: 5%;
   .page-title {
     
-    margin: 0 auto; 
+    // margin: 0 auto; 
     margin-bottom: 2rem;
     text-align: center;
     max-width: 100%;
@@ -21,7 +23,7 @@ height: 90vh;
       border: 1px solid #000000;
       padding: 1.2rem;
       background-color: #bbd1c5;
-      border-radius: 8px;
+      border-radius: 4px;
       cursor: pointer;
       transition: all 0.3s ease;
 
@@ -46,6 +48,11 @@ height: 90vh;
         margin: 1rem 1rem 0.5rem;
         font-size: clamp(2rem, 5vw, 2rem);
         text-align: center;
+        font-weight: 520;
+        // font-style: semibold;
+
+
+        letter-spacing: 0.01em;
       }
 
       
@@ -54,7 +61,10 @@ height: 90vh;
         font-size: clamp(1.5rem, 5vw, 1.5rem);
         color: #000000;
         text-align: center;
-        margin-bottom: 0px;
+        font-style: italic;
+        margin:0;
+          letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
+
       }
     }
   }
@@ -62,7 +72,12 @@ height: 90vh;
 
 
 @media only screen and (max-width:600px) {
-
+  .page-title {
+    margin-top: 10rem;
+    h1 {
+    font-size: 3rem;
+  }
+  };
   .projects-grid {
     /* Force a single column and center grid items so smaller cards sit centered */
     grid-template-columns: 1fr;
@@ -77,15 +92,14 @@ height: 90vh;
     margin: 0 auto; /* centers the card */
   }
 
-  h1 {
-    font-size: 3rem;
-  }
+  
 }
 
 @media only screen and (min-width:600px) {
   .projects-page {
-    max-width: 85%;
-    margin: 1rem auto;
+    max-width: 95%;
+
+    // margin: 1rem auto;
   }
   .page-title {
     max-width: 100%;

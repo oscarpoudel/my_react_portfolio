@@ -1,10 +1,11 @@
 .research-page {
     // padding-top: 10%;
     // margin-bottom: 10%;
-  max-width: 80%;
+  max-width: 90%;
+  padding-left: 5%;
   // margin: clamp(2rem, 10vh, 5rem) auto; // Responsive top-bottom spacing
 //   padding: 0 clamp(1rem, 5vw, 2rem); // Responsive left-right spacing
-  // height: 80vh;
+  height: 100vh;
   overflow-y: auto;
   scroll-behavior: smooth;
   .page-title {
@@ -12,6 +13,7 @@
     // font-size: clamp(2rem, 5vw, 3rem); // Responsive font size
     // font-weight: bold;
     text-align: center;
+    
   }
 
   .research-list {
@@ -48,7 +50,8 @@
       }
 
       .citation-text {
-        font-size: clamp(1.5rem, 2vw, 2rem);
+        font-size: clamp(1.7rem, 2.5vw, 1.5rem);
+        letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
         color: #000000;
         line-height: 1.6;
         display: inline;
@@ -57,7 +60,8 @@
 
       .paper-link {
         display: inline;
-        font-size: clamp(1rem, 1.8vw, 2rem);
+        font-size: clamp(1.7rem, 2.5vw, 1.5rem);
+  letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
         color: #0056b3;
         text-decoration: underline;
         margin-left: 0;
@@ -114,7 +118,7 @@
       }
 
       .citation-text {
-        font-size: clamp(1rem, 3.5vw, 1.15rem);
+        // font-size: clamp(1rem, 3.5vw, 1.15rem);
         line-height: 1.5;
       }
 
@@ -122,7 +126,8 @@
         display: block; /* place link on its own line */
         margin-left: 0;
         margin-top: 0.6rem;
-        font-size: clamp(0.95rem, 3.2vw, 1.05rem);
+        font-size: clamp(1.7rem, 2.5vw, 1.5rem);
+  letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
         text-align: left;
       }
     }

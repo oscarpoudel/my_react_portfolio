@@ -21,9 +21,9 @@ const ProjectDetail = () => {
   if (!project || !Component) return <div>Project not found</div>
 
   return (
-    <div className="project-detail-page">
+    <div className="container project-detail-page">
       <div className="project-header">
-        <h1 className="project-title">{project.title}</h1>
+        <h1 className="project_detail-title">{project.title}</h1>
         <h3 className="project-subtitle">{project.description}</h3>
         <h3 className="Project-url">
           Project-URL:{" "}

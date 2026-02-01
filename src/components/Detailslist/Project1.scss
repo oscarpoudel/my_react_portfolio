@@ -1,10 +1,10 @@
 .styled-project {
-  max-width: 80%;
-  margin: 0 auto;
+  // max-width: 80%;
+  // margin: 0 auto;
   background-color: #d8ebe0;
-  border: 1px solid black;
-  padding: clamp(3rem, 4vw, 2rem);
-  border-radius: 8px;
+  // border: 1px solid black;
+  padding: clamp(2rem, 4vw, 2rem);
+  // border-radius: 8px;
   
 .project-content-centered {
   width: 80%;
@@ -20,8 +20,8 @@
   
   h2, h3 {
     text-align: center;
-    margin-bottom: clamp(0.5rem, 2vh, 1rem);
-    margin-top: clamp(0.5rem, 2vh, 1rem);
+    // margin-bottom: clamp(0.5rem, 2vh, 1rem);
+    // margin-top: clamp(0.5rem, 2vh, 1rem);
   }
 
   h2 {
@@ -35,21 +35,26 @@
   }
 
   h4 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
     color: #000000;
+    margin:0px;
   }
 
   p {
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(.8rem, 3vw, 1.6rem);
+    letter-spacing: clamp(0.5px, 1vw, 1.5px);
     line-height: 1.6;
     margin: clamp(0.3rem, 1vh, 0.5rem) 0;
   }
 
   ul {
+    margin-top: 0px;
     padding-left: 1.5rem;
+    font-size: clamp(.8rem, 3vw, 1.6rem);
+    letter-spacing: clamp(0.5px, 1vw, 1px);
     li {
       margin-bottom: clamp(0.3rem, 1vh, 0.5rem);
-      font-size: clamp(1rem, 3vw, 2rem);
+      
     }
   }
 

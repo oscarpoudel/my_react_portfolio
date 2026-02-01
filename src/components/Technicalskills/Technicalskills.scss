@@ -1,17 +1,17 @@
 .technical-skills-page {
-  width: 80%;
-  padding: clamp(2vh, 6vh, 7vh) clamp(3rem, 6vw, 6rem);
+  width: 95%;
+  margin-left: 10%;
+  // padding: clamp(2vh, 6vh, 7vh) clamp(3rem, 6vw, 6rem);
   color: white;
-  height: 80vh;
+  height: 100vh;
   overflow-y: auto;
   scroll-behavior: smooth;
 
   .page-title {
     text-align: left;
     margin-left: 2rem;
-    margin-bottom: clamp(1rem, 4vh, 40px);
     font-family: 'CoolVetica';
-    font-size: clamp(2.2rem, 6vw, 3.6rem); // slightly reduced
+   
   }
 
   .skills-columns {
@@ -47,13 +47,14 @@
           font-size: clamp(2rem, 2.2vw, 1.5rem); // smaller and now unclipped
           margin-bottom: clamp(0.3rem, 1vh, 1rem);
           white-space: normal;    // allow wrapping
+          font-weight: 400;
           text-overflow: unset;   // no ellipsis
           overflow: visible;  
           width: 100%;    // show entire text
         }
 
         p {
-          font-size: clamp(1.2rem, 1.4vw, 1.15rem); // smaller
+          font-size: clamp(1.2rem, 1.4vw, 1.3rem); // smaller
           display: flex;
           flex-wrap: wrap;
           line-height: 1.6;
@@ -105,9 +106,10 @@
 
     .page-title {
       text-align: center;
+      color: #000000;
       margin-top: 1rem;
       margin-bottom: clamp(0.75rem, 3vh, 1.25rem);
-      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      // font-size: clamp(1.8rem, 6vw, 2.6rem);
     }
 
     .skills-columns {
@@ -129,7 +131,7 @@
           }
 
           p {
-            font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+            font-size: clamp(1rem, 3.5vw, 1.1rem);
           }
         }
       }
