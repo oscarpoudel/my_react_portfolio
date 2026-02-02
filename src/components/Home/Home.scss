@@ -144,12 +144,12 @@
             position: absolute;
             z-index: 1;
             overflow: hidden;
-            // margin-top: 6em;
+            margin-top: 6em;
         }
         .vec{
             position: absolute;
             z-index: 20;
-            margin-top:40em;
+            margin-top:23em;
             overflow: hidden;
             scale: 1.1;
         }
@@ -298,6 +298,9 @@
         z-index: auto;
         height: auto;
         display: block;
+        // .vec{
+        //   padding-top: -10px;
+        // }
 }
 h1{
         color:#000000;
