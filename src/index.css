@@ -5,7 +5,10 @@ html{
 
 body {
   margin: 0;
-  font: 300 11px/1.4 Helvetica;
+  /* font: 400 11px/1.4 Helvetica; */
+  font-family: 'Helvetica';
+  font-size: clamp(1.7rem, 2.5vw, 1.8rem);
+  letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
   color: #000000;
   background: #f4f5ea;
   /* background: #d9d9d9; */
@@ -14,4 +17,10 @@ body {
   display:block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h3{
+  font-family: 'Helvetica';
+  font-size: clamp(1.7rem, 2.5vw, 1.8rem);
+  letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
 }

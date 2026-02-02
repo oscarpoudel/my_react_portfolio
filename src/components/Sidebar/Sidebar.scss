@@ -276,7 +276,7 @@
                 right: 0%;
                 display: flex;
                 flex-direction: column;
-                background: black;
+                background: #181818;
                 align-items: center;
                 position: relative;
                 justify-content: space-evenly;
@@ -487,7 +487,7 @@
 //   }
 
   .nav-bar .social .social_button.open {
-    background: rgb(24, 24, 24);
+    background: #181818;
     border-color: #ffd700;
   }
 
@@ -500,7 +500,7 @@
     left: 80%;
     bottom: calc(20px + 23px);
     transform: translateY(50%) translateX(18px);
-    background: black;
+    background: #181818;
     border-radius: 8px;
     padding: 6px 10px;
 
