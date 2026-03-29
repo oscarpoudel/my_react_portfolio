@@ -47,8 +47,8 @@ const About = () => {
             <strong>Ph.D. in Civil Engineering</strong><br/>
             NJIT, 2023 – <br/><br/>
 
-            <strong>B.Sc. in Civil Engineering</strong><br/>
-            IOE Pulchowk Campus,Nepal, 2022<br/>
+            {/* <strong>B.Sc. in Civil Engineering</strong><br/>
+            IOE Pulchowk Campus,Nepal, 2022<br/> */}
           </h2>
         </div>
         <div className='sideImage'>

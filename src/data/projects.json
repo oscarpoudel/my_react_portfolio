@@ -77,10 +77,20 @@
        "description": " support multimodal reasoning over visual inputs and text context, while maintaining an interaction trace through database logging and test utilities.",
       "URL": "https://github.com/oscarpoudel/multiagent_LLM_for_construction",
       "image":  "images/research_images/Multiagent_LLM.png"
+    },
+    {
+      "id": 12,
+      "title": "Custom LiDAR Scanner with RGB-D Fusion for Infrastructure Inspection",
+      "description": "Portable Livox-based handheld scanner combining custom mechanical design, embedded electronics, ROS 2 sensor fusion, and 3D reconstruction.",
+      "URL": "https://doi.org/10.1061/9780784486122.050",
+      "image": "images/research_images/proj_12_overview.png"
+    },
+    {
+      "id": 13,
+      "title": "Custom Wearable Eye-Tracking System with Touch, Haptics, and Audio Control",
+      "description": "A Raspberry Pi Zero 2 W powered head-mounted eye tracker using custom hardware, PyZMQ streaming, and the open-source Pupil Labs algorithm.",
+      "URL": "",
+      "image": "images/research_images/proj_13_hardware.png"
     }
-
-
-
-
   ]
 }

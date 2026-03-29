@@ -25,12 +25,14 @@ const ProjectDetail = () => {
       <div className="project-header">
         <h1 className="project_detail-title">{project.title}</h1>
         <h3 className="project-subtitle">{project.description}</h3>
-        <h3 className="Project-url">
-          Project-URL:{" "}
-          <a href={project.URL} target="_blank" rel="noopener noreferrer">
-            {project.URL}
-          </a>
-        </h3>
+        {project.URL ? (
+          <h3 className="Project-url">
+            Project-URL:{" "}
+            <a href={project.URL} target="_blank" rel="noopener noreferrer">
+              {project.URL}
+            </a>
+          </h3>
+        ) : null}
       </div>
 
       <div className="divider" />
