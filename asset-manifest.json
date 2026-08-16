@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9278ba58.css",
-    "main.js": "/static/js/main.aa191034.js",
+    "main.css": "/static/css/main.692277b6.css",
+    "main.js": "/static/js/main.7b7882f5.js",
     "static/css/35.ad019d4b.chunk.css": "/static/css/35.ad019d4b.chunk.css",
     "static/js/35.d6eb6ce0.chunk.js": "/static/js/35.d6eb6ce0.chunk.js",
     "static/css/1.ad019d4b.chunk.css": "/static/css/1.ad019d4b.chunk.css",
@@ -27,7 +27,7 @@
     "static/css/968.ad019d4b.chunk.css": "/static/css/968.ad019d4b.chunk.css",
     "static/js/968.3b6d0185.chunk.js": "/static/js/968.3b6d0185.chunk.js",
     "static/css/55.ad019d4b.chunk.css": "/static/css/55.ad019d4b.chunk.css",
-    "static/js/55.4a406b7b.chunk.js": "/static/js/55.4a406b7b.chunk.js",
+    "static/js/55.0cddd74b.chunk.js": "/static/js/55.0cddd74b.chunk.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/6. final_assembled_lidar_scanner.png": "/static/media/6. final_assembled_lidar_scanner.1762ce111a227a450c31.png",
     "static/media/3. 3d_desing_and_print_of_front_cover.png": "/static/media/3. 3d_desing_and_print_of_front_cover.7c9c906d43e1bb8a908e.png",
@@ -61,8 +61,8 @@
     "static/media/5_res2.png": "/static/media/5_res2.54a4070fdf69df11b308.png",
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/index.html",
-    "main.9278ba58.css.map": "/static/css/main.9278ba58.css.map",
-    "main.aa191034.js.map": "/static/js/main.aa191034.js.map",
+    "main.692277b6.css.map": "/static/css/main.692277b6.css.map",
+    "main.7b7882f5.js.map": "/static/js/main.7b7882f5.js.map",
     "35.ad019d4b.chunk.css.map": "/static/css/35.ad019d4b.chunk.css.map",
     "35.d6eb6ce0.chunk.js.map": "/static/js/35.d6eb6ce0.chunk.js.map",
     "1.ad019d4b.chunk.css.map": "/static/css/1.ad019d4b.chunk.css.map",
@@ -88,11 +88,11 @@
     "968.ad019d4b.chunk.css.map": "/static/css/968.ad019d4b.chunk.css.map",
     "968.3b6d0185.chunk.js.map": "/static/js/968.3b6d0185.chunk.js.map",
     "55.ad019d4b.chunk.css.map": "/static/css/55.ad019d4b.chunk.css.map",
-    "55.4a406b7b.chunk.js.map": "/static/js/55.4a406b7b.chunk.js.map",
+    "55.0cddd74b.chunk.js.map": "/static/js/55.0cddd74b.chunk.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9278ba58.css",
-    "static/js/main.aa191034.js"
+    "static/css/main.692277b6.css",
+    "static/js/main.7b7882f5.js"
   ]
 }
