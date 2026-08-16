@@ -160,13 +160,36 @@ p {
 @media only screen and (min-width: 600px) {
   .sideImage {
     display: block;
-    
   }
-
 }
 
+@media (orientation: portrait) and (min-width: 700px) {
+  .abt-pg {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding-right: 1.2rem;
+  }
 
+  .text-zone {
+    position: relative;
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+  }
 
+  .sideImage {
+    display: none;
+  }
+
+  .about-page h2 {
+    width: 100% !important;
+    font-size: clamp(1.15rem, 2vw, 1.7rem);
+    text-align: left;
+  }
+}
 
 // @media only screen and (min-width: 700px) and (max-height: 950px) {
 @media only screen and (min-width: 700px) and (max-height: 550px) {

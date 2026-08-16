@@ -3,11 +3,13 @@
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
+  padding-top: clamp(4rem, 7vh, 6rem);
 
   .project-header {
     text-align: center !important;
     padding-left: 10%;
     padding-right: 10%;
+    margin-top: clamp(0.5rem, 1vh, 1rem);
     
     // 
     // margin-bottom: clamp(1rem, 3vh, 1.5rem);

@@ -1,8 +1,23 @@
 {
   "papers": [
     {
+      "id": 13,
+      "citation": "[J6.] Poudel, O., Assaad, R. H., & Awada, M. (2026). Noise-Invariant Agentic Human–Robot Interaction GenAI System Using a Dual-Encoder Contrastive ASR Architecture and VLMs for Robot Control and Navigation in Acoustically Challenging Jobsites. Journal of Computing in Civil Engineering, 40(6), 04026088.",
+      "link": "https://ascelibrary.org/doi/abs/10.1061/JCCEE5.CPENG-7372"
+    },
+    {
+      "id": 12,
+      "citation": "[J5.] Poudel, O., Mohammadi, M., Assaf, G., & Assaad, R. H. (2026). Intelligent Acoustic-Based IoT-Enabled Sensing and Monitoring System for Automated Real-Time Leak Detection, Localization, and Pinpointing in Water Distribution Infrastructures. Journal of Infrastructure Systems, 32(3), 04026017.",
+      "link": "https://ascelibrary.org/doi/abs/10.1061/JITSE4.ISENG-2861"
+    },
+    {
+      "id": 11,
+      "citation": "[J4.] Poudel, O., Hu, X., Assaad, R. H., Wang, W., Huang, T., & Wang, G. (2026). VTECSeg: Edge-aware hybrid CNN-vision transformer network with zero-shot vision-language-guided region proposals for crack segmentation. Automation in Construction, 188, 106998.",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0926580526002396"
+    },
+    {
       "id": 10,
-      "citation": "[C7.] Poudel, O., Assaad, R. H., & Awada, M. (2025). Visio-GEN: A Wireless Gaze-Assisted and Voice-Controlled Generative AI System Leveraging Stable Diffusion for Real-Time Image Generation for Civil Engineering Design and Visualization. In Computing in Civil Engineering 2025",
+      "citation": "[C7.] Poudel, O., Assaad, R. H., & Awada, M. (2025). Visio-GEN: A Wireless Gaze-Assisted and Voice-Controlled Generative AI System Leveraging Stable Diffusion for Real-Time Image Generation for Civil Engineering Design and Visualization. In Computing in Civil Engineering 2025.",
       "link": "https://doi.org/10.1061/9780784486436.106"
     },
     {
@@ -12,27 +27,27 @@
     },
     {
       "id": 8,
-      "citation": "[C5.] Poudel, O., Assaad, R. H., & Awada, M. (2025). SLAM assisted Transformers-Based TD3 Deep Reinforcement Learning for Adaptive Navigation and Mapping and Dynamic Obstacle Avoidance in Autonomous Construction Robotics. In Computing in Civil Engineering 2025",
+      "citation": "[C5.] Poudel, O., Assaad, R. H., & Awada, M. (2025). SLAM assisted Transformers-Based TD3 Deep Reinforcement Learning for Adaptive Navigation and Mapping and Dynamic Obstacle Avoidance in Autonomous Construction Robotics. In Computing in Civil Engineering 2025.",
       "link": "https://doi.org/10.1061/9780784486443.057"
     },
     {
       "id": 7,
-      "citation": "[C4.] Mohammadi, M., Poudel, O., Assaad, R. H., Awada, M. & Assaf, G. (2025). IA Smart Cyber-Physical System Combining Large Language Models (LLMs) and Augmented Reality (AR) to Enhance Human–Building Interaction during Building Operations and Maintenance Procedures. In Computing in Civil Engineering 2025.",
+      "citation": "[C4.] Mohammadi, M., Poudel, O., Assaad, R. H., Awada, M., & Assaf, G. (2025). IA Smart Cyber-Physical System Combining Large Language Models (LLMs) and Augmented Reality (AR) to Enhance Human–Building Interaction during Building Operations and Maintenance Procedures. In Computing in Civil Engineering 2025.",
       "link": "https://doi.org/10.1061/9780784486436.090"
     },
     {
       "id": 6,
-      "citation": "[C3.] Mohammadi, M., Poudel, O., Assaad, R. H., Awada, M. & Assaf, G. (2025).An Intelligent Cyber-Physical System Integrating Large Language Models (LLMs), IoT Wireless Sensor Networks, and Augmented Reality (AR) for Real-Time Indoor Environmental Quality Improvement and Automated HVAC Control in Smart Buildings. In Computing in Civil Engineering 2025.",
+      "citation": "[C3.] Mohammadi, M., Poudel, O., Assaad, R. H., Awada, M., & Assaf, G. (2025). An Intelligent Cyber-Physical System Integrating Large Language Models (LLMs), IoT Wireless Sensor Networks, and Augmented Reality (AR) for Real-Time Indoor Environmental Quality Improvement and Automated HVAC Control in Smart Buildings. In Computing in Civil Engineering 2025.",
       "link": "https://doi.org/10.1061/9780784486436.105"
     },
     {
       "id": 5,
-      "citation": "[C2.] Poudel, O., & Assaad, R. H. (2024). Developing Real-Time Acoustic Technologies for Enhancing Safety and Efficiency on Construction Job Sites using Deep Learning Algorithms: Moving Towards Automated Construction Site Monitoring. In ASCE Computing in Civil Engineering 2024. ",
+      "citation": "[C2.] Poudel, O., & Assaad, R. H. (2024). Developing Real-Time Acoustic Technologies for Enhancing Safety and Efficiency on Construction Job Sites using Deep Learning Algorithms: Moving Towards Automated Construction Site Monitoring. In ASCE Computing in Civil Engineering 2024.",
       "link": "https://ascelibrary.org/doi/abs/10.1061/9780784486139.108"
     },
     {
       "id": 4,
-      "citation": "[C1.] Poudel, O., & Assaad, R. H. (2024). Advancing Sound Level Localization through Innovative Integration and Fusion of Remote Sensing and Reality Captured LiDAR-based Digital Twins, Auditory Devices, and IoT Technologies. In ASCE Computing in Civil Engineering 2024. ",
+      "citation": "[C1.] Poudel, O., & Assaad, R. H. (2024). Advancing Sound Level Localization through Innovative Integration and Fusion of Remote Sensing and Reality Captured LiDAR-based Digital Twins, Auditory Devices, and IoT Technologies. In ASCE Computing in Civil Engineering 2024.",
       "link": "https://doi.org/10.1061/9780784486122.05"
     },
     {

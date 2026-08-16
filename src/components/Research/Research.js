@@ -31,7 +31,6 @@ const Portfolio = () => {
                 {sortedPapers.map((paper) => (
                     <div key={paper.id} className="citation-box">
                         <div className="id-number">{paper.id}.</div>
-                        <div className="paper-title">{paper.title}</div>
                         <span className="citation-text">{paper.citation}</span>{paper.link && (<a href={paper.link} target="_blank" rel="noopener noreferrer" className="paper-link">[View Paper]</a>)}
                     </div>
                 ))}

@@ -59,10 +59,10 @@
     },
     {
       "id": 9,
-      "title": "Crack Segmentation Using Vision Transformers",
-      "description": "Training Vits for Crack Segmentation and Applicibality test",
+      "title": "VitCrackSeg: Crack Segmentation Using Vision Transformer",
+      "description": "Vision Transformer-based crack segmentation for structural health monitoring using BCE Logit loss and a real-time prediction pipeline.",
       "URL": "https://github.com/oscarpoudel/DL_VitCrackSeg",
-      "image":  "https://raw.githubusercontent.com/oscarpoudel/DL_VitCrackSeg/main/images/image.jpg"
+      "image": "https://raw.githubusercontent.com/oscarpoudel/DL_VitCrackSeg/main/images/image.jpg"
     },
     {
       "id": 10,
