@@ -91,6 +91,22 @@
       "description": "A Raspberry Pi Zero 2 W powered head-mounted eye tracker using custom hardware, PyZMQ streaming, and the open-source Pupil Labs algorithm.",
       "URL": "",
       "image": "images/research_images/proj_13_hardware.png"
+    },
+    {
+      "id": 14,
+      "title": "UsherScan : AI-Based Structural Inspection App for Android",
+      "description": "An AI based structural inspection app for android system that scans the crack and defects in infrastructure and stores it for future references.",
+      "URL": "https://github.com/oscarpoudel/usherscan-showcase",
+      "external": true,
+      "image": "images/research_images/usherscan_home.jfif"
+    },
+    {
+      "id": 15,
+      "title": "StructAgent: Multi-Agent LLM Structural Design & Analysis Tool",
+      "description": "A Flask-based structural analysis assistant with a multi-agent LLM workflow and an ETABS-style interactive 3D modeling with OpenSeesPy.",
+      "URL": "https://github.com/oscarpoudel/StructAgent-LLM-structural-design-analysis",
+      "external": true,
+      "image": "images/research_images/structagent_dashboard.jpg"
     }
   ]
 }

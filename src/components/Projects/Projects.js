@@ -33,7 +33,11 @@ const Projects = () => {
           <div
             key={project.id}
             className="project-card"
-            onClick={() => navigate(`/projects/${project.id}`)}
+            onClick={() =>
+              project.external && project.URL
+                ? window.open(project.URL, '_blank', 'noopener,noreferrer')
+                : navigate(`/projects/${project.id}`)
+            }
           >
             <img src={project.image} alt={project.title} />
             <h2>{project.title}</h2>
