@@ -1,6 +1,24 @@
 {
   "papers": [
     {
+      "id": 17,
+      "citation": "[C11.]Charbel, G., Poudel, O., Assaf, M., Assaad, R. H., & Awada, M. Pavement Deterioration Prediction by Integrating Agent-Based Simulation and Transformer-Based Machine Learning Models for Smart Infrastructure Asset Management. In Construction Research Congress 2026 (pp. 502-512).",
+      "link": "https://doi.org/10.1061/9780784486979.048"
+    },
+    {
+      "id": 16,
+      "citation": "[C10.] Poudel, O., Charbel, G., Assaad, R. H., & Awada, M. BIM Augmented VR Teleoperation for Precise Robotic Arm Manipulation with Human-in-the-Loop in Low Level Construction Tasks. In Construction Research Congress 2026 (pp. 100-109).",
+      "link": "https://doi.org/10.1061/9780784486979.010"
+    },{
+      "id": 15,
+      "citation": "[C9.] Poudel, O., Assaad, R. H., & Awada, M. AI-Assisted Autonomous Quadruped Mobile Robotic System Integrated with Thermal and Environmental Sensing for Real-Time Fire Hazard Detection and Mitigation in Construction and Facility Safety Management. In Construction Research Congress 2026 (pp. 90-99).",
+      "link": "https://doi.org/10.1061/9780784486979.009"
+    },{
+      "id": 14,
+      "citation": "[C8.] Poudel, O., Assaf, M., Assaad, R. H., & Awada, M. Talk, See, Support (TSS): A Wearable Multimodal, Intelligent, Agentic LLM-Powered Construction Assistant for Real-Time On-Site Guidance and Compliance Monitoring. In Construction Research Congress 2026 (pp. 94-104).",
+      "link": "https://doi.org/10.1061/9780784486962.010"
+    },
+    {
       "id": 13,
       "citation": "[J6.] Poudel, O., Assaad, R. H., & Awada, M. (2026). Noise-Invariant Agentic Human–Robot Interaction GenAI System Using a Dual-Encoder Contrastive ASR Architecture and VLMs for Robot Control and Navigation in Acoustically Challenging Jobsites. Journal of Computing in Civil Engineering, 40(6), 04026088.",
       "link": "https://ascelibrary.org/doi/abs/10.1061/JCCEE5.CPENG-7372"
