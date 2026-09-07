@@ -8,7 +8,7 @@
 .env
 # testing
 /coverage
-
+.opencode
 # production
 /build
 
