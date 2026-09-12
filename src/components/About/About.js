@@ -44,7 +44,7 @@ const About = () => {
           </h1>
           <h2>
             
-            <strong>Ph.D. in Civil Engineering</strong><br/>
+            <strong>Ph.D.</strong><br/>
             NJIT, 2023 – <br/><br/>
 
             {/* <strong>B.Sc. in Civil Engineering</strong><br/>
