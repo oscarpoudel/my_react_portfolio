@@ -1,6 +1,16 @@
 {
   "papers": [
     {
+      "id": 19,
+      "citation": "[J8.] Poudel, O., Assaad, R. H., Park, A. B., & Awada, M. (2027; published online 2026). MAESTRO: Fine-Tuned Multiagent Large Action Model-Based GenAI Assistant Integrating IoT Sensing, Smart Control, and Extended Reality for Human-Building Interaction. Journal of Computing in Civil Engineering, 41(1). ",
+      "link": "https://doi.org/10.1061/JCCEE5.CPENG-7915"
+    },
+    {
+      "id": 18,
+      "citation": "[J7.] Park, A. B., Poudel, O., Wu, Z., Awada, M., & Assaad, R. H. (2026). Age-group perspectives on large language models in the architecture, engineering, and construction industry: usage patterns, adoption expectations, trust, and future outlook. Construction Management and Economics, 1-19.",
+      "link": ""
+    },
+    {
       "id": 17,
       "citation": "[C11.]Charbel, G., Poudel, O., Assaf, M., Assaad, R. H., & Awada, M. Pavement Deterioration Prediction by Integrating Agent-Based Simulation and Transformer-Based Machine Learning Models for Smart Infrastructure Asset Management. In Construction Research Congress 2026 (pp. 502-512).",
       "link": "https://doi.org/10.1061/9780784486979.048"
