@@ -82,10 +82,15 @@ function localCollection() {
   const legacy = readJson('src/data/projectMedia.json', {});
   const projects = { ...legacy, ...Object.fromEntries(Object.entries(showcases).map(([id, entry]) => [id, [entry.cover, ...entry.figures]])) };
   const tasks = new Map();
+  const existingAssets = readJson(snapshotFile, { assets: {} }).assets || {};
   const add = (key, tags, metadata) => {
     if (/^https?:/.test(key)) return;
     const full = path.resolve(root, 'public', key);
-    if (!full.startsWith(path.join(root, 'public') + path.sep) || !fs.existsSync(full)) throw new Error(`Missing local media: ${key}`);
+    if (!full.startsWith(path.join(root, 'public') + path.sep)) throw new Error(`Invalid local media path: ${key}`);
+    if (!fs.existsSync(full)) {
+      if (existingAssets[key]?.fileId) return;
+      throw new Error(`Missing local media with no ImageKit copy: ${key}`);
+    }
     if (!tasks.has(key)) tasks.set(key, { key, full, tags, metadata });
   };
   for (const item of gallery) {
@@ -97,7 +102,7 @@ function localCollection() {
     add(figure.src, ['portfolio-managed', 'project-slide', `project-${id}`], figure);
     add(figure.original, ['portfolio-managed', 'portfolio-original', `project-${id}`], {});
   }
-  return { gallery, projects, tasks: [...tasks.values()] };
+  return { gallery, projects, existingAssets, tasks: [...tasks.values()] };
 }
 
 async function hashFile(file) {
@@ -110,7 +115,8 @@ async function uploadLocal(files) {
   const collection = localCollection();
   const existing = new Map(files.map((file) => [file.filePath, file]));
   const checkpoint = readJson(checkpointFile, {});
-  const assets = {};
+  const assets = { ...collection.existingAssets };
+  let completed = 0;
   let cursor = 0;
   let failure;
   const worker = async () => {
@@ -142,7 +148,7 @@ async function uploadLocal(files) {
       assets[task.key] = { url: remote.url, fileId: remote.fileId, filePath: remote.filePath || storagePath, hash, width: remote.width, height: remote.height };
       checkpoint[task.key] = assets[task.key];
       writeJson(checkpointFile, checkpoint);
-      const completed = Object.keys(assets).length;
+      completed++;
       if (completed % 20 === 0 || completed === collection.tasks.length) console.log(`ImageKit assets ready: ${completed}/${collection.tasks.length} (${uploaded} newly uploaded)`);
     }
   };

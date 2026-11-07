@@ -1,6 +1,31 @@
 .page{
     overflow: hidden;
 }
+.gallery-launcher {
+    position: fixed;
+    right: 30px;
+    bottom: 28px;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 20px 14px 14px;
+    border: 1px solid #d7dac8;
+    border-radius: 60px;
+    color: #282c21;
+    background: #f4f5eaf0;
+    backdrop-filter: blur(16px);
+    text-decoration: none;
+    letter-spacing: 0;
+    box-shadow: 0 8px 30px #333c2220;
+    transition: box-shadow .3s;
+    strong { display: block; font-size: 15px; font-weight: 600; }
+    small { display: block; font-size: 10px; margin-top: 4px; color: #6b725d; }
+    .gallery-launcher-icon { display: grid; place-items: center; width: 43px; height: 43px; background: #ffd700; border-radius: 50%; font-size: 25px; animation: gallery-float 5s ease-in-out infinite; }
+    &:hover, &:focus-visible { box-shadow: 0 10px 35px #333c2240; animation-play-state: paused; outline: 2px solid #b69c00; outline-offset: 3px; }
+}
+@keyframes gallery-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@media (max-width: 600px) { .gallery-launcher { bottom: 14px; right: 14px; padding: 9px 14px 9px 9px; gap: 10px; strong { font-size: 13px; } small { font-size: 9px; } .gallery-launcher-icon { width: 34px; height: 34px; font-size: 21px; } } }
 .home-page{
     
     .text-zone{

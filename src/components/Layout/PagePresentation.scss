@@ -1,0 +1,142 @@
+// Match Home's one-second letter animation and 100ms character stagger.
+.container.about-page.abt-pg,
+.container.technical-skills-page,
+.container.research-page,
+.container.projects-page,
+.container.contact-page {
+  animation: none;
+  opacity: 1;
+  .text-animate {
+    animation-duration: 1s;
+  }
+  @for $i from 1 through 50 {
+    .text-animate:nth-child(#{$i}) { animation-delay: #{.5 + ($i - 1) * .1}s; }
+  }
+}
+
+.container.about-page.abt-pg .text-zone > p,
+.container.about-page.abt-pg .text-zone > h2,
+.container.about-page.abt-pg .expertise-carousel,
+.container.technical-skills-page .skills-columns,
+.container.research-page .research-filters,
+.container.research-page .research-list,
+.container.projects-page .projects-intro,
+.container.projects-page .projects-github,
+.container.projects-page .project-filters,
+.container.projects-page .project-results,
+.container.projects-page .projects-grid,
+.container.contact-page .text-zone > h2,
+.container.contact-page .contact-form,
+.container.contact-page .map-wrap {
+  animation: page-content-enter 1s ease 1.8s both;
+}
+.container.contact-page .contact-form li { animation: none; opacity: 1; }
+
+// About's body follows the first heading letters, with no extra waiting phase.
+.container.about-page.abt-pg .text-zone > p,
+.container.about-page.abt-pg .text-zone > h2,
+.container.about-page.abt-pg .expertise-carousel { animation-delay: 1s; }
+
+.gallery-page .gallery-header { animation: page-content-enter 1s ease .2s both; }
+.gallery-page .gallery-toolbar,
+.gallery-page .gallery-filters,
+.gallery-page .gallery-stage,
+.gallery-page .gallery-collection,
+.gallery-page .gallery-footer { animation: page-content-enter 1s ease 1.8s both; }
+
+@keyframes page-content-enter {
+  from { opacity: 0; visibility: hidden; }
+  to { opacity: 1; visibility: visible; }
+}
+
+// Detail routes share the same entrance, including lazy-loaded case studies.
+.container.project-summary-page,
+.container.project-detail-page { animation: none; opacity: 1; }
+.container.project-summary-page .summary-back,
+.container.project-summary-page .summary-categories,
+.container.project-summary-page .summary-grid h1,
+.container.project-detail-page .project-header > .project-action-pill,
+.container.project-detail-page .project_detail-title {
+  animation: page-content-enter 1s ease .2s both;
+}
+.container.project-summary-page .summary-intro,
+.container.project-summary-page .summary-actions,
+.container.project-summary-page .summary-grid > .project-visual,
+.container.project-summary-page .summary-grid > .project-carousel,
+.container.project-summary-page .summary-section,
+.container.project-detail-page .project-subtitle,
+.container.project-detail-page .project-url,
+.container.project-detail-page .divider,
+.container.project-detail-page .project-body {
+  animation: page-content-enter 1.2s ease 1s both;
+}
+.container.project-summary-page .summary-case-study .styled-project,
+.container.project-detail-page .project-content > .styled-project {
+  animation: page-content-enter 1s ease both;
+}
+
+// Match Gallery's rounded, grouped layout buttons for both topic filters.
+.container.projects-page .project-topics,
+.container.research-page .research-topic-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  gap: 4px;
+  padding: 4px;
+  border: 0;
+  border-radius: 30px;
+  background: #e6e8db;
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 30px;
+    background: transparent;
+    color: #47513d;
+    font-size: 14px;
+    font-weight: 500;
+    span { font-size: 12px; font-weight: 500; opacity: .9; }
+    &:hover { background: #d9ddcd; }
+    &[aria-pressed='true'], &[aria-pressed='true']:hover {
+      background: #24271f;
+      color: #fafbf3;
+      box-shadow: 0 3px 8px #20221e18;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .container.projects-page .project-topics,
+  .container.research-page .research-topic-buttons {
+    gap: 3px;
+    button { padding: 10px 12px; gap: 7px; font-size: 13px; span { font-size: 11px; } }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .container.about-page.abt-pg,
+  .container.technical-skills-page,
+  .container.research-page,
+  .container.projects-page,
+  .container.contact-page,
+  .gallery-page {
+    .text-animate { animation: none; opacity: 1; }
+    .text-zone > p, .text-zone > h2, .expertise-carousel, .skills-columns,
+    .research-filters, .research-list, .projects-intro, .projects-github,
+    .project-filters, .project-results, .projects-grid, .contact-form, .map-wrap,
+    .gallery-header, .gallery-toolbar, .gallery-filters, .gallery-stage,
+    .gallery-collection, .gallery-footer { animation: none; }
+  }
+  .container.project-summary-page,
+  .container.project-detail-page {
+    .summary-back, .summary-categories, .summary-grid h1, .summary-intro,
+    .summary-actions, .summary-grid > .project-visual, .summary-grid > .project-carousel, .summary-section,
+    .project-header > .project-action-pill, .project_detail-title,
+    .project-subtitle, .project-url, .divider, .project-body,
+    .summary-case-study .styled-project, .project-content > .styled-project {
+      animation: none;
+    }
+  }
+}

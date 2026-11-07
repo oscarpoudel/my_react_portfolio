@@ -1,14 +1,16 @@
+import ProjectCaseImage from '../projectdetail/ProjectCaseImage';
 import React from 'react'
-import designImage from "../../assets/research_images/proj_12/1. 3d_model_design_in_fusion_360_for_the_lidar_scanner.png"
-import bodyImage from "../../assets/research_images/proj_12/2. 3d_desing_and_print_of_the_bottom_and_side_cover.png"
-import frontCoverImage from "../../assets/research_images/proj_12/3. 3d_desing_and_print_of_front_cover.png"
-import electronicsImage from "../../assets/research_images/proj_12/4. internal_component_assembly_lidar_scanner.png"
-import panelImage from "../../assets/research_images/proj_12/5. back_panel_assemly_lidar_scanner.png"
-import assembledImage from "../../assets/research_images/proj_12/6. final_assembled_lidar_scanner.png"
-import rawPointCloudImage from "../../assets/research_images/proj_12/7. raw_rgbd_point_clound.png"
-import finalModelImage from "../../assets/research_images/proj_12/8. 3d_post_proccessed_model_of_the_scanned_hallway.png"
-import overviewImage from "../../assets/research_images/proj_12/9. overview_of_the_system.png"
 import "./Project1.scss"
+
+const designImage = "src/assets/research_images/proj_12/1. 3d_model_design_in_fusion_360_for_the_lidar_scanner.png";
+const bodyImage = "src/assets/research_images/proj_12/2. 3d_desing_and_print_of_the_bottom_and_side_cover.png";
+const frontCoverImage = "src/assets/research_images/proj_12/3. 3d_desing_and_print_of_front_cover.png";
+const electronicsImage = "src/assets/research_images/proj_12/4. internal_component_assembly_lidar_scanner.png";
+const panelImage = "src/assets/research_images/proj_12/5. back_panel_assemly_lidar_scanner.png";
+const assembledImage = "src/assets/research_images/proj_12/6. final_assembled_lidar_scanner.png";
+const rawPointCloudImage = "src/assets/research_images/proj_12/7. raw_rgbd_point_clound.png";
+const finalModelImage = "src/assets/research_images/proj_12/8. 3d_post_proccessed_model_of_the_scanned_hallway.png";
+const overviewImage = "src/assets/research_images/proj_12/9. overview_of_the_system.png";
 
 const Project12 = () => {
   return (
@@ -34,7 +36,7 @@ const Project12 = () => {
 
       <div className="image-row">
         <div>
-          <img src={overviewImage} alt="Overview of the custom LiDAR scanner system and reconstruction pipeline" className="scaled-image" />
+          <ProjectCaseImage src={overviewImage} alt="Overview of the custom LiDAR scanner system and reconstruction pipeline" className="scaled-image" />
           <div className="caption">End-to-end workflow from custom scanner design to RGB-D mapping and final 3D model generation</div>
         </div>
       </div>
@@ -67,18 +69,18 @@ const Project12 = () => {
 
       <div className="image-row">
         <div>
-          <img src={designImage} alt="Fusion 360 design of the custom LiDAR scanner" className="scaled-image" />
+          <ProjectCaseImage src={designImage} alt="Fusion 360 design of the custom LiDAR scanner" className="scaled-image" />
           <div className="caption">Initial Fusion 360 concept showing the Livox sensing head, top camera mounts, I/O cutouts, and handheld form factor</div>
         </div>
         <div>
-          <img src={bodyImage} alt="Body and side cover design and fabrication" className="scaled-image" />
+          <ProjectCaseImage src={bodyImage} alt="Body and side cover design and fabrication" className="scaled-image" />
           <div className="caption">Main chassis and side-cover design translated into printable structural components</div>
         </div>
       </div>
 
       <div className="image-row">
         <div>
-          <img src={frontCoverImage} alt="Front cover and interface module design" className="scaled-image" />
+          <ProjectCaseImage src={frontCoverImage} alt="Front cover and interface module design" className="scaled-image" />
           <div className="caption">Front-panel enclosure designed for a compact display, buttons, and operator-facing feedback interface</div>
         </div>
       </div>
@@ -100,18 +102,18 @@ const Project12 = () => {
 
       <div className="image-row">
         <div>
-          <img src={electronicsImage} alt="Internal electronics assembly of the LiDAR scanner" className="scaled-image" />
+          <ProjectCaseImage src={electronicsImage} alt="Internal electronics assembly of the LiDAR scanner" className="scaled-image" />
           <div className="caption">Internal packaging of compute, wiring, power, and interface electronics inside the printed enclosure</div>
         </div>
         <div>
-          <img src={panelImage} alt="Back panel assembly and interface controls" className="scaled-image" />
+          <ProjectCaseImage src={panelImage} alt="Back panel assembly and interface controls" className="scaled-image" />
           <div className="caption">Back-panel assembly integrating display, buttons, and local operator control hardware</div>
         </div>
       </div>
 
       <div className="image-row">
         <div>
-          <img src={assembledImage} alt="Final assembled custom LiDAR scanner" className="scaled-image" />
+          <ProjectCaseImage src={assembledImage} alt="Final assembled custom LiDAR scanner" className="scaled-image" />
           <div className="caption">Final integrated scanner with external battery, top-mounted cameras, embedded display, and handheld infrastructure inspection form factor</div>
         </div>
       </div>
@@ -170,7 +172,7 @@ const Project12 = () => {
 
       <div className="image-row">
         <div>
-          <img src={rawPointCloudImage} alt="Raw RGBD fused point cloud" className="scaled-image" />
+          <ProjectCaseImage src={rawPointCloudImage} alt="Raw RGBD fused point cloud" className="scaled-image" />
           <div className="caption">Early RGB-D fused point-cloud output before post-processing, showing aligned geometry and appearance information</div>
         </div>
       </div>
@@ -215,7 +217,7 @@ const Project12 = () => {
 
       <div className="image-row">
         <div>
-          <img src={finalModelImage} alt="Post-processed 3D model generated from the scanned hallway" className="scaled-image" />
+          <ProjectCaseImage src={finalModelImage} alt="Post-processed 3D model generated from the scanned hallway" className="scaled-image" />
           <div className="caption">Post-processed indoor model reconstructed from the captured point cloud after Blender-based cleanup and refinement</div>
         </div>
       </div>

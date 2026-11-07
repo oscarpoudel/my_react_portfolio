@@ -1,11 +1,7 @@
 import './About.scss';
 import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCss3, faGitAlt, faJsSquare, faPython, faReact } from '@fortawesome/free-brands-svg-icons';
-import { faBuilding, faHelmetSafety } from '@fortawesome/free-solid-svg-icons';
-import Loader from 'react-loaders';
-import workImg from '../../assets/images/work2_bg.png';
+import ExpertiseCarousel from './ExpertiseCarousel';
 import useScrollNavigation from '../../hooks/useScrollNavigation';
 
 const About = () => {
@@ -14,9 +10,10 @@ const About = () => {
   useScrollNavigation('/research', '/', true)
   useEffect(() => {
 
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setLetterClass('text-animate-hover')
-    }, 3000)
+    }, 4000)
+    return () => clearTimeout(timer)
   }, [])
 
   return (
@@ -28,18 +25,18 @@ const About = () => {
               idx={15} />
           </h1>
 
-          <h2>
-          I am a PhD candidate in Civil Engineering, specializing in the integration of robotics and artificial
-           intelligence into civil engineering systems. With a background in structural engineering and programming, 
-           my research focuses on advancing automation and modernizing infrastructure through AI, computer vision, machine
-            listening, and reinforcement learning. I work extensively on developing intelligent robotic systems using deep 
-            learning and ROS2, with additional expertise in electronics, IoT, and edge computing. My hands-on experience includes
-             PCB design, 3D printing, and embedded system development with platforms such as Raspberry Pi, Jetson, Pico, and STM32.
-              I aim to drive innovation in civil engineering by combining practical domain knowledge with cutting-edge technologies.
-          </h2>
+          <p>
+            I am a Ph.D. candidate in Civil Engineering at the New Jersey Institute of Technology (NJIT), working at the intersection of artificial intelligence, robotics, and civil infrastructure. With a background in structural engineering, I am a hands-on researcher, engineer, and technology developer who enjoys turning innovative ideas into functional systems.
+          </p>
+          <p>
+            My research focuses on embodied AI, construction robotics, human-robot interaction, computer vision, multimodal learning, reinforcement learning, and intelligent infrastructure systems. Beyond research, I am passionate about building real-world solutions that integrate software, electronics, and physical hardware. My technical experience spans ROS2, autonomous robotic systems, embedded computing, IoT, PCB design, 3D printing, and AI-powered engineering applications.
+          </p>
+          <p>
+            Whether designing structures, developing intelligent software, or building robotic systems, I enjoy solving challenging engineering problems by combining creativity, scientific reasoning, and practical implementation. My broader goal is to advance technologies that make engineering systems more intelligent, autonomous, efficient, and accessible.
+          </p>
 
           <h1>
-            <AnimatedLetters letterClass={letterClass} strArray={['Education']}
+            <AnimatedLetters letterClass={letterClass} strArray={'Education'.split('')}
               idx={16} />
           </h1>
           <h2>
@@ -51,9 +48,7 @@ const About = () => {
             IOE Pulchowk Campus,Nepal, 2022<br/> */}
           </h2>
         </div>
-        <div className='sideImage'>
-            <img  src = {workImg}/>
-        </div>
+        <ExpertiseCarousel introDelay={1000} />
       </div>
       
     </>

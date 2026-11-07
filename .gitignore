@@ -15,6 +15,15 @@
 # misc
 .DS_Store
 .env.local
+.imagekit-state.json
+.imagekit-cache/
+# ImageKit-backed media is staged locally and archived outside this repository.
+/public/gallery/
+/public/images/project-showcase/
+/public/images/research_images/
+/src/assets/research_images/
+/src/assets/images/*_bak.*
+/src/assets/images/*_BAk.*
 .env.development.local
 .env.test.local
 .env.production.local

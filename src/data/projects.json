@@ -1,112 +1,1038 @@
 {
+  "categories": [
+    {
+      "id": "robotics",
+      "label": "Robotics & autonomy",
+      "color": "#557d70"
+    },
+    {
+      "id": "ai",
+      "label": "AI & agents",
+      "color": "#87719c"
+    },
+    {
+      "id": "bim",
+      "label": "BIM & structures",
+      "color": "#b58c40"
+    },
+    {
+      "id": "vision",
+      "label": "Vision & inspection",
+      "color": "#5e829d"
+    },
+    {
+      "id": "sensing",
+      "label": "Sensing & wearables",
+      "color": "#b47762"
+    },
+    {
+      "id": "buildings",
+      "label": "Smart buildings",
+      "color": "#86934d"
+    }
+  ],
   "projects": [
     {
       "id": 1,
       "title": "Gaze-Assisted Teleoperation for Precision UAV Navigation",
-      "description": "A Comparison of Traditional vs. Gaze-Assisted Teleoperation",
+      "description": "Webots-based Crazyflie simulation comparing conventional and gaze-assisted navigation using eye tracking, state-machine control, and multimodal flight sensing.",
       "image": "images/research_images/gaze_tel.png",
-      "URL":"https://github.com/oscarpoudel/Eye-Tracking-drone-control"
+      "URL": "https://github.com/oscarpoudel/Eye-Tracking-drone-control",
+      "categories": [
+        "robotics",
+        "sensing"
+      ],
+      "platforms": [
+        "UAV"
+      ],
+      "tags": [
+        "Eye tracking",
+        "Webots",
+        "Teleoperation"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/Eye-Tracking-drone-control"
+        }
+      ]
     },
     {
       "id": 2,
       "title": "Virtual Force-driven Coachbot Swarm Navigation around a Nucleus Point",
       "description": "Exploration of Different Swarm algorithms;",
-      "URL" :"https://github.com/oscarpoudel/swarm-robot-coordination",
-      "image": "images/research_images/swarm.png"
+      "URL": "https://github.com/oscarpoudel/swarm-robot-coordination",
+      "image": "images/research_images/swarm.png",
+      "categories": [
+        "robotics"
+      ],
+      "platforms": [
+        "Swarm"
+      ],
+      "tags": [
+        "Swarm control",
+        "Simulation",
+        "Coordination"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/swarm-robot-coordination"
+        }
+      ]
     },
     {
       "id": 3,
       "title": "Recycling Robot MDP: Solving with Value Iteration and Policy Iteration",
       "description": "Foundational Reinforcement learning Policy comparing value iteration and policy iteration;",
-      "URL" :"https://github.com/oscarpoudel/cleaning_robot_RL_VI-PI",
-      "image": "images/research_images/res_rbot.png" 
+      "URL": "https://github.com/oscarpoudel/cleaning_robot_RL_VI-PI",
+      "image": "images/research_images/res_rbot.png",
+      "categories": [
+        "robotics",
+        "ai"
+      ],
+      "platforms": [
+        "Simulation"
+      ],
+      "tags": [
+        "Reinforcement learning",
+        "MDP",
+        "Policy iteration"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/cleaning_robot_RL_VI-PI"
+        }
+      ]
     },
     {
       "id": 4,
       "title": "VSLAM_light: Lightweight Monocular Visual Odometry with Kalman Smoothing",
       "description": "vSLAM pipeline with Shi–Tomasi features, LK optical flow,, and  Kalman filter",
       "URL": "https://github.com/oscarpoudel/VSLAM_light",
-      "image": "https://raw.githubusercontent.com/oscarpoudel/VSLAM_light/main/image/2.png"
+      "image": "https://raw.githubusercontent.com/oscarpoudel/VSLAM_light/main/image/2.png",
+      "categories": [
+        "robotics",
+        "vision"
+      ],
+      "platforms": [
+        "Mobile robot"
+      ],
+      "tags": [
+        "Visual odometry",
+        "Kalman filtering",
+        "SLAM"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/VSLAM_light"
+        }
+      ]
     },
     {
-    "id": 5,
-    "title": "ArUco Pose Detector  with ROS 2 and opencv",
-    "description": "ROS 2 package for real-time detection of ArUco markers, 6-DoF pose estimation with OpenCV, and broadcasting into the ROS TF tree",
-    "URL": "https://github.com/oscarpoudel/aruco_pose_detector",
-    "image": "https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/2.aruco_postion_wr_robot.png"
+      "id": 5,
+      "title": "ArUco Pose Detector  with ROS 2 and opencv",
+      "description": "ROS 2 package for real-time detection of ArUco markers, 6-DoF pose estimation with OpenCV, and broadcasting into the ROS TF tree",
+      "URL": "https://github.com/oscarpoudel/aruco_pose_detector",
+      "image": "https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/2.aruco_postion_wr_robot.png",
+      "categories": [
+        "robotics",
+        "vision"
+      ],
+      "platforms": [
+        "Robotic system"
+      ],
+      "tags": [
+        "ROS2",
+        "OpenCV",
+        "Pose estimation"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/aruco_pose_detector"
+        }
+      ]
     },
-    
     {
-    "id": 6,
-    "title": "Camera Calibration Toolkit (ROS 2)",
-    "description": "A ROS 2 package with USB and IP camera streaming and camera calibration.",
-    "URL": "https://github.com/oscarpoudel/get_calibrate_camera",
-    "image": "https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/sample_image.png"
+      "id": 6,
+      "title": "Camera Calibration Toolkit (ROS 2)",
+      "description": "A ROS 2 package with USB and IP camera streaming and camera calibration.",
+      "URL": "https://github.com/oscarpoudel/get_calibrate_camera",
+      "image": "https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/sample_image.png",
+      "categories": [
+        "vision",
+        "robotics"
+      ],
+      "platforms": [
+        "Robotic system"
+      ],
+      "tags": [
+        "ROS2",
+        "Camera calibration",
+        "Camera streaming"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/get_calibrate_camera"
+        }
+      ]
     },
     {
       "id": 7,
       "title": "Semantic Object Detection & Spatial Memory with YOLOv8 on TurtleBot3 (ROS 2)",
       "description": " object detection (YOLOv8), robot localization, and Qdrant vector storage for mobile robotic agents.",
       "URL": "https://github.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8",
-      "image": "https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/4_object_detection_placement_1.png"
+      "image": "https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/4_object_detection_placement_1.png",
+      "categories": [
+        "robotics",
+        "vision"
+      ],
+      "platforms": [
+        "Mobile robot"
+      ],
+      "tags": [
+        "TurtleBot3",
+        "YOLOv8",
+        "Qdrant",
+        "Nav2"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8"
+        }
+      ]
     },
     {
       "id": 8,
-      "title": "ROS-LM: Natural Language Robot Assistant with ROS2 and OLLAMA",
-      "description": "Natural language control for ROS2 robots using multimodal LLMs with ROS2 CLI commands through Streamlit or CLI.",
+      "title": "ROS-LM: Natural Language Robot Assistant",
+      "description": "Multimodal LLM control of ROS2 robots: motion, Nav2 waypoints, vision queries, diagnostics, and command execution through Streamlit or a command-line interface.",
       "URL": "https://github.com/oscarpoudel/LLM_ROS2_agent",
-      "image":  "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/6.moving_robot-based_on_symantic_locaiton_eg_firehydrant.png"
+      "image": "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/6.moving_robot-based_on_symantic_locaiton_eg_firehydrant.png",
+      "categories": [
+        "robotics",
+        "ai"
+      ],
+      "platforms": [
+        "Robotic system",
+        "Mobile robot"
+      ],
+      "tags": [
+        "ROS2",
+        "Multimodal LLMs",
+        "Nav2"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/LLM_ROS2_agent"
+        }
+      ],
+      "featured": true
     },
     {
       "id": 9,
       "title": "VitCrackSeg: Crack Segmentation Using Vision Transformer",
       "description": "Vision Transformer-based crack segmentation for structural health monitoring using BCE Logit loss and a real-time prediction pipeline.",
       "URL": "https://github.com/oscarpoudel/DL_VitCrackSeg",
-      "image": "https://raw.githubusercontent.com/oscarpoudel/DL_VitCrackSeg/main/images/image.jpg"
+      "image": "https://raw.githubusercontent.com/oscarpoudel/DL_VitCrackSeg/main/images/image.jpg",
+      "categories": [
+        "vision",
+        "ai"
+      ],
+      "platforms": [
+        "Infrastructure"
+      ],
+      "tags": [
+        "Vision Transformer",
+        "Crack segmentation",
+        "Deep learning"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/DL_VitCrackSeg"
+        }
+      ]
     },
     {
       "id": 10,
-       "title": "Comparative Analysis of Neural Sequence Models and BERT-Based Large Language Models for Conversational AI",
-       "description": "A comprehensive study comparing Seq2Seq with Attention, Transformer Seq2Seq, and fine-tuned BERT",
+      "title": "Comparative Analysis of Neural Sequence Models and BERT-Based Large Language Models for Conversational AI",
+      "description": "A comprehensive study comparing Seq2Seq with Attention, Transformer Seq2Seq, and fine-tuned BERT",
       "URL": "",
-      "image":  "images/research_images/comp_plot_pro10.png"
+      "image": "images/research_images/comp_plot_pro10.png",
+      "categories": [
+        "ai"
+      ],
+      "platforms": [
+        "Software"
+      ],
+      "tags": [
+        "Conversational AI",
+        "Transformers",
+        "BERT"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": []
     },
     {
       "id": 11,
-       "title": "Multi-Agent LLM Framework for Automated Construction Monitoring and Documentation",
-       "description": " support multimodal reasoning over visual inputs and text context, while maintaining an interaction trace through database logging and test utilities.",
+      "title": "Multi-Agent LLM Framework for Automated Construction Monitoring and Documentation",
+      "description": " support multimodal reasoning over visual inputs and text context, while maintaining an interaction trace through database logging and test utilities.",
       "URL": "https://github.com/oscarpoudel/multiagent_LLM_for_construction",
-      "image":  "images/research_images/Multiagent_LLM.png"
+      "image": "images/research_images/Multiagent_LLM.png",
+      "categories": [
+        "ai",
+        "vision"
+      ],
+      "platforms": [
+        "Infrastructure"
+      ],
+      "tags": [
+        "Multi-agent systems",
+        "Construction monitoring",
+        "Multimodal AI"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/multiagent_LLM_for_construction"
+        }
+      ]
     },
     {
       "id": 12,
       "title": "Custom LiDAR Scanner with RGB-D Fusion for Infrastructure Inspection",
       "description": "Portable Livox-based handheld scanner combining custom mechanical design, embedded electronics, ROS 2 sensor fusion, and 3D reconstruction.",
       "URL": "https://doi.org/10.1061/9780784486122.050",
-      "image": "images/research_images/proj_12_overview.png"
+      "image": "images/research_images/proj_12_overview.png",
+      "categories": [
+        "sensing",
+        "vision"
+      ],
+      "platforms": [
+        "Infrastructure"
+      ],
+      "tags": [
+        "LiDAR",
+        "RGB-D",
+        "ROS2",
+        "3D reconstruction"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486122.050"
+        }
+      ]
     },
     {
       "id": 13,
       "title": "Custom Wearable Eye-Tracking System with Touch, Haptics, and Audio Control",
       "description": "A Raspberry Pi Zero 2 W powered head-mounted eye tracker using custom hardware, PyZMQ streaming, and the open-source Pupil Labs algorithm.",
       "URL": "",
-      "image": "images/research_images/proj_13_hardware.png"
+      "image": "images/research_images/proj_13_hardware.png",
+      "categories": [
+        "sensing",
+        "robotics"
+      ],
+      "platforms": [
+        "Wearable"
+      ],
+      "tags": [
+        "Eye tracking",
+        "Embedded systems",
+        "Haptics"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": true,
+      "links": []
     },
     {
       "id": 14,
-      "title": "UsherScan : AI-Based Structural Inspection App for Android",
-      "description": "An AI based structural inspection app for android system that scans the crack and defects in infrastructure and stores it for future references.",
+      "title": "UsherScan: On-device Structural Inspection",
+      "description": "Mobile structural inspection with on-device YOLO instance segmentation, real-time crack detection, batch processing, offline inference, voice feedback, and scan-session archiving.",
       "URL": "https://github.com/oscarpoudel/usherscan-showcase",
       "external": true,
-      "image": "images/research_images/usherscan_home.jfif"
+      "image": "images/research_images/usherscan_home.jfif",
+      "categories": [
+        "vision",
+        "ai"
+      ],
+      "platforms": [
+        "Infrastructure",
+        "Software"
+      ],
+      "tags": [
+        "Android",
+        "YOLO",
+        "On-device inference"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": false,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/usherscan-showcase"
+        }
+      ]
     },
     {
       "id": 15,
       "title": "StructAgent: Multi-Agent LLM Structural Design & Analysis Tool",
-      "description": "A Flask-based structural analysis assistant with a multi-agent LLM workflow and an ETABS-style interactive 3D modeling with OpenSeesPy.",
+      "description": "A Flask-based structural engineering assistant combining specialist LLM agents, an interactive 3D canvas, ASCE 7 loads, AISC/ACI design checks, and OpenSeesPy analysis.",
       "URL": "https://github.com/oscarpoudel/StructAgent-LLM-structural-design-analysis",
       "external": true,
-      "image": "images/research_images/structagent_dashboard.jpg"
+      "image": "images/research_images/structagent_dashboard.jpg",
+      "categories": [
+        "bim",
+        "ai"
+      ],
+      "platforms": [
+        "Software"
+      ],
+      "tags": [
+        "Multi-agent LLMs",
+        "OpenSeesPy",
+        "Structural design"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": false,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/StructAgent-LLM-structural-design-analysis"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": 16,
+      "title": "buildBIM: Building Models to Engineering Decisions",
+      "description": "BIM authoring and structural design in one platform: 3D model creation, engineering analysis, design checks, and collaborative review from a single source of truth.",
+      "URL": "https://github.com/oscarpoudel/buildBIM",
+      "image": "images/research_images/buildBIM.png",
+      "categories": [
+        "bim"
+      ],
+      "platforms": [
+        "Software"
+      ],
+      "tags": [
+        "BIM authoring",
+        "Structural design",
+        "Collaborative review"
+      ],
+      "featured": true,
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": false,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/buildBIM"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "BIM IFC Toolkit",
+      "description": "An open toolkit for IFC visualization, IFC-to-JSON conversion, JSON-to-IFC reconstruction, and semantic graph generation for GNN workflows.",
+      "URL": "https://github.com/oscarpoudel/BIM_IFC_Toolkit",
+      "image": "images/research_images/Bim_ifc.png",
+      "categories": [
+        "bim",
+        "ai"
+      ],
+      "platforms": [
+        "Software"
+      ],
+      "tags": [
+        "IFC",
+        "Semantic graphs",
+        "GNN workflows"
+      ],
+      "origin": "build",
+      "status": "Project",
+      "detailComponent": false,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oscarpoudel/BIM_IFC_Toolkit"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "MAESTRO: Multi-agent Smart-building Assistant",
+      "description": "A GenAI assistant combining specialist action agents, IoT sensing, smart control, and extended reality for human-building interaction.",
+      "URL": "https://doi.org/10.1061/JCCEE5.CPENG-7915",
+      "categories": [
+        "ai",
+        "buildings"
+      ],
+      "platforms": [
+        "Smart building"
+      ],
+      "tags": [
+        "Multi-agent systems",
+        "IoT",
+        "Extended reality"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2026,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., Assaad, R. H., Park, A. B., & Awada, M. (2027; published online 2026). MAESTRO: Fine-Tuned Multiagent Large Action Model-Based GenAI Assistant Integrating IoT Sensing, Smart Control, and Extended Reality for Human-Building Interaction. Journal of Computing in Civil Engineering, 41(1).",
+          "url": "https://doi.org/10.1061/JCCEE5.CPENG-7915"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/JCCEE5.CPENG-7915"
+        }
+      ],
+      "yearLabel": "Online 2026"
+    },
+    {
+      "id": 19,
+      "title": "Noise-resilient Robot Voice & Vision Control",
+      "description": "An agentic robot interaction system combining dual-encoder contrastive speech recognition and vision-language models for control and navigation in noisy construction jobsites.",
+      "URL": "https://doi.org/10.1061/JCCEE5.CPENG-7372",
+      "categories": [
+        "robotics",
+        "ai"
+      ],
+      "platforms": [
+        "Robotic system"
+      ],
+      "tags": [
+        "Speech recognition",
+        "VLMs",
+        "Human-robot interaction"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2026,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., Assaad, R. H., & Awada, M. (2026). Noise-Invariant Agentic Human-Robot Interaction GenAI System Using a Dual-Encoder Contrastive ASR Architecture and VLMs for Robot Control and Navigation in Acoustically Challenging Jobsites. Journal of Computing in Civil Engineering, 40(6), 04026088.",
+          "url": "https://doi.org/10.1061/JCCEE5.CPENG-7372"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/JCCEE5.CPENG-7372"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Acoustic Water-leak Detection & Localization",
+      "description": "An acoustic IoT monitoring system for real-time leak detection, localization, and pinpointing in water distribution infrastructure.",
+      "URL": "https://doi.org/10.1061/JITSE4.ISENG-2861",
+      "categories": [
+        "sensing",
+        "vision"
+      ],
+      "platforms": [
+        "Infrastructure"
+      ],
+      "tags": [
+        "Acoustic sensing",
+        "IoT",
+        "Leak localization"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2026,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., Mohammadi, M., Assaf, G., & Assaad, R. H. (2026). Intelligent Acoustic-Based IoT-Enabled Sensing and Monitoring System for Automated Real-Time Leak Detection, Localization, and Pinpointing in Water Distribution Infrastructures. Journal of Infrastructure Systems, 32(3), 04026017.",
+          "url": "https://doi.org/10.1061/JITSE4.ISENG-2861"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/JITSE4.ISENG-2861"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "VTECSeg: Vision-language Crack Segmentation",
+      "description": "An edge-aware CNN?Vision Transformer segmentation system with zero-shot vision-language-guided region proposals for infrastructure crack inspection.",
+      "URL": "https://doi.org/10.1016/j.autcon.2026.106998",
+      "categories": [
+        "vision",
+        "ai"
+      ],
+      "platforms": [
+        "Infrastructure"
+      ],
+      "tags": [
+        "CNN + ViT",
+        "Vision-language models",
+        "Crack segmentation"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2026,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., Hu, X., Assaad, R. H., Wang, W., Huang, T., & Wang, G. (2026). VTECSeg: Edge-Aware Hybrid CNN-Vision Transformer Network with Zero-Shot Vision-Language-Guided Region Proposals for Crack Segmentation. Automation in Construction, 188, 106998.",
+          "url": "https://doi.org/10.1016/j.autcon.2026.106998"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1016/j.autcon.2026.106998"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Edge-AI Acoustic Jobsite Monitor",
+      "description": "An embedded acoustic monitoring and alert system combining deep-learning machine listening, edge computing, and cloud connectivity for construction sites.",
+      "URL": "https://doi.org/10.1061/JCEMD4.COENG-15938",
+      "categories": [
+        "sensing",
+        "ai"
+      ],
+      "platforms": [
+        "Infrastructure"
+      ],
+      "tags": [
+        "Machine listening",
+        "Edge AI",
+        "Cloud monitoring"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2025,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., & Assaad, R. H. (2025). A Real-Time Intelligent Acoustic IoT-Enabled Embedded Construction Site Monitoring and Alert System: Integrating Deep Learning-Based Machine-Listening Algorithms, Edge Computing, and Cloud Computing. Journal of Construction Engineering and Management, 151(7), 04025075.",
+          "url": "https://doi.org/10.1061/JCEMD4.COENG-15938"
+        },
+        {
+          "citation": "Poudel, O., & Assaad, R. H. (2024). Developing Real-Time Acoustic Technologies for Enhancing Safety and Efficiency on Construction Job Sites Using Deep Learning Algorithms: Moving Towards Automated Construction Site Monitoring. In Computing in Civil Engineering 2024, 1009-1018.",
+          "url": "https://doi.org/10.1061/9780784486139"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/JCEMD4.COENG-15938"
+        },
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486139"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Wearable Biosensing & Monitoring Dashboard",
+      "description": "An IoT wearable and cloud dashboard for physiological, emotional, and cognitive monitoring through multimodal biosensing and sensor fusion.",
+      "URL": "https://doi.org/10.1016/j.sna.2024.116074",
+      "categories": [
+        "sensing"
+      ],
+      "platforms": [
+        "Wearable"
+      ],
+      "tags": [
+        "Biosensing",
+        "Sensor fusion",
+        "Cloud dashboard"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2025,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Assaad, R. H., Mohammadi, M., & Poudel, O. (2025). Developing an Intelligent IoT-Enabled Wearable Multimodal Biosensing Device and Cloud-Based Digital Dashboard for Real-Time and Comprehensive Health, Physiological, Emotional, and Cognitive Monitoring Using Multi-Sensor Fusion Technologies. Sensors and Actuators A: Physical, 381, 116074.",
+          "url": "https://doi.org/10.1016/j.sna.2024.116074"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1016/j.sna.2024.116074"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Inclined-column Seismic Design",
+      "description": "Structural engineering investigations into strategically arranged inclined columns for improving the earthquake resilience of multistoried RCC structures.",
+      "URL": "https://doi.org/10.1007/s41062-024-01540-3",
+      "categories": [
+        "bim"
+      ],
+      "platforms": [
+        "Infrastructure"
+      ],
+      "tags": [
+        "Structural analysis",
+        "Seismic resilience",
+        "RCC structures"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2024,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., & Shrestha, K. C. (2024). Enhancing Earthquake Resilience with Strategically Arranged Inclined Columns in Multistoried RCC Structures. Innovative Infrastructure Solutions, 9(6), 223.",
+          "url": "https://doi.org/10.1007/s41062-024-01540-3"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1007/s41062-024-01540-3"
+        }
+      ]
+    },
+
+    {
+      "id": 31,
+      "title": "BIM-VR Robot-arm Teleoperation",
+      "description": "A human-in-the-loop robotic arm manipulation system using BIM-augmented virtual reality for precise low-level construction tasks.",
+      "URL": "https://doi.org/10.1061/9780784486979.010",
+      "categories": [
+        "robotics",
+        "bim"
+      ],
+      "platforms": [
+        "Robotic arm"
+      ],
+      "tags": [
+        "BIM",
+        "Virtual reality",
+        "Teleoperation"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2026,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., Charbel, G., Assaad, R. H., & Awada, M. (2026). BIM Augmented VR Teleoperation for Precise Robotic Arm Manipulation with Human-in-the-Loop in Low Level Construction Tasks. In Construction Research Congress 2026, 100-109.",
+          "url": "https://doi.org/10.1061/9780784486979.010"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486979.010"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "title": "Firefighting Quadruped Robot",
+      "description": "An autonomous quadruped system combining AI, thermal sensing, and environmental sensing for real-time fire-hazard detection and mitigation.",
+      "URL": "https://doi.org/10.1061/9780784486979.009",
+      "categories": [
+        "robotics",
+        "sensing",
+        "ai"
+      ],
+      "platforms": [
+        "Quadruped"
+      ],
+      "tags": [
+        "Autonomous robotics",
+        "Thermal sensing",
+        "Fire safety"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2026,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., Assaad, R. H., & Awada, M. (2026). AI-Assisted Autonomous Quadruped Mobile Robotic System Integrated with Thermal and Environmental Sensing for Real-Time Fire Hazard Detection and Mitigation in Construction and Facility Safety Management. In Construction Research Congress 2026, 90-99.",
+          "url": "https://doi.org/10.1061/9780784486979.009"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486979.009"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "Talk, See, Support: Wearable Site Assistant",
+      "description": "A wearable multimodal construction assistant using agentic LLMs for real-time on-site guidance and compliance support.",
+      "URL": "https://doi.org/10.1061/9780784486962.010",
+      "categories": [
+        "ai",
+        "sensing"
+      ],
+      "platforms": [
+        "Wearable"
+      ],
+      "tags": [
+        "Multimodal AI",
+        "Agentic LLMs",
+        "On-site guidance"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2026,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., Assaf, M., Assaad, R. H., & Awada, M. (2026). Talk, See, Support (TSS): A Wearable Multimodal, Intelligent, Agentic LLM-Powered Construction Assistant for Real-Time On-Site Guidance and Compliance Monitoring. In Construction Research Congress 2026, 94-104.",
+          "url": "https://doi.org/10.1061/9780784486962.010"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486962.010"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Viso-Gen: Gaze & Voice Design Interface",
+      "description": "A wireless gaze-assisted and voice-controlled image-generation system using Stable Diffusion for civil engineering design and visualization.",
+      "URL": "https://doi.org/10.1061/9780784486436.106",
+      "categories": [
+        "ai",
+        "sensing"
+      ],
+      "platforms": [
+        "Wearable",
+        "Software"
+      ],
+      "tags": [
+        "Eye tracking",
+        "Voice control",
+        "Stable Diffusion"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2025,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., Assaad, R. H., & Awada, M. (2025). Viso-Gen: A Wireless Gaze-Assisted and Voice-Controlled Generative AI System Leveraging Stable Diffusion for Real-Time Image Generation for Civil Engineering Design and Visualization. In Computing in Civil Engineering 2025, 990-999.",
+          "url": "https://doi.org/10.1061/9780784486436.106"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486436.106"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title": "LLM-guided Aerial Safety Inspection",
+      "description": "An aerial drone robotics and computer-vision system using LLMs for context-adaptive construction site safety monitoring and risk assessment.",
+      "URL": "https://doi.org/10.1061/9780784486443.056",
+      "categories": [
+        "robotics",
+        "vision",
+        "ai"
+      ],
+      "platforms": [
+        "UAV"
+      ],
+      "tags": [
+        "Aerial robotics",
+        "Computer vision",
+        "Site safety"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2025,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., Assaad, R. H., & Awada, M. (2025). Integrating Large Language Models (LLMs) with Autonomous Aerial Drone Robotics and Computer Vision for Contextual Adaptive Construction Site Safety Management and Risk Assessment. In Computing in Civil Engineering 2025, 509-518.",
+          "url": "https://doi.org/10.1061/9780784486443.056"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486443.056"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "title": "SLAM & Reinforcement-learning Navigation",
+      "description": "An autonomous construction-robot navigation system combining SLAM, Transformers, and TD3 reinforcement learning for mapping and dynamic obstacle avoidance.",
+      "URL": "https://doi.org/10.1061/9780784486443.057",
+      "categories": [
+        "robotics",
+        "ai"
+      ],
+      "platforms": [
+        "Mobile robot"
+      ],
+      "tags": [
+        "SLAM",
+        "TD3",
+        "Obstacle avoidance"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2025,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., Assaad, R. H., & Awada, M. (2025). SLAM-Assisted Transformer-Based TD3 Deep Reinforcement Learning for Adaptive Navigation and Mapping and Dynamic Obstacle Avoidance in Autonomous Construction Robotics. In Computing in Civil Engineering 2025, 519-529.",
+          "url": "https://doi.org/10.1061/9780784486443.057"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486443.057"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "title": "AR Smart-building Control & Assistance",
+      "description": "A cyber-physical building interface combining LLMs, augmented reality, and IoT sensor networks for operational assistance, indoor environmental monitoring, and automated HVAC control.",
+      "URL": "https://doi.org/10.1061/9780784486436.090",
+      "categories": [
+        "buildings",
+        "ai",
+        "sensing"
+      ],
+      "platforms": [
+        "Smart building"
+      ],
+      "tags": [
+        "Augmented reality",
+        "IoT networks",
+        "HVAC control"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2025,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Mohammadi, M., Poudel, O., Assaad, R. H., Awada, M., & Assaf, G. (2025). A Smart Cyber-Physical System Combining Large Language Models (LLMs) and Augmented Reality (AR) to Enhance Human-Building Interaction during Building Operations and Maintenance Procedures. In Computing in Civil Engineering 2025, 847-857.",
+          "url": "https://doi.org/10.1061/9780784486436.090"
+        },
+        {
+          "citation": "Mohammadi, M., Poudel, O., Assaad, R. H., Awada, M., & Assaf, G. (2025). An Intelligent Cyber-Physical System Integrating Large Language Models (LLMs), IoT Wireless Sensor Networks, and Augmented Reality (AR) for Real-Time Indoor Environmental Quality Improvement and Automated HVAC Control in Smart Buildings. In Computing in Civil Engineering 2025, 980-989.",
+          "url": "https://doi.org/10.1061/9780784486436.105"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486436.090"
+        },
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486436.105"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "title": "Acoustic Digital Twins & Sound Localization",
+      "description": "A sound-localization workflow integrating LiDAR-based digital twins, auditory devices, and IoT sensing to connect acoustic measurements with reality-captured environments.",
+      "URL": "https://doi.org/10.1061/9780784486122.050",
+      "categories": [
+        "sensing",
+        "bim"
+      ],
+      "platforms": [
+        "Infrastructure"
+      ],
+      "tags": [
+        "LiDAR digital twins",
+        "Acoustic localization",
+        "IoT"
+      ],
+      "origin": "research",
+      "status": "Research system",
+      "year": 2024,
+      "detailComponent": false,
+      "publications": [
+        {
+          "citation": "Poudel, O., & Assaad, R. H. (2024). Advancing Sound Level Localization through Innovative Integration and Fusion of Remote Sensing and Reality Captured LiDAR-Based Digital Twins, Auditory Devices, and IoT-Enabled Sensing Technologies. In Computing in Civil Engineering 2024, 466-475.",
+          "url": "https://doi.org/10.1061/9780784486122.050"
+        }
+      ],
+      "links": [
+        {
+          "label": "Related paper",
+          "url": "https://doi.org/10.1061/9780784486122.050"
+        }
+      ]
     }
   ]
 }

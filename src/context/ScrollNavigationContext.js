@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useRef, useEffect, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 // Create context for scroll navigation state
 export const ScrollNavigationContext = createContext(null);

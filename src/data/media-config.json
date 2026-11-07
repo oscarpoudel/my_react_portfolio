@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "manifestUrl": "https://ik.imagekit.io/oscarpnp/portfolio/index/media.json",
+  "refreshIntervalMs": 300000
+}

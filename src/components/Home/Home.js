@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import React,{useState,useEffect} from 'react';
 import HomeImg from '../../assets/images/home_img_upd.png'
-import vectorforimage from '../../assets/images/blur_vec.png'
-import { faGraduationCap,faHome,faPeoplePulling,faSuitcase,faUser, } from '@fortawesome/free-solid-svg-icons';
-import { faOrcid,faLinkedin,faFacebook, faGithub, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faOrcid,faLinkedin,faGithub,faYoutube } from '@fortawesome/free-brands-svg-icons';
 // 'C','i','v','i','l',' '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useScrollNavigation from '../../hooks/useScrollNavigation';
 
 const Home = () => {
+    const [portraitRatio, setPortraitRatio] = useState(2662 / 2516)
     const [letterClass,setLetterClass] = useState('text-animate')
     // Next: About, Prev: none (first page)
     useScrollNavigation('/about', null, true)
@@ -26,6 +26,11 @@ const Home = () => {
       }, [])
     return (
         <>
+        <Link to='/gallery' className='gallery-launcher' aria-label='Explore my life and PhD gallery'>
+            <span className='gallery-launcher-icon' aria-hidden='true'>▦</span>
+            <span><strong>My gallery</strong><small>Life beyond the research</small></span>
+            <span aria-hidden='true'>↗</span>
+        </Link>
         <div className='container home-page'>
          
             <div className='text-zone'>
@@ -46,7 +51,6 @@ const Home = () => {
                     New Jersey Institute of Technology<br/>
                     University Heights<br/>
                     Newark, New Jersey 07102</h2>
-                <h2></h2>
 
                 <div className='social-mid-page' >
                         <ul>
@@ -109,14 +113,14 @@ const Home = () => {
                 <Link to='/contact' className='flat-button'>Contact</Link>
             </div>
            
-            <div className = 'sideImage_home'>
+            <div className='home-portrait-group'>
+              <div className='sideImage_home' style={{ '--portrait-ratio': portraitRatio }}>
                 <div className='image1'>
-                    <img src ={HomeImg}/>
+                    <img src={HomeImg} alt="Oscar Poudel working with robots in the lab" onLoad={(event) => setPortraitRatio(event.currentTarget.naturalHeight / event.currentTarget.naturalWidth)}/>
                     </div>
-                  <div className='vec'>
-                <img  src = {vectorforimage}/>
-                    </div>  
-            </div>           
+              </div>
+              <p className='home-photo-caption'><span>a little curiosity, a lot of robots</span></p>
+            </div>
         </div>
        
         </>

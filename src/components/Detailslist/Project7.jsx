@@ -1,3 +1,4 @@
+import ProjectCaseImage from '../projectdetail/ProjectCaseImage';
 import React from 'react'
 import "./Project1.scss"
 
@@ -11,12 +12,12 @@ const ProjectTurtlebotYolov8 = () => {
       </p>
 
       <div className="image-row">
-        <img src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/2_object_placement_in_maze.png" alt="Object placement in maze environment" className="scaled-image"/>
-        <img src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/3_zoomed_in_placement_1.png" alt="Zoomed-in: object placement" className="scaled-image"/>
-        <img src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/4_object_detection_placement_1.png" alt="Detection: placement 1" className="scaled-image"/>
-        <img src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/5_object_detection_placement_2.png" alt="Detection: placement 2" className="scaled-image"/>
-        <img src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/6_object_detection_placement_3.png" alt="Detection: placement 3" className="scaled-image"/>
-        <img src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/7_detection_logs.png" alt="Detection logs (ROS 2)" className="scaled-image"/>
+        <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/2_object_placement_in_maze.png" alt="Object placement in maze environment" className="scaled-image"/>
+        <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/3_zoomed_in_placement_1.png" alt="Zoomed-in: object placement" className="scaled-image"/>
+        <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/4_object_detection_placement_1.png" alt="Detection: placement 1" className="scaled-image"/>
+        <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/5_object_detection_placement_2.png" alt="Detection: placement 2" className="scaled-image"/>
+        <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/6_object_detection_placement_3.png" alt="Detection: placement 3" className="scaled-image"/>
+        <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/7_detection_logs.png" alt="Detection logs (ROS 2)" className="scaled-image"/>
       </div>
       <div className="caption">
         Left: Objects arranged for detection in a maze. Center: YOLOv8 model identifies, localizes, and classifies objects at different locations. Right: Detection logs and output topics for downstream semantic mapping.

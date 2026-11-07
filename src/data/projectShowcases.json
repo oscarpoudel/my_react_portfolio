@@ -1,0 +1,1547 @@
+{
+  "18": {
+    "papers": [
+      18
+    ],
+    "cover": {
+      "sourceFile": "18_cover_image.jpg",
+      "title": "MAESTRO extended-reality interface",
+      "caption": "An extended-reality interface connected to building sensing and supervised device control.",
+      "width": 1254,
+      "height": 1479,
+      "src": "images/project-showcase/18/cover.webp",
+      "original": "images/project-showcase/18/originals/cover.jpg"
+    },
+    "methodology": [
+      {
+        "title": "Adapt the reasoning layer",
+        "description": "Adapt a facility-management language model with LoRA, connect procedural retrieval, and route requests between language, vision, and IoT agents."
+      },
+      {
+        "title": "Connect reasoning to physical systems",
+        "description": "Use MCP-mediated, schema-validated tool calls to read telemetry and request supervised device actions through a shared orchestration layer."
+      },
+      {
+        "title": "Close the interaction loop",
+        "description": "Bring speech, images, live sensing, and device feedback into an XR interface; evaluate answer quality, tool validity, and end-to-end task completion."
+      }
+    ],
+    "skills": [
+      {
+        "area": "AI engineering",
+        "items": [
+          "Multi-agent orchestration",
+          "LoRA adaptation",
+          "RAG",
+          "Structured tool calling"
+        ]
+      },
+      {
+        "area": "Cyber-physical systems",
+        "items": [
+          "IoT telemetry",
+          "Supervised actuation",
+          "XR interaction",
+          "System evaluation"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "18_overview of the system.png",
+        "title": "System architecture",
+        "caption": "The sensing, reasoning, control, and XR layers connected in one human-building interaction loop.",
+        "width": 779,
+        "height": 481,
+        "src": "images/project-showcase/18/figure-1.webp",
+        "original": "images/project-showcase/18/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "18_multi agent llm graph for the system.png",
+        "title": "Agent orchestration",
+        "caption": "Routing between specialized agents for procedural questions, visual queries, and device actions.",
+        "width": 2600,
+        "height": 1646,
+        "src": "images/project-showcase/18/figure-2.webp",
+        "original": "images/project-showcase/18/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "18_iot_system panel I.png",
+        "title": "Physical IoT integration",
+        "caption": "Sensor and actuator endpoints that connect the assistant to building equipment.",
+        "width": 2600,
+        "height": 1966,
+        "src": "images/project-showcase/18/figure-3.webp",
+        "original": "images/project-showcase/18/originals/figure-3.png"
+      },
+      {
+        "sourceFile": "18_working of the system graphics.png",
+        "title": "Interaction workflow",
+        "caption": "Examples of requests moving through the interface and connected system.",
+        "width": 2600,
+        "height": 1483,
+        "src": "images/project-showcase/18/figure-4.webp",
+        "original": "images/project-showcase/18/originals/figure-4.png"
+      },
+      {
+        "sourceFile": "18_iot sysetms panel II.png",
+        "title": "IoT integration: second panel",
+        "caption": "Additional sensor and actuator connections used in the building-control setup.",
+        "width": 2600,
+        "height": 764,
+        "src": "images/project-showcase/18/figure-5.webp",
+        "original": "images/project-showcase/18/originals/figure-5.png"
+      },
+      {
+        "sourceFile": "18_user controlling iot endpoint in VR headset.png",
+        "title": "Immersive device interaction",
+        "caption": "An XR interaction with a connected IoT endpoint.",
+        "width": 2600,
+        "height": 1129,
+        "src": "images/project-showcase/18/figure-6.webp",
+        "original": "images/project-showcase/18/originals/figure-6.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Models & adaptation",
+        "description": "Adapt Qwen3-4B using LoRA for facility-management language tasks, and use Qwen3-VL-8B for image-based questions with retrieval support."
+      },
+      {
+        "title": "Agent-to-device integration",
+        "description": "Route requests through specialist agents and MCP tools. Validate structured arguments before supervised sensor reads or actuator commands are sent to physical endpoints."
+      },
+      {
+        "title": "Operator interface",
+        "description": "Combine XR interaction, spoken requests, images, and live telemetry in a shared request-and-feedback workflow; evaluate tool validity and completed device actions."
+      }
+    ]
+  },
+  "19": {
+    "papers": [
+      17
+    ],
+    "cover": {
+      "sourceFile": "17_cover_image with isaac sim based rover.png",
+      "title": "Simulated rover platform",
+      "caption": "The rover platform used in the simulated human-robot interaction workflow.",
+      "width": 239,
+      "height": 223,
+      "src": "images/project-showcase/19/cover.webp",
+      "original": "images/project-showcase/19/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Build a construction-noise speech pipeline",
+        "description": "Curate speech augmented with recorded construction noise and synthesized interference to reproduce difficult jobsite listening conditions."
+      },
+      {
+        "title": "Learn noise-resistant representations",
+        "description": "Develop a dual-encoder ASR architecture with contrastive learning, and compare transcription performance against baseline speech models."
+      },
+      {
+        "title": "Turn language into robot behavior",
+        "description": "Connect transcription to a closed-loop vision-language control agent and bounded ROS2 actions; test navigation and inspection in simulation and physical scenarios."
+      }
+    ],
+    "skills": [
+      {
+        "area": "AI & speech",
+        "items": [
+          "Dual-encoder ASR",
+          "Contrastive learning",
+          "Noise augmentation",
+          "Vision-language agents"
+        ]
+      },
+      {
+        "area": "Robotics",
+        "items": [
+          "ROS2 integration",
+          "Isaac Sim",
+          "Closed-loop navigation",
+          "HRI evaluation"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "17_created deep learning model architecture.png",
+        "title": "Speech-model architecture",
+        "caption": "The dual-encoder model and contrastive learning stage for noise-invariant speech features.",
+        "width": 2600,
+        "height": 1389,
+        "src": "images/project-showcase/19/figure-1.webp",
+        "original": "images/project-showcase/19/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "17_overview of the system.png",
+        "title": "Voice-to-action pipeline",
+        "caption": "From noisy spoken instructions to visual reasoning and robot actions.",
+        "width": 2600,
+        "height": 1489,
+        "src": "images/project-showcase/19/figure-2.webp",
+        "original": "images/project-showcase/19/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "17_working of the navigation system with user query.png",
+        "title": "Navigation interaction",
+        "caption": "User requests connected to robot navigation and visual feedback.",
+        "width": 2600,
+        "height": 1745,
+        "src": "images/project-showcase/19/figure-3.webp",
+        "original": "images/project-showcase/19/originals/figure-3.png"
+      },
+      {
+        "sourceFile": "17_real_world_ construction site audio_recoding for test.png",
+        "title": "Field audio collection",
+        "caption": "Construction-site recordings used to ground the acoustic testing conditions.",
+        "width": 2600,
+        "height": 1068,
+        "src": "images/project-showcase/19/figure-4.webp",
+        "original": "images/project-showcase/19/originals/figure-4.png"
+      },
+      {
+        "sourceFile": "17_navigation map robots and layout of the simulation.png",
+        "title": "Navigation test layout",
+        "caption": "Robot platforms, map layout, and simulated construction scenes used for evaluation.",
+        "width": 2600,
+        "height": 1618,
+        "src": "images/project-showcase/19/figure-5.webp",
+        "original": "images/project-showcase/19/originals/figure-5.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Speech-model development",
+        "description": "Train a dual-encoder ASR model with a contrastive objective on speech mixed with recorded construction noise and synthesized interference."
+      },
+      {
+        "title": "Robot software stack",
+        "description": "Use ROS2 navigation and a closed-loop vision-language agent to convert transcribed requests into bounded robot operations, then verify progress through camera feedback."
+      },
+      {
+        "title": "Simulation & testing",
+        "description": "Build construction scenarios in NVIDIA Isaac Sim 4.5.0 with a Nova Carter rover. Compare transcription baselines and test waypoint, inspection, and adaptive-navigation requests."
+      }
+    ]
+  },
+  "20": {
+    "papers": [
+      16
+    ],
+    "cover": {
+      "sourceFile": "16_leak_detection cover image.png",
+      "title": "Acoustic leak-sensing prototype",
+      "caption": "The acoustic sensing prototype used for pipe-network leak experiments.",
+      "width": 433,
+      "height": 536,
+      "src": "images/project-showcase/20/cover.webp",
+      "original": "images/project-showcase/20/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Extract acoustic leak signatures",
+        "description": "Collect and filter hydrophone signals, isolate low-frequency leak energy, and estimate time differences of arrival between sensors."
+      },
+      {
+        "title": "Localize across a pipe network",
+        "description": "Combine timing estimates with two-dimensional network geometry to identify a leak zone and refine its estimated position."
+      },
+      {
+        "title": "Build and validate the complete system",
+        "description": "Integrate four hydrophones, Arduino acquisition, and Jetson edge processing; construct a physical pipe-network testbed and visualize localization through a GUI."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Acoustic signal processing",
+        "items": [
+          "Acoustic filtering",
+          "Time-delay estimation",
+          "Sensor fusion",
+          "Network localization"
+        ]
+      },
+      {
+        "area": "Infrastructure engineering",
+        "items": [
+          "Arduino",
+          "NVIDIA Jetson",
+          "Physical testbed design",
+          "Monitoring interfaces"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "16_system_overview.png",
+        "title": "Localization workflow",
+        "caption": "Signal acquisition, acoustic processing, and network-based leak localization.",
+        "width": 2600,
+        "height": 1445,
+        "src": "images/project-showcase/20/figure-1.webp",
+        "original": "images/project-showcase/20/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "16_leak_detection iot architecture.png",
+        "title": "Embedded sensing architecture",
+        "caption": "Hydrophones and embedded hardware connected to edge processing.",
+        "width": 960,
+        "height": 476,
+        "src": "images/project-showcase/20/figure-2.webp",
+        "original": "images/project-showcase/20/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "16_test_setup.png",
+        "title": "Laboratory test network",
+        "caption": "Physical pipe-network experiments used to evaluate detection and localization.",
+        "width": 2600,
+        "height": 1855,
+        "src": "images/project-showcase/20/figure-3.webp",
+        "original": "images/project-showcase/20/originals/figure-3.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Embedded acquisition",
+        "description": "Integrate four hydrophones with Arduino acquisition and NVIDIA Jetson edge processing, bringing synchronized acoustic measurements into the localization workflow."
+      },
+      {
+        "title": "Localization algorithms",
+        "description": "Combine acoustic cross-correlation, time-delay estimation, graph-based path searching, and pipe-network geometry to distinguish a leak zone from an estimated leak point."
+      },
+      {
+        "title": "Physical validation",
+        "description": "Build a laboratory pipe network with controlled leaks and a graphical interface for displaying detected events, candidate zones, and estimated positions."
+      }
+    ]
+  },
+  "21": {
+    "papers": [
+      11
+    ],
+    "cover": {
+      "sourceFile": "11_comparative_crack_segmentation.png",
+      "title": "Crack-segmentation examples",
+      "caption": "Example crack masks from the comparative segmentation evaluation.",
+      "width": 1600,
+      "height": 679,
+      "src": "images/project-showcase/21/cover.webp",
+      "original": "images/project-showcase/21/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Combine local edges with global context",
+        "description": "Develop a hybrid encoder-decoder with a CNN edge branch and a Vision Transformer backbone to preserve thin crack boundaries while reasoning across an image."
+      },
+      {
+        "title": "Guide segmentation with language and vision",
+        "description": "Use zero-shot vision-language region proposals to focus the segmentation pipeline on likely crack locations in cluttered scenes."
+      },
+      {
+        "title": "Evaluate inspection quality",
+        "description": "Benchmark against segmentation baselines on DeepCrack, comparing overlap, precision, recall, and boundary preservation rather than relying on a single score."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Computer vision",
+        "items": [
+          "CNN-ViT architecture",
+          "Edge-aware segmentation",
+          "Zero-shot VLM proposals",
+          "Model benchmarking"
+        ]
+      },
+      {
+        "area": "Infrastructure inspection",
+        "items": [
+          "Crack delineation",
+          "Damage-image analysis",
+          "Quantitative evaluation",
+          "Inspection automation"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "11_new_created_deep_learning_model.png",
+        "title": "Hybrid network architecture",
+        "caption": "CNN edge features combined with transformer context in the segmentation model.",
+        "width": 2600,
+        "height": 1623,
+        "src": "images/project-showcase/21/figure-1.webp",
+        "original": "images/project-showcase/21/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "11_system_overview_diagram.png",
+        "title": "Inspection pipeline",
+        "caption": "The region-proposal and segmentation stages of the full workflow.",
+        "width": 2600,
+        "height": 1670,
+        "src": "images/project-showcase/21/figure-2.webp",
+        "original": "images/project-showcase/21/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "11_training_outpus.png",
+        "title": "Model training",
+        "caption": "Training behavior and evaluation outputs from the developed model.",
+        "width": 1280,
+        "height": 548,
+        "src": "images/project-showcase/21/figure-3.webp",
+        "original": "images/project-showcase/21/originals/figure-3.png"
+      },
+      {
+        "sourceFile": "11_auc_ruc_plot.svg",
+        "title": "Model comparison curves",
+        "caption": "Performance curves comparing the segmentation approaches; available as a scalable vector chart.",
+        "src": "images/project-showcase/21/figure-4.svg",
+        "original": "images/project-showcase/21/originals/figure-4.svg"
+      },
+      {
+        "sourceFile": "11_cover_image.png",
+        "title": "Field imaging setup",
+        "caption": "The field imaging setup included in the project material.",
+        "width": 2094,
+        "height": 1570,
+        "src": "images/project-showcase/21/figure-5.webp",
+        "original": "images/project-showcase/21/originals/figure-5.png"
+      },
+      {
+        "sourceFile": "11_crack_quantification.png",
+        "title": "Crack measurement outputs",
+        "caption": "Visual outputs illustrating the crack-quantification stage.",
+        "width": 1910,
+        "height": 1549,
+        "src": "images/project-showcase/21/figure-6.webp",
+        "original": "images/project-showcase/21/originals/figure-6.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Training implementation",
+        "description": "Implement the network in PyTorch and train with AdamW, weight decay, a polynomial learning-rate schedule, and early stopping on a GPU workstation."
+      },
+      {
+        "title": "Model integration",
+        "description": "Fuse a CNN edge encoder with a Vision Transformer backbone and add zero-shot vision-language region proposals to focus inference on likely crack regions."
+      },
+      {
+        "title": "Evaluation workflow",
+        "description": "Use DeepCrack images for baseline comparisons, qualitative mask inspection, and precision, recall, F1, and overlap metrics to assess thin-crack preservation."
+      }
+    ]
+  },
+  "22": {
+    "papers": [
+      3,
+      4
+    ],
+    "cover": {
+      "sourceFile": "3_iot_devices.png",
+      "title": "Embedded acoustic monitoring hardware",
+      "caption": "The connected microphone and embedded electronics used for acoustic monitoring.",
+      "width": 1600,
+      "height": 623,
+      "src": "images/project-showcase/22/cover.webp",
+      "original": "images/project-showcase/22/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Recognize jobsite activity from audio",
+        "description": "Develop a convolutional recurrent audio classifier for equipment, work activity, environmental conditions, hazards, and workforce-related sounds."
+      },
+      {
+        "title": "Engineer the edge-to-cloud pipeline",
+        "description": "Connect Wi-Fi/BLE acoustic endpoints to Jetson inference and AWS EC2 services, with streaming data transfer for ongoing site monitoring."
+      },
+      {
+        "title": "Deliver usable field feedback",
+        "description": "Build a Flutter/Dart mobile interface for monitoring and targeted alerts, and test the integrated hardware and software across workshop environments."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Machine listening",
+        "items": [
+          "Audio classification",
+          "CRNN / GRU models",
+          "Feature extraction",
+          "Model evaluation"
+        ]
+      },
+      {
+        "area": "Connected systems",
+        "items": [
+          "Embedded IoT",
+          "Jetson edge inference",
+          "AWS EC2",
+          "Flutter / Dart"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "3_end_to_end_pipeline.png",
+        "title": "End-to-end architecture",
+        "caption": "Audio sensing connected to edge inference, cloud services, and a mobile endpoint.",
+        "width": 2600,
+        "height": 1404,
+        "src": "images/project-showcase/22/figure-1.webp",
+        "original": "images/project-showcase/22/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "3_deep_learning_model_for_the_system.png",
+        "title": "Audio-model design",
+        "caption": "The deep-learning architecture used to interpret construction sounds.",
+        "width": 2600,
+        "height": 1173,
+        "src": "images/project-showcase/22/figure-2.webp",
+        "original": "images/project-showcase/22/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "3_monitoring_app developed in flutter for the system.png",
+        "title": "Mobile monitoring interface",
+        "caption": "A Flutter application for viewing site conditions and receiving alerts.",
+        "width": 336,
+        "height": 720,
+        "src": "images/project-showcase/22/figure-3.webp",
+        "original": "images/project-showcase/22/originals/figure-3.png"
+      },
+      {
+        "sourceFile": "3_experimentation and results for audio prediction.png",
+        "title": "Experimental evaluation",
+        "caption": "Audio classification experiments and model outputs.",
+        "width": 2600,
+        "height": 1808,
+        "src": "images/project-showcase/22/figure-4.webp",
+        "original": "images/project-showcase/22/originals/figure-4.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Embedded & network stack",
+        "description": "Stream audio from Wi-Fi/BLE sensing endpoints over WebSockets to Jetson edge processing, with AWS EC2 providing cloud-side monitoring capabilities."
+      },
+      {
+        "title": "Machine-listening model",
+        "description": "Use a convolutional recurrent network with GRU-based sequence modeling to classify 14 construction-related sound categories from the audio stream."
+      },
+      {
+        "title": "Application delivery",
+        "description": "Develop the Android monitoring endpoint with Flutter and Dart, supporting local and cloud data sources plus targeted alerts for stakeholders."
+      }
+    ]
+  },
+  "23": {
+    "papers": [
+      2
+    ],
+    "cover": {
+      "sourceFile": "2_cover_image_with user_wearing_all_combined_biosensors.png",
+      "title": "Integrated wearable biosensing prototype",
+      "caption": "The assembled wearable sensing system shown in use.",
+      "width": 580,
+      "height": 771,
+      "src": "images/project-showcase/23/cover.webp",
+      "original": "images/project-showcase/23/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Integrate a multisensor wearable",
+        "description": "Combine 14 sensors across four ESP32 boards to acquire 18 physiological and health-related indicators through Wi-Fi/Bluetooth connectivity."
+      },
+      {
+        "title": "Package electronics for field use",
+        "description": "Design and 3D-print hip and foot enclosures, arrange wiring and sensor placement, and bring the distributed measurements into one sensing system."
+      },
+      {
+        "title": "Make measurements visible and testable",
+        "description": "Develop a Django/React dashboard on an edge server and benchmark sensor readings against commercial reference devices."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Embedded engineering",
+        "items": [
+          "ESP32",
+          "Wi-Fi / Bluetooth",
+          "Multisensor integration",
+          "3D-printed enclosures"
+        ]
+      },
+      {
+        "area": "Software & validation",
+        "items": [
+          "Django",
+          "React",
+          "Live dashboards",
+          "Sensor benchmarking"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "2_overview_of the biosensor system.png",
+        "title": "Wearable sensing workflow",
+        "caption": "The path from body-worn sensing to transmission and visualization.",
+        "width": 2093,
+        "height": 2568,
+        "src": "images/project-showcase/23/figure-1.webp",
+        "original": "images/project-showcase/23/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "2_hardware design of the system.png",
+        "title": "Hardware architecture",
+        "caption": "Distributed sensor and microcontroller connections in the wearable system.",
+        "width": 1500,
+        "height": 972,
+        "src": "images/project-showcase/23/figure-2.webp",
+        "original": "images/project-showcase/23/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "2_3d_printed enclouse with all wires.jpg",
+        "title": "Prototype assembly",
+        "caption": "Enclosures, wiring, and integrated electronics in the physical build.",
+        "width": 1958,
+        "height": 2600,
+        "src": "images/project-showcase/23/figure-3.webp",
+        "original": "images/project-showcase/23/originals/figure-3.jpg"
+      },
+      {
+        "sourceFile": "2_sensor_placement_of_system.png",
+        "title": "Sensor placement",
+        "caption": "The placement of sensors across the wearable arrangement.",
+        "width": 997,
+        "height": 1127,
+        "src": "images/project-showcase/23/figure-4.webp",
+        "original": "images/project-showcase/23/originals/figure-4.png"
+      },
+      {
+        "sourceFile": "2_foot_sensor.jpg",
+        "title": "Foot-worn sensing module",
+        "caption": "The wearable sensor hardware packaged for placement on the foot.",
+        "width": 1958,
+        "height": 2600,
+        "src": "images/project-showcase/23/figure-5.webp",
+        "original": "images/project-showcase/23/originals/figure-5.jpg"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Electronics & connectivity",
+        "description": "Integrate 14 sensors across four ESP32 boards using Wi-Fi and Bluetooth, collecting 18 physiological and health-related indicators in one wearable system."
+      },
+      {
+        "title": "Mechanical integration",
+        "description": "Design hip and foot sensor placement, 3D-print protective enclosures, and assemble the wiring and distributed electronics into wearable modules."
+      },
+      {
+        "title": "Dashboard & validation",
+        "description": "Serve live measurements through a Django backend and React interface on an edge server. Compare sensor readings against commercial reference devices."
+      }
+    ]
+  },
+  "24": {
+    "papers": [
+      1
+    ],
+    "cover": {
+      "sourceFile": "1_building_configuration.png",
+      "title": "Inclined-column structural models",
+      "caption": "Reinforced-concrete models used to study inclined-column seismic behavior.",
+      "width": 1600,
+      "height": 782,
+      "src": "images/project-showcase/24/cover.webp",
+      "original": "images/project-showcase/24/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Automate the structural model study",
+        "description": "Use Python and the ETABS CSI API to generate and analyze more than 80 reinforced-concrete model variations with symmetric and asymmetric inclined-column layouts."
+      },
+      {
+        "title": "Evaluate elastic and nonlinear response",
+        "description": "Run response-spectrum and nonlinear pushover analyses, comparing drift, displacement, base shear, and stiffness across the configurations."
+      },
+      {
+        "title": "Connect response to seismic performance",
+        "description": "Develop fragility curves and compare performance trends to understand how column geometry changes seismic vulnerability and design behavior."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Structural engineering",
+        "items": [
+          "RCC modeling",
+          "Response-spectrum analysis",
+          "Nonlinear pushover",
+          "Seismic fragility"
+        ]
+      },
+      {
+        "area": "Engineering computation",
+        "items": [
+          "ETABS CSI API",
+          "Python automation",
+          "Parametric studies",
+          "Response visualization"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "1_flowchart_of_the_system.png",
+        "title": "Automated analysis workflow",
+        "caption": "The modeling, analysis, and fragility-assessment sequence.",
+        "width": 1772,
+        "height": 1104,
+        "src": "images/project-showcase/24/figure-1.webp",
+        "original": "images/project-showcase/24/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "1_buildng_configuration more.png",
+        "title": "Parametric configurations",
+        "caption": "Alternative inclined-column arrangements used in the comparative study.",
+        "width": 1772,
+        "height": 911,
+        "src": "images/project-showcase/24/figure-2.webp",
+        "original": "images/project-showcase/24/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "1_building_fragitlity.png",
+        "title": "Fragility assessment",
+        "caption": "Performance-based comparisons of the structural model variations.",
+        "width": 2032,
+        "height": 2247,
+        "src": "images/project-showcase/24/figure-3.webp",
+        "original": "images/project-showcase/24/originals/figure-3.png"
+      },
+      {
+        "sourceFile": "1_results analysis.png",
+        "title": "Structural response comparison",
+        "caption": "Analysis outputs used to compare the effect of column configurations.",
+        "width": 2032,
+        "height": 1276,
+        "src": "images/project-showcase/24/figure-4.webp",
+        "original": "images/project-showcase/24/originals/figure-4.png"
+      },
+      {
+        "sourceFile": "1_nomenclature_i_created.png",
+        "title": "Model naming system",
+        "caption": "A consistent nomenclature for identifying and comparing structural configurations.",
+        "width": 2032,
+        "height": 1336,
+        "src": "images/project-showcase/24/figure-5.webp",
+        "original": "images/project-showcase/24/originals/figure-5.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Parametric model automation",
+        "description": "Drive ETABS through the CSI API using Python scripts to generate, modify, and analyze more than 80 inclined-column building configurations."
+      },
+      {
+        "title": "Structural analysis workflow",
+        "description": "Automate response-spectrum and nonlinear pushover studies, extracting story drift, displacement, base shear, and stiffness for cross-model comparison."
+      },
+      {
+        "title": "Performance assessment",
+        "description": "Build fragility curves from structural response outputs and organize consistent model naming and plots to compare symmetric and asymmetric configurations."
+      }
+    ]
+  },
+  "31": {
+    "papers": [
+      14
+    ],
+    "cover": {
+      "sourceFile": "14_cover_image_for_14_showing_robot_arm.jpg",
+      "title": "Robot-arm teleoperation prototype",
+      "caption": "The physical robot-arm setup for immersive teleoperation.",
+      "width": 1583,
+      "height": 1600,
+      "src": "images/project-showcase/31/cover.webp",
+      "original": "images/project-showcase/31/originals/cover.jpg"
+    },
+    "methodology": [
+      {
+        "title": "Align digital geometry with the workcell",
+        "description": "Bring BIM geometry into Unity and register the robot workspace with RGB-D scene information to give the operator spatial context."
+      },
+      {
+        "title": "Translate VR input into controlled motion",
+        "description": "Connect a lightweight VR interface to ROS2 robot control, using MoveIt Servo for continuous commands and waypoint planning for goal-based motion."
+      },
+      {
+        "title": "Keep the operator in the loop",
+        "description": "Use calibration, motion smoothing, speed constraints, and timeout handling to support manipulation; evaluate task execution and operator interaction."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Robotics",
+        "items": [
+          "ROS2",
+          "MoveIt Servo",
+          "6-DOF manipulation",
+          "Human-in-the-loop control"
+        ]
+      },
+      {
+        "area": "BIM & immersive systems",
+        "items": [
+          "BIM-to-Unity",
+          "VR interfaces",
+          "RGB-D registration",
+          "Workspace calibration"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "14_overview_of_the_system.png",
+        "title": "BIM-VR-robot architecture",
+        "caption": "The connections between the digital model, operator interface, and robot controller.",
+        "width": 2600,
+        "height": 1360,
+        "src": "images/project-showcase/31/figure-1.webp",
+        "original": "images/project-showcase/31/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "14_BIM to Unity.png",
+        "title": "BIM to Unity workflow",
+        "caption": "Building-model geometry transferred into the interactive environment.",
+        "width": 2600,
+        "height": 747,
+        "src": "images/project-showcase/31/figure-2.webp",
+        "original": "images/project-showcase/31/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "14. working of the system in vr and the 3d cloud being registed at the same time in unity so we can build in BIM.png",
+        "title": "Live scene and VR operation",
+        "caption": "VR interaction alongside registered scene information for manipulation.",
+        "width": 2600,
+        "height": 1965,
+        "src": "images/project-showcase/31/figure-3.webp",
+        "original": "images/project-showcase/31/originals/figure-3.png"
+      },
+      {
+        "sourceFile": "14_robot_arrangment_system_with_controller_PC.png",
+        "title": "Physical workcell",
+        "caption": "The arm, controller, and computer arranged for teleoperation experiments.",
+        "width": 1529,
+        "height": 1772,
+        "src": "images/project-showcase/31/figure-4.webp",
+        "original": "images/project-showcase/31/originals/figure-4.png"
+      },
+      {
+        "sourceFile": "14_simulation_environment_with_SES_pro_ARM.png",
+        "title": "Robot-arm simulation",
+        "caption": "The arm and virtual workspace used to develop and test manipulation workflows.",
+        "width": 2118,
+        "height": 1768,
+        "src": "images/project-showcase/31/figure-5.webp",
+        "original": "images/project-showcase/31/originals/figure-5.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Robotics software",
+        "description": "Connect ROS2 to MoveIt Servo for continuous pose/twist input, alongside goal-based waypoint planning, motion smoothing, and Cartesian speed constraints."
+      },
+      {
+        "title": "BIM & VR integration",
+        "description": "Import BIM geometry into Unity and connect the operator interface to the robot workspace, combining virtual model context with RGB-D scene information."
+      },
+      {
+        "title": "Calibration & safeguards",
+        "description": "Use a RealSense D455 and ArUco-based hand-eye registration to align camera, robot-base, and BIM frames. Add command timeouts and re-registration for drift."
+      }
+    ]
+  },
+  "32": {
+    "papers": [
+      13
+    ],
+    "cover": {
+      "sourceFile": "13_cover_image_with_my_picture_with_robot_dog.jpg",
+      "title": "Quadruped firefighting research prototype",
+      "caption": "The quadruped research platform used for perception and response integration.",
+      "width": 1600,
+      "height": 1200,
+      "src": "images/project-showcase/32/cover.webp",
+      "original": "images/project-showcase/32/originals/cover.jpg"
+    },
+    "methodology": [
+      {
+        "title": "Integrate perception and mobile robotics",
+        "description": "Combine RGB fire detection, thermal tracking, and environmental sensing with mapping and autonomous navigation on a quadruped platform."
+      },
+      {
+        "title": "Build the suppression mechanism",
+        "description": "Fabricate an extinguisher mount and controlled clamp, then integrate a pan-tilt module to direct the nozzle using thermal feedback."
+      },
+      {
+        "title": "Coordinate and evaluate the sequence",
+        "description": "Orchestrate detection, approach, aiming, and actuation with behavior trees; assess navigation in Gazebo and staged physical demonstrations."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Robotics & perception",
+        "items": [
+          "SLAM navigation",
+          "Thermal tracking",
+          "Behavior trees",
+          "Gazebo simulation"
+        ]
+      },
+      {
+        "area": "Physical prototyping",
+        "items": [
+          "3D-printed mounts",
+          "Servo control",
+          "Embedded actuation",
+          "System integration"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "13_overview of the system.png",
+        "title": "System architecture",
+        "caption": "Perception, navigation, and actuation connected into a coordinated research prototype.",
+        "width": 2600,
+        "height": 1206,
+        "src": "images/project-showcase/32/figure-1.webp",
+        "original": "images/project-showcase/32/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "13_3d printed fireextenguisher clamp with the controller system and its positiotining in fire extenguisher.png",
+        "title": "Extinguisher mechanism",
+        "caption": "Custom clamp fabrication and controller integration for the suppression hardware.",
+        "width": 480,
+        "height": 908,
+        "src": "images/project-showcase/32/figure-2.webp",
+        "original": "images/project-showcase/32/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "13_simulation_enviorment and behavior tree for the robot.png",
+        "title": "Simulation and orchestration",
+        "caption": "The test environment and behavior-tree sequence used to coordinate tasks.",
+        "width": 968,
+        "height": 293,
+        "src": "images/project-showcase/32/figure-3.webp",
+        "original": "images/project-showcase/32/originals/figure-3.png"
+      },
+      {
+        "sourceFile": "13_results of the system with first panel rvis for navigation second fire decetion with rgb third therman camera and fire massk.png",
+        "title": "Perception and navigation outputs",
+        "caption": "Navigation visualization, RGB detection, and thermal feedback shown together.",
+        "width": 1632,
+        "height": 510,
+        "src": "images/project-showcase/32/figure-4.webp",
+        "original": "images/project-showcase/32/originals/figure-4.png"
+      },
+      {
+        "sourceFile": "13_robot_dog_with_fire_extenguisher_attached.png",
+        "title": "Integrated quadruped prototype",
+        "caption": "The mobile platform with the extinguisher mechanism mounted and connected.",
+        "width": 1488,
+        "height": 1984,
+        "src": "images/project-showcase/32/figure-5.webp",
+        "original": "images/project-showcase/32/originals/figure-5.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Onboard perception",
+        "description": "Run a trained YOLO fire/smoke detector on the Jetson computer integrated with the Unitree Go1, and combine RGB observations with thermal sensing."
+      },
+      {
+        "title": "Mechanism & control",
+        "description": "Fabricate the extinguisher clamp and mount, integrate a pan-tilt nozzle mechanism, and connect embedded servo and clamp control to thermal target tracking."
+      },
+      {
+        "title": "Task orchestration",
+        "description": "Use behavior trees to coordinate detection, navigation, aiming, and actuation. Develop the facility scenario in Gazebo and evaluate staged physical demonstrations."
+      }
+    ]
+  },
+  "33": {
+    "papers": [
+      12
+    ],
+    "cover": {
+      "sourceFile": "12_talk_see_support_cover_page_and hardware layout.png",
+      "title": "Talk, See, Support wearable",
+      "caption": "The wearable audio and visual capture device assembled on a hard hat.",
+      "width": 1600,
+      "height": 1098,
+      "src": "images/project-showcase/33/cover.webp",
+      "original": "images/project-showcase/33/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Build the wearable capture interface",
+        "description": "Integrate an ESP32, camera, microphone, wake/confirm input, and battery into a compact mountable device for jobsite audio and image capture."
+      },
+      {
+        "title": "Connect multimodal input to agent tools",
+        "description": "Send buffered observations to cloud-based reasoning, using retrieval-augmented generation and inspection tools to answer contextual field questions."
+      },
+      {
+        "title": "Return actionable guidance",
+        "description": "Deliver audio and web feedback, support progress documentation, and generate visual or textual task guidance from the same multimodal workflow."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Agentic AI",
+        "items": [
+          "Multimodal reasoning",
+          "RAG pipelines",
+          "Tool orchestration",
+          "Generative guidance"
+        ]
+      },
+      {
+        "area": "Wearable systems",
+        "items": [
+          "ESP32",
+          "Audio / image capture",
+          "Cloud APIs",
+          "Field interface design"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "12_system_overview.png",
+        "title": "Wearable-to-cloud workflow",
+        "caption": "The capture, reasoning, and feedback stages of the assistant.",
+        "width": 2600,
+        "height": 1179,
+        "src": "images/project-showcase/33/figure-1.webp",
+        "original": "images/project-showcase/33/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "12_agent_graph_multiagent.png",
+        "title": "Agent graph",
+        "caption": "How specialized reasoning and tool capabilities are coordinated.",
+        "width": 989,
+        "height": 515,
+        "src": "images/project-showcase/33/figure-2.webp",
+        "original": "images/project-showcase/33/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "12_RAG_Pipeline.png",
+        "title": "Retrieval pipeline",
+        "caption": "Document retrieval connected to contextual construction guidance.",
+        "width": 2053,
+        "height": 1500,
+        "src": "images/project-showcase/33/figure-3.webp",
+        "original": "images/project-showcase/33/originals/figure-3.png"
+      },
+      {
+        "sourceFile": "12_hardware_system_developed for the project.png",
+        "title": "Wearable hardware",
+        "caption": "The electronics and integrated assembly developed for field interaction.",
+        "width": 2537,
+        "height": 2157,
+        "src": "images/project-showcase/33/figure-4.webp",
+        "original": "images/project-showcase/33/originals/figure-4.png"
+      },
+      {
+        "sourceFile": "12_results showing the output of video generation input prompt and prompt optimization.png",
+        "title": "Generated task guidance",
+        "caption": "Examples connecting user input, prompt refinement, and generated visual guidance.",
+        "width": 2600,
+        "height": 1242,
+        "src": "images/project-showcase/33/figure-5.webp",
+        "original": "images/project-showcase/33/originals/figure-5.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Wearable hardware",
+        "description": "Assemble an ESP32, camera, digital microphone, rechargeable battery, and capacitive wake/confirm input in a clip-on unit for vest or helmet mounting."
+      },
+      {
+        "title": "Cloud reasoning pipeline",
+        "description": "Buffer and compress captured audio/images for API delivery to an agentic LLM workflow. Connect retrieval and image-inspection tools to contextual construction queries."
+      },
+      {
+        "title": "Feedback & documentation",
+        "description": "Return spoken and web-based responses, record progress observations, and generate task guidance through a shared multimodal interaction pipeline."
+      }
+    ]
+  },
+  "34": {
+    "papers": [
+      10
+    ],
+    "cover": {
+      "sourceFile": "10_cover_image_with_me_wearing_eye_tracker.png",
+      "title": "Custom gaze-tracking wearable",
+      "caption": "The custom gaze-tracking wearable shown in use.",
+      "width": 710,
+      "height": 550,
+      "src": "images/project-showcase/34/cover.webp",
+      "original": "images/project-showcase/34/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Create the gaze input system",
+        "description": "Build a wireless eye tracker with calibrated eye and scene cameras in a custom 3D-printed frame, then overlay gaze coordinates onto the scene view."
+      },
+      {
+        "title": "Turn attention into an editing region",
+        "description": "Generate a dynamic inpainting mask around the gaze location and use spoken instructions to specify the intended design change."
+      },
+      {
+        "title": "Connect interaction to image generation",
+        "description": "Run Stable Diffusion generation and inpainting alongside gaze processing, and present iterative outputs through a browser-based interface."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Generative AI & vision",
+        "items": [
+          "Stable Diffusion",
+          "Image inpainting",
+          "Gaze mapping",
+          "Speech interaction"
+        ]
+      },
+      {
+        "area": "Human-centered prototyping",
+        "items": [
+          "Eye-tracker calibration",
+          "3D-printed frames",
+          "Parallel processing",
+          "Browser visualization"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "10_overview_of_the_pipeline.png",
+        "title": "Interaction and generation pipeline",
+        "caption": "Wireless gaze and voice input linked to the generative design workflow.",
+        "width": 1212,
+        "height": 600,
+        "src": "images/project-showcase/34/figure-1.webp",
+        "original": "images/project-showcase/34/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "10_inpainting_outline_with_eye_tracking.png",
+        "title": "Gaze-driven region selection",
+        "caption": "Attention points define the image area selected for modification.",
+        "width": 2600,
+        "height": 914,
+        "src": "images/project-showcase/34/figure-2.webp",
+        "original": "images/project-showcase/34/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "10_inpainting_diffusion_model.png",
+        "title": "Inpainting workflow",
+        "caption": "The diffusion-based image editing stage of Viso-Gen.",
+        "width": 2600,
+        "height": 897,
+        "src": "images/project-showcase/34/figure-3.webp",
+        "original": "images/project-showcase/34/originals/figure-3.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Gaze interface",
+        "description": "Use the Pupil Core framework and a ZeroMQ-based API to process calibrated eye-camera streams, normalize gaze coordinates, and map attention into the scene image."
+      },
+      {
+        "title": "Generation & interaction",
+        "description": "Transcribe spoken instructions with Vosk and create gaze-centered masks for Stable Diffusion inpainting, connecting the selected image region to the requested design change."
+      },
+      {
+        "title": "Hardware & runtime",
+        "description": "Package cameras in a custom 3D-printed frame, process gaze and image-generation work in parallel, and expose iterative results through a browser interface."
+      }
+    ]
+  },
+  "35": {
+    "papers": [
+      9
+    ],
+    "cover": {
+      "sourceFile": "9_real_world_output.png",
+      "title": "Aerial safety-inspection demonstration",
+      "caption": "Visual safety detections from the aerial inspection demonstration.",
+      "width": 1600,
+      "height": 963,
+      "src": "images/project-showcase/35/cover.webp",
+      "original": "images/project-showcase/35/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Fine-tune visual safety detection",
+        "description": "Adapt YOLOv11n to recognize construction safety-related classes and identify frames that need contextual analysis."
+      },
+      {
+        "title": "Generate context-aware feedback",
+        "description": "Combine visual detections and CLIP context with a construction-adapted language model, then convert responses into spoken guidance."
+      },
+      {
+        "title": "Integrate and test the aerial workflow",
+        "description": "Evaluate D* navigation and the inspection-response loop in Webots, and port the perception-to-audio pipeline to a physical drone setup."
+      }
+    ],
+    "skills": [
+      {
+        "area": "AI & computer vision",
+        "items": [
+          "YOLO fine-tuning",
+          "CLIP",
+          "LLM adaptation",
+          "Text-to-speech"
+        ]
+      },
+      {
+        "area": "Aerial robotics",
+        "items": [
+          "Webots",
+          "D* path planning",
+          "Drone integration",
+          "Simulation-to-hardware testing"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "9_overview of the system.png",
+        "title": "Inspection-to-response pipeline",
+        "caption": "Visual detection, contextual reasoning, speech output, and navigation in one workflow.",
+        "width": 2600,
+        "height": 1216,
+        "src": "images/project-showcase/35/figure-1.webp",
+        "original": "images/project-showcase/35/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "9_hardware layout used for testing.png",
+        "title": "Hardware configuration",
+        "caption": "The equipment arrangement used to test the aerial inspection system.",
+        "width": 2600,
+        "height": 705,
+        "src": "images/project-showcase/35/figure-2.webp",
+        "original": "images/project-showcase/35/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "9_simulation enviromnet created for testing.png",
+        "title": "Simulation environment",
+        "caption": "A Webots construction scene for navigation and safety-monitoring evaluation.",
+        "width": 2232,
+        "height": 1104,
+        "src": "images/project-showcase/35/figure-3.webp",
+        "original": "images/project-showcase/35/originals/figure-3.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Vision & language stack",
+        "description": "Fine-tune YOLOv11n for construction safety classes, use CLIP for visual context, and adapt Llama 3.2 to generate situation-specific responses."
+      },
+      {
+        "title": "Response integration",
+        "description": "Connect image-frame selection, contextual prompt assembly, and text-to-speech output so detected conditions can produce spoken feedback through the drone setup."
+      },
+      {
+        "title": "Aerial testing",
+        "description": "Evaluate the D* navigation workflow in Webots construction scenes, then port the detection-to-audio pipeline to the physical drone configuration."
+      }
+    ]
+  },
+  "36": {
+    "papers": [
+      7
+    ],
+    "cover": {
+      "sourceFile": "7_slam_training_environment.png",
+      "title": "SLAM navigation test environment",
+      "caption": "The simulated robot workspace for mapping and navigation.",
+      "width": 1600,
+      "height": 1191,
+      "src": "images/project-showcase/36/cover.webp",
+      "original": "images/project-showcase/36/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Fuse mapping with learned control",
+        "description": "Use SLAM pose estimates and occupancy grids to inform navigation state and reward estimation for a differential-drive robot."
+      },
+      {
+        "title": "Develop the navigation policy",
+        "description": "Integrate transformer-based representation learning with twin delayed deep deterministic policy gradient (TD3) for movement and dynamic obstacle avoidance."
+      },
+      {
+        "title": "Train across changing conditions",
+        "description": "Build a ROS2/Gazebo training environment with domain randomization, varying sensor noise, dynamics, and scene conditions to test policy adaptability."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Learning for robotics",
+        "items": [
+          "Transformer-based TD3",
+          "Reward design",
+          "Domain randomization",
+          "Dynamic obstacle avoidance"
+        ]
+      },
+      {
+        "area": "Autonomy stack",
+        "items": [
+          "ROS2",
+          "Gazebo",
+          "SLAM",
+          "Occupancy-grid mapping"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "7_reinforcemen_learning overview.png",
+        "title": "Learning and mapping architecture",
+        "caption": "SLAM observations connected to the reinforcement-learning navigation policy.",
+        "width": 2600,
+        "height": 986,
+        "src": "images/project-showcase/36/figure-1.webp",
+        "original": "images/project-showcase/36/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "7_td3_algorihtm_used_for_the paper reinforcement learning.png",
+        "title": "TD3 learning design",
+        "caption": "The actor-critic learning structure used for robot navigation.",
+        "width": 2600,
+        "height": 1310,
+        "src": "images/project-showcase/36/figure-2.webp",
+        "original": "images/project-showcase/36/originals/figure-2.png"
+      },
+      {
+        "sourceFile": "7_results from the paper.png",
+        "title": "Navigation evaluation",
+        "caption": "Training and navigation results from the simulated experiments.",
+        "width": 2600,
+        "height": 740,
+        "src": "images/project-showcase/36/figure-3.webp",
+        "original": "images/project-showcase/36/originals/figure-3.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Simulation infrastructure",
+        "description": "Build the differential-drive robot training environment with ROS2 and Gazebo, integrating SLAM pose estimates and real-time occupancy-grid observations."
+      },
+      {
+        "title": "Learning architecture",
+        "description": "Extend TD3 with transformer-based representations, using mapping and localization information in navigation state and reward estimation for dynamic obstacle avoidance."
+      },
+      {
+        "title": "Training variations",
+        "description": "Randomize sensor noise, lighting, and dynamics during simulation, then evaluate policy behavior across changing construction layouts and moving obstacles."
+      }
+    ]
+  },
+  "37": {
+    "papers": [
+      6,
+      8
+    ],
+    "cover": {
+      "sourceFile": "6_layout of the ar environment.png",
+      "title": "AR building-operations interface",
+      "caption": "The AR interface and building-operations demonstration environment.",
+      "width": 1332,
+      "height": 593,
+      "src": "images/project-showcase/37/cover.webp",
+      "original": "images/project-showcase/37/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Link live building data to assistance",
+        "description": "Combine IoT sensor readings and wireless communication with language-model support for indoor environmental monitoring and facilities troubleshooting."
+      },
+      {
+        "title": "Build the speech-to-AR loop",
+        "description": "Transcribe spoken requests, send them to the language-model backend, and render contextual guidance in a Unity-based AR interface."
+      },
+      {
+        "title": "Connect assistance to operational tasks",
+        "description": "Present equipment guidance, environmental information, and stepwise responses in the user's field of view, and evaluate human-building interaction scenarios."
+      }
+    ],
+    "skills": [
+      {
+        "area": "AI-enabled building systems",
+        "items": [
+          "LLM integration",
+          "Speech transcription",
+          "IoT monitoring",
+          "Wireless sensor networks"
+        ]
+      },
+      {
+        "area": "Immersive interfaces",
+        "items": [
+          "Unity",
+          "Augmented reality",
+          "Human-building interaction",
+          "Facilities workflows"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "6_overview of the system.png",
+        "title": "AR assistant architecture",
+        "caption": "Speech, language-model processing, and immersive output connected through the backend.",
+        "width": 1414,
+        "height": 751,
+        "src": "images/project-showcase/37/figure-1.webp",
+        "original": "images/project-showcase/37/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "6_output of the llm and ar interface.png",
+        "title": "Guidance in the interface",
+        "caption": "Examples of generated responses presented through the AR workflow.",
+        "width": 1317,
+        "height": 988,
+        "src": "images/project-showcase/37/figure-2.webp",
+        "original": "images/project-showcase/37/originals/figure-2.png"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Immersive application",
+        "description": "Build a Unity-based AR interface for Microsoft HoloLens 2, presenting generated equipment guidance and contextual building information in the operator's field of view."
+      },
+      {
+        "title": "Speech & backend services",
+        "description": "Convert spoken requests into text and send them to the language-model backend, then return stepwise guidance to the headset through wireless communication."
+      },
+      {
+        "title": "Building-data integration",
+        "description": "Connect IoT and wireless sensor information to indoor environmental monitoring and assistance, combining live readings with conversational facilities workflows."
+      }
+    ]
+  },
+  "38": {
+    "papers": [
+      5
+    ],
+    "cover": {
+      "sourceFile": "5_generated_3d_digital_twin.png",
+      "title": "Reality-captured acoustic digital twin",
+      "caption": "Reality-captured geometry reconstructed into an indoor digital twin.",
+      "width": 1600,
+      "height": 420,
+      "src": "images/project-showcase/38/cover.webp",
+      "original": "images/project-showcase/38/originals/cover.png"
+    },
+    "methodology": [
+      {
+        "title": "Reconstruct the indoor environment",
+        "description": "Combine LiDAR and RGB capture into a detailed three-dimensional model that provides spatial context for acoustic measurements."
+      },
+      {
+        "title": "Connect distributed acoustic endpoints",
+        "description": "Develop audio-sensing IoT devices and process sound-level, loudness, and reverberation information before transmission to the visualization layer."
+      },
+      {
+        "title": "Map measurements into the digital twin",
+        "description": "Stream sensor data into Unity over TCP and place acoustic information in the reconstructed environment to compare spatial sound conditions."
+      }
+    ],
+    "skills": [
+      {
+        "area": "Digital twins & spatial computing",
+        "items": [
+          "LiDAR / RGB reconstruction",
+          "3D scene integration",
+          "Unity",
+          "Spatial visualization"
+        ]
+      },
+      {
+        "area": "Connected acoustic sensing",
+        "items": [
+          "IoT endpoints",
+          "Audio preprocessing",
+          "TCP streaming",
+          "Sound-level mapping"
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "sourceFile": "5_overview_of_the_piepline.png",
+        "title": "Digital-twin pipeline",
+        "caption": "Reality capture and audio endpoints combined in a shared spatial model.",
+        "width": 2600,
+        "height": 1090,
+        "src": "images/project-showcase/38/figure-1.webp",
+        "original": "images/project-showcase/38/originals/figure-1.png"
+      },
+      {
+        "sourceFile": "5_iot_endpoint1.jpg",
+        "title": "Acoustic endpoint",
+        "caption": "Embedded sensing hardware used to acquire indoor acoustic information.",
+        "width": 2600,
+        "height": 1958,
+        "src": "images/project-showcase/38/figure-2.webp",
+        "original": "images/project-showcase/38/originals/figure-2.jpg"
+      },
+      {
+        "sourceFile": "5_image_in_unity.jpg",
+        "title": "Unity visualization",
+        "caption": "The reconstructed environment used to place acoustic measurements.",
+        "width": 1958,
+        "height": 2600,
+        "src": "images/project-showcase/38/figure-3.webp",
+        "original": "images/project-showcase/38/originals/figure-3.jpg"
+      },
+      {
+        "sourceFile": "5_audio_monitoring_outputs.png",
+        "title": "Spatial monitoring outputs",
+        "caption": "Acoustic information displayed within the digital-twin workflow.",
+        "width": 2600,
+        "height": 798,
+        "src": "images/project-showcase/38/figure-4.webp",
+        "original": "images/project-showcase/38/originals/figure-4.png"
+      },
+      {
+        "sourceFile": "5_iot_endpoint_2.jpg",
+        "title": "Acoustic endpoint: second assembly",
+        "caption": "A second view of the embedded hardware used in the acoustic monitoring network.",
+        "width": 2600,
+        "height": 1958,
+        "src": "images/project-showcase/38/figure-5.webp",
+        "original": "images/project-showcase/38/originals/figure-5.jpg"
+      }
+    ],
+    "implementation": [
+      {
+        "title": "Reality-capture workflow",
+        "description": "Use LiDAR and RGB observations to reconstruct indoor geometry and bring the resulting three-dimensional model into a Unity visualization environment."
+      },
+      {
+        "title": "Acoustic processing",
+        "description": "Build distributed IoT audio endpoints and prepare sound-pressure, loudness, and reverberation measurements for spatial monitoring within the captured environment."
+      },
+      {
+        "title": "Live data connection",
+        "description": "Implement a TCP client-server connection between sensing endpoints and Unity, placing incoming measurements in the digital twin to compare acoustic conditions by location."
+      }
+    ]
+  }
+}

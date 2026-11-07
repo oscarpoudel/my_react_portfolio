@@ -1,135 +1,39 @@
-.research-page {
-    // padding-top: 10%;
-    // margin-bottom: 10%;
-  max-width: 90%;
-  padding-left: 5%;
-  // margin: clamp(2rem, 10vh, 5rem) auto; // Responsive top-bottom spacing
-//   padding: 0 clamp(1rem, 5vw, 2rem); // Responsive left-right spacing
-  height: 100vh;
-  overflow-y: auto;
+﻿.container.research-page {
   scroll-behavior: smooth;
-  .page-title {
-    margin-bottom: clamp(1rem, 5vh, 2.5rem);
-    // font-size: clamp(2rem, 5vw, 3rem); // Responsive font size
-    // font-weight: bold;
-    text-align: center;
-    
-  }
-
+  .page-title { text-align: left; font: 400 clamp(34px, 4vw, 56px)/1.1 'Coolvetica', Helvetica, sans-serif; }
+  .research-filters { margin-bottom: 22px; padding: 18px 0 14px; border-top: 1px solid #cdd5bd; border-bottom: 1px solid #cdd5bd; }
+  .research-topic-buttons { display: flex; flex-wrap: wrap; gap: 8px; button { display: inline-flex; align-items: center; gap: 9px; border: 1px solid #ccd5bd; border-radius: 24px; background: transparent; padding: 10px 13px; color: #566448; font: inherit; font-size: 11px; letter-spacing: 0; cursor: pointer; span { opacity: .7; font-size: 9px; } &[aria-pressed='true'] { background: #293122; border-color: var(--topic-accent, #293122); color: #fafbf2; } &:hover { border-color: var(--topic-accent, #6e8059); } } }
+  .research-filter-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 16px; font-size: 14px; color: #4f6043; letter-spacing: 0; label { display: flex; align-items: center; gap: 10px; span { font-size: 13px; } } select { padding: 9px 12px; border: 1px solid #aab99a; background: #fafbf4; color: #35472a; font: inherit; font-size: 14px; max-width: 100%; } }
+  .research-filters button:focus-visible, .research-filters select:focus-visible { outline: 3px solid #ad962c; outline-offset: 3px; }
+  .research-empty { text-align: center; padding: 35px 10px; font-size: 14px; color: #68795a; button { border: 1px solid #b4c29c; background: #e5ecd8; color: #475c30; padding: 10px 16px; cursor: pointer; } }
   .research-list {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 2vw, 1.8rem); // Responsive gap between boxes
-    // margin-bottom: 10%;
-    .citation-box {
-      border: 2px solid #000000;
-      border-radius: 8px;
-      padding: clamp(1rem, 2vw, 1.5rem);
-      background:#bbd1c5;
-      transition: border-color 0.3s ease;
-      display: block;
-
-      &:hover {
-        border-color: #ffd700;
-      }
-
-      .id-number {
-        font-size: clamp(1.2rem, 2.2vw, 2rem);
-        font-weight: bold;
-        color: #444;
-        display: inline;
-        margin-right: clamp(0.5rem, 1vw, 1rem);
-      }
-
-      .paper-title {
-        font-size: clamp(1.2rem, 2.2vw, 2rem);
-        font-weight: bold;
-        color: #000000;
-        display: inline;
-        margin-right: clamp(0.5rem, 1vw, 1rem);
-      }
-
-      .citation-text {
-        font-size: clamp(1.7rem, 2.5vw, 1.5rem);
-        letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
-        color: #000000;
-        line-height: 1.6;
-        display: inline;
-        word-wrap: break-word;
-      }
-
-      .paper-link {
-        display: inline;
-        font-size: clamp(1.7rem, 2.5vw, 1.5rem);
-  letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
-        color: #0056b3;
-        text-decoration: underline;
-        margin-left: 0;
-
-        &:hover {
-          color: #003580;
-        }
-      }
-    }
+    gap: clamp(12px, 1.2vw, 20px);
+    min-width: 0;
+  }
+  .citation-box {
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+    padding: clamp(14px, 1.4vw, 22px);
+    border: 2px solid #000;
+    border-radius: 8px;
+    background: #bbd1c5;
+    font-size: clamp(1.4rem, calc(1.2rem + .3vw), 1.8rem);
+    line-height: 1.65;
+    letter-spacing: .1px;
+    color: #20251e;
+    overflow-wrap: anywhere;
+    transition: border-color .3s ease;
+    &:hover { border-color: #ffd700; }
+    .id-number { display: inline; margin-right: .5em; font-size: inherit; line-height: inherit; font-weight: 700; color: #41493b; }
+    .citation-text { display: inline; font-size: inherit; line-height: inherit; letter-spacing: inherit; }
+    .paper-link { display: inline; margin-left: .4em; font-size: inherit; line-height: inherit; letter-spacing: inherit; color: #0056b3; text-decoration: underline; text-underline-offset: 3px; &:hover { color: #003580; } &:focus-visible { outline: 2px solid #0056b3; outline-offset: 3px; } }
   }
 }
-
-
-/* Mobile improvements: natural flow (no inner scroll), responsive boxes and stacked headers */
-@media only screen and (max-width: 600px) {
-  .research-page {
-    max-width: 95%;
-    margin:  auto;
-    // margin-top: 15%;
-    /* Ensure the page can scroll when content overflows */
-    height: 95%;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 2rem 1rem 2rem; /* top padding so title sits a bit below */
-  }
-
-  .page-title {
-    // font-size: clamp(1.6rem, 5vw, 2.4rem);
-    margin-top: 10rem; /* push the title a bit lower */
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .research-list {
-    gap: clamp(0.5rem, 2.5vw, 1.25rem);
-
-    .citation-box {
-      padding: clamp(0.75rem, 2.2vw, 1rem);
-    
-      .citation-header {
-        /* Stack id and title on mobile to avoid cramped horizontal layout */
-        // flex-direction: column;
-        align-items: flex-start;
-        gap: clamp(0.25rem, 1.2vw, 0.75rem);
-        margin-bottom: clamp(0.5rem, 1vh, 1rem);
-
-        .id-number {
-          font-size: clamp(1rem, 3.2vw, 1.4rem);
-        }
-
-        .paper-title {
-          font-size: clamp(1.05rem, 3.6vw, 1.6rem);
-        }
-      }
-
-      .citation-text {
-        // font-size: clamp(1rem, 3.5vw, 1.15rem);
-        line-height: 1.5;
-      }
-
-      .paper-link {
-        display: block; /* place link on its own line */
-        margin-left: 0;
-        margin-top: 0.6rem;
-        font-size: clamp(1.7rem, 2.5vw, 1.5rem);
-  letter-spacing: clamp(0.5px, 0.8vw, 1.5px);
-        text-align: left;
-      }
-    }
-  }
+@media (max-width: 600px) {
+  .container.research-page .page-title { font-size: clamp(28px, 7vw, 36px); }
+  .container.research-page { .research-topic-buttons { gap: 6px; button { padding: 8px 10px; font-size: 10px; } } .research-filter-bottom { align-items: start; flex-direction: column; gap: 10px; label { width: 100%; justify-content: space-between; } } }
+  .container.research-page .citation-box .paper-link { display: block; width: fit-content; margin: 8px 0 0; }
 }

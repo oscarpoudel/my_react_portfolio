@@ -1,3 +1,4 @@
+import ProjectCaseImage from '../projectdetail/ProjectCaseImage';
 import React from 'react'
 import "./Project1.scss"
 
@@ -58,8 +59,8 @@ const ProjectVSLAM = () => {
           Real-time visualizations support live debugging and assessment of tracking performance
         </li>
       </ul>
-      <img src="https://raw.githubusercontent.com/oscarpoudel/VSLAM_light/main/image/2.png" alt="Feature tracking overlay" className="scaled-image" />
-      <img src="https://raw.githubusercontent.com/oscarpoudel/VSLAM_light/main/image/1.png" alt="Estimated and ground-truth trajectories" className="scaled-image" />
+      <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/VSLAM_light/main/image/2.png" alt="Feature tracking overlay" className="scaled-image" />
+      <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/VSLAM_light/main/image/1.png" alt="Estimated and ground-truth trajectories" className="scaled-image" />
 
       <h4>Key Insights</h4>
       <ul>

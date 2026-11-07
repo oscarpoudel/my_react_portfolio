@@ -3,7 +3,7 @@ import LogoS from '../../assets/images/trans_logo_black.png';
 import React,{useState} from 'react'
 import { Link,NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptop,faScrewdriverWrench, faBookBookmark, faEnvelope,faGraduationCap,faHome,faPeoplePulling,faUser, } from '@fortawesome/free-solid-svg-icons';
+import { faImages, faLaptop,faScrewdriverWrench, faBookBookmark, faEnvelope,faGraduationCap,faHome,faPeoplePulling,faUser, } from '@fortawesome/free-solid-svg-icons';
 import { faOrcid,faLinkedin, faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 const Sidebar = () => {
     const [isShown, setIsShown] = useState(false);
@@ -36,6 +36,9 @@ const Sidebar = () => {
             </NavLink>
             <NavLink exact = "true" activeclassname='active' className='contact-link' to='/contact'>
                 <FontAwesomeIcon icon = {faEnvelope} color='#4d4d4e'/>
+            </NavLink>
+            <NavLink className='gallery-link' to='/gallery' aria-label='Gallery'>
+                <FontAwesomeIcon icon={faImages} color='#4d4d4e'/>
             </NavLink>
         </nav>
         <div className={`social-top ${isShown && "open"}` } >

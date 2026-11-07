@@ -177,6 +177,7 @@
         }
     }
 }
+.nav-bar nav a.gallery-link:after { content: 'GALLERY'; }
 
 
 @media only screen and (max-width:600px) {

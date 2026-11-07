@@ -27,221 +27,221 @@ const useScrollNavigation = (nextPagePath, prevPagePath = null, enabled = true) 
   const wheelDeltaRequired = 300;
   const wheelResetMs = 180;
 
-  const isElementScrollable = (x, y) => {
-    const element = document.elementFromPoint(x, y);
-    if (!element) return false;
+  useEffect(() => {
+    if (!enabled) return;
 
-    let current = element;
-    while (current && current !== document.body) {
-      const style = window.getComputedStyle(current);
-      const overflowY = style.overflowY;
-      const scrollHeight = current.scrollHeight;
-      const clientHeight = current.clientHeight;
+    const isElementScrollable = (x, y) => {
+      const element = document.elementFromPoint(x, y);
+      if (!element) return false;
 
-      if (
-        (overflowY === 'auto' || overflowY === 'scroll') &&
-        scrollHeight > clientHeight &&
-        scrollHeight > 0
-      ) {
-        return true;
+      let current = element;
+      while (current && current !== document.body) {
+        const style = window.getComputedStyle(current);
+        const overflowY = style.overflowY;
+        const scrollHeight = current.scrollHeight;
+        const clientHeight = current.clientHeight;
+
+        if (
+          (overflowY === 'auto' || overflowY === 'scroll') &&
+          scrollHeight > clientHeight &&
+          scrollHeight > 0
+        ) {
+          return true;
+        }
+        current = current.parentElement;
       }
-      current = current.parentElement;
-    }
-    return false;
-  };
+      return false;
+    };
 
-  const handleMouseMove = (e) => {
-    mouseX.current = e.clientX;
-    mouseY.current = e.clientY;
-  };
+    const handleMouseMove = (e) => {
+      mouseX.current = e.clientX;
+      mouseY.current = e.clientY;
+    };
 
-  const resetWheelAccumSoon = () => {
-    if (wheelResetTimeout.current) clearTimeout(wheelResetTimeout.current);
-    wheelResetTimeout.current = setTimeout(() => {
-      wheelDeltaAccum.current = 0;
-      setScrollState((s) => ({ ...s, progress: 0, isNearBoundary: false }));
-    }, wheelResetMs);
-  };
+    const resetWheelAccumSoon = () => {
+      if (wheelResetTimeout.current) clearTimeout(wheelResetTimeout.current);
+      wheelResetTimeout.current = setTimeout(() => {
+        wheelDeltaAccum.current = 0;
+        setScrollState((s) => ({ ...s, progress: 0, isNearBoundary: false }));
+      }, wheelResetMs);
+    };
 
-  const doNavigate = (direction) => {
-    const now = Date.now();
-    if (now - lastNavigationTime.current < debounceDelay) return;
+    const doNavigate = (direction) => {
+      const now = Date.now();
+      if (now - lastNavigationTime.current < debounceDelay) return;
 
-    lastNavigationTime.current = now;
-    isNavigatingRef.current = true;
+      lastNavigationTime.current = now;
+      isNavigatingRef.current = true;
 
-    setScrollState({
-      direction,
-      progress: 100,
-      isNearBoundary: true,
-      isNavigating: true
-    });
-
-    setTimeout(() => {
-      if (direction === 'down' && nextPagePath) {
-        navigate(nextPagePath);
-        window.scrollTo(0, 0);
-      } else if (direction === 'up' && prevPagePath) {
-        navigate(prevPagePath);
-        window.scrollTo(0, 0);
-      }
+      setScrollState({
+        direction,
+        progress: 100,
+        isNearBoundary: true,
+        isNavigating: true
+      });
 
       setTimeout(() => {
-        isNavigatingRef.current = false;
+        if (direction === 'down' && nextPagePath) {
+          navigate(nextPagePath);
+          window.scrollTo(0, 0);
+        } else if (direction === 'up' && prevPagePath) {
+          navigate(prevPagePath);
+          window.scrollTo(0, 0);
+        }
+
+        setTimeout(() => {
+          isNavigatingRef.current = false;
+          wheelDeltaAccum.current = 0;
+          setScrollState({
+            direction: null,
+            progress: 0,
+            isNearBoundary: false,
+            isNavigating: false
+          });
+        }, 80);
+      }, 280);
+    };
+
+    const handleWheel = (e) => {
+      if (!enabled) return;
+
+      if (isNavigatingRef.current) {
+        e.preventDefault();
+        return;
+      }
+
+      const isOverScrollable = isElementScrollable(mouseX.current, mouseY.current);
+      if (isOverScrollable) {
+        return;
+      }
+
+      const direction = e.deltaY > 0 ? 'down' : 'up';
+      const delta = Math.abs(e.deltaY);
+
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const hasPageScroll = scrollableHeight > 50;
+
+      const y = window.scrollY;
+      const atTop = y <= boundaryPx;
+      const atBottom = hasPageScroll
+        ? (y >= scrollableHeight - boundaryPx)
+        : true;
+
+      const tryingPastTop = direction === 'up' && atTop;
+      const tryingPastBottom = direction === 'down' && atBottom;
+
+      const hasTarget =
+        (direction === 'down' && !!nextPagePath) ||
+        (direction === 'up' && !!prevPagePath);
+
+      const shouldIntercept =
+        hasTarget && (hasPageScroll ? (tryingPastTop || tryingPastBottom) : true);
+
+      if (!shouldIntercept) {
         wheelDeltaAccum.current = 0;
+        return;
+      }
+
+      e.preventDefault();
+
+      wheelDeltaAccum.current += delta;
+      resetWheelAccumSoon();
+
+      const progress = Math.max(
+        0,
+        Math.min(100, Math.round((wheelDeltaAccum.current / wheelDeltaRequired) * 100))
+      );
+
+      setScrollState({
+        direction,
+        progress,
+        isNearBoundary: progress >= boundaryThreshold,
+        isNavigating: progress >= navigationThreshold
+      });
+
+      if (wheelDeltaAccum.current >= wheelDeltaRequired) {
+        wheelDeltaAccum.current = 0;
+        doNavigate(direction);
+      }
+    };
+
+    const handleScroll = () => {
+      if (!enabled) return;
+      if (isNavigatingRef.current) return;
+
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = window.scrollY;
+
+      if (scrollableHeight <= 50) {
         setScrollState({
           direction: null,
           progress: 0,
           isNearBoundary: false,
           isNavigating: false
         });
-      }, 80);
-    }, 280);
-  };
-
-  const handleWheel = (e) => {
-    if (!enabled) return;
-
-    if (isNavigatingRef.current) {
-      e.preventDefault();
-      return;
-    }
-
-    const isOverScrollable = isElementScrollable(mouseX.current, mouseY.current);
-    if (isOverScrollable) {
-      return;
-    }
-
-    const direction = e.deltaY > 0 ? 'down' : 'up';
-    const delta = Math.abs(e.deltaY);
-
-    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const hasPageScroll = scrollableHeight > 50;
-
-    const y = window.scrollY;
-    const atTop = y <= boundaryPx;
-    const atBottom = hasPageScroll
-      ? (y >= scrollableHeight - boundaryPx)
-      : true;
-
-    const tryingPastTop = direction === 'up' && atTop;
-    const tryingPastBottom = direction === 'down' && atBottom;
-
-    const hasTarget =
-      (direction === 'down' && !!nextPagePath) ||
-      (direction === 'up' && !!prevPagePath);
-
-    const shouldIntercept =
-      hasTarget && (hasPageScroll ? (tryingPastTop || tryingPastBottom) : true);
-
-    if (!shouldIntercept) {
-      wheelDeltaAccum.current = 0;
-      return;
-    }
-
-    e.preventDefault();
-
-    wheelDeltaAccum.current += delta;
-    resetWheelAccumSoon();
-
-    const progress = Math.max(
-      0,
-      Math.min(100, Math.round((wheelDeltaAccum.current / wheelDeltaRequired) * 100))
-    );
-
-    setScrollState({
-      direction,
-      progress,
-      isNearBoundary: progress >= boundaryThreshold,
-      isNavigating: progress >= navigationThreshold
-    });
-
-    if (wheelDeltaAccum.current >= wheelDeltaRequired) {
-      wheelDeltaAccum.current = 0;
-      doNavigate(direction);
-    }
-  };
-
-  const handleScroll = () => {
-    if (!enabled) return;
-    if (isNavigatingRef.current) return;
-
-    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = window.scrollY;
-
-    if (scrollableHeight <= 50) {
-      setScrollState({
-        direction: null,
-        progress: 0,
-        isNearBoundary: false,
-        isNavigating: false
-      });
-      return;
-    }
-
-    if (lastScrollPosition.current === null) {
-      scrollDirection.current = null;
-    } else {
-      scrollDirection.current = scrolled > lastScrollPosition.current ? 'down' : 'up';
-    }
-    lastScrollPosition.current = scrolled;
-
-    const scrollPercentage = (scrolled / scrollableHeight) * 100;
-
-    if (scrollDirection.current === 'down' && nextPagePath) {
-      const progress = Math.min(scrollPercentage, 100);
-      const isNear = scrollPercentage >= boundaryThreshold;
-      const shouldNavigate = scrollPercentage >= navigationThreshold;
-
-      setScrollState({
-        direction: 'down',
-        progress,
-        isNearBoundary: isNear,
-        isNavigating: shouldNavigate
-      });
-    } else if (scrollDirection.current === 'up' && prevPagePath) {
-      const progress = Math.max(100 - scrollPercentage, 0);
-      const isNear = scrollPercentage <= (100 - boundaryThreshold);
-      const shouldNavigate = scrollPercentage <= (100 - navigationThreshold);
-
-      setScrollState({
-        direction: 'up',
-        progress,
-        isNearBoundary: isNear,
-        isNavigating: shouldNavigate
-      });
-    } else {
-      setScrollState({
-        direction: null,
-        progress: 0,
-        isNearBoundary: false,
-        isNavigating: false
-      });
-    }
-
-    if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
-
-    scrollTimeout.current = setTimeout(() => {
-      const now = Date.now();
-      if (now - lastNavigationTime.current < debounceDelay) return;
-
-      const currentScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (currentScrollableHeight <= 50) return;
-
-      const finalPercentage = (window.scrollY / currentScrollableHeight) * 100;
-
-      if (scrollDirection.current === 'down' && finalPercentage >= navigationThreshold && nextPagePath) {
-        doNavigate('down');
-        lastScrollPosition.current = 0;
-      } else if (scrollDirection.current === 'up' && finalPercentage <= (100 - navigationThreshold) && prevPagePath) {
-        doNavigate('up');
-        lastScrollPosition.current = 0;
+        return;
       }
-    }, 250);
-  };
 
-  useEffect(() => {
-    if (!enabled) return;
+      if (lastScrollPosition.current === null) {
+        scrollDirection.current = null;
+      } else {
+        scrollDirection.current = scrolled > lastScrollPosition.current ? 'down' : 'up';
+      }
+      lastScrollPosition.current = scrolled;
+
+      const scrollPercentage = (scrolled / scrollableHeight) * 100;
+
+      if (scrollDirection.current === 'down' && nextPagePath) {
+        const progress = Math.min(scrollPercentage, 100);
+        const isNear = scrollPercentage >= boundaryThreshold;
+        const shouldNavigate = scrollPercentage >= navigationThreshold;
+
+        setScrollState({
+          direction: 'down',
+          progress,
+          isNearBoundary: isNear,
+          isNavigating: shouldNavigate
+        });
+      } else if (scrollDirection.current === 'up' && prevPagePath) {
+        const progress = Math.max(100 - scrollPercentage, 0);
+        const isNear = scrollPercentage <= (100 - boundaryThreshold);
+        const shouldNavigate = scrollPercentage <= (100 - navigationThreshold);
+
+        setScrollState({
+          direction: 'up',
+          progress,
+          isNearBoundary: isNear,
+          isNavigating: shouldNavigate
+        });
+      } else {
+        setScrollState({
+          direction: null,
+          progress: 0,
+          isNearBoundary: false,
+          isNavigating: false
+        });
+      }
+
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+
+      scrollTimeout.current = setTimeout(() => {
+        const now = Date.now();
+        if (now - lastNavigationTime.current < debounceDelay) return;
+
+        const currentScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (currentScrollableHeight <= 50) return;
+
+        const finalPercentage = (window.scrollY / currentScrollableHeight) * 100;
+
+        if (scrollDirection.current === 'down' && finalPercentage >= navigationThreshold && nextPagePath) {
+          doNavigate('down');
+          lastScrollPosition.current = 0;
+        } else if (scrollDirection.current === 'up' && finalPercentage <= (100 - navigationThreshold) && prevPagePath) {
+          doNavigate('up');
+          lastScrollPosition.current = 0;
+        }
+      }, 250);
+    };
 
     setScrollState({
       direction: null,

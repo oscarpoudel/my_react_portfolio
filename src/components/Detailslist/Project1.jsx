@@ -1,11 +1,13 @@
+import ProjectCaseImage from '../projectdetail/ProjectCaseImage';
 import React from 'react'
-import metodologyImage from "../../assets/research_images/proj_1/1_methodology.png"
-import envImage from "../../assets/research_images/proj_1/2_simulation_setup.png"
-import tarImage from "../../assets/research_images/proj_1/3_target_system.png"
-import res1Image from "../../assets/research_images/proj_1/4_res1.png"
-import res2Image from "../../assets/research_images/proj_1/5_res2.png"
-import gazeImage from "../../assets/research_images/proj_1/6_gaze_pid.png"
 import "./Project1.scss"
+
+const metodologyImage = "src/assets/research_images/proj_1/1_methodology.png";
+const envImage = "src/assets/research_images/proj_1/2_simulation_setup.png";
+const tarImage = "src/assets/research_images/proj_1/3_target_system.png";
+const res1Image = "src/assets/research_images/proj_1/4_res1.png";
+const res2Image = "src/assets/research_images/proj_1/5_res2.png";
+const gazeImage = "src/assets/research_images/proj_1/6_gaze_pid.png";
 const Project2 = () => {
   return (
     <div className="project-details-content styled-project">
@@ -39,7 +41,7 @@ const Project2 = () => {
         <li>Metrics: Task time, accuracy, latency, success rate</li>
       </ul>
       <div className="image-row">
-      <img src={envImage} alt="Simulation Environment" className="scaled-image" />
+      <ProjectCaseImage src={envImage} alt="Simulation Environment" className="scaled-image" />
       </div>
       <h4>Methodology</h4>
       <ul>
@@ -48,12 +50,12 @@ const Project2 = () => {
         <li>Target point system with task switching on successful reach</li>
         <li>Gaze input denoised and mapped to drone PID controller</li>
       </ul>
-      <img src={metodologyImage} alt="Methodology Diagram" className="scaled-image" />
+      <ProjectCaseImage src={metodologyImage} alt="Methodology Diagram" className="scaled-image" />
 
       <h4>Target System</h4>
       <div className="image-row">
-      <img src={tarImage} alt="Target System" className="scaled-image" />
-      <img src={gazeImage} alt="Gaze to PID mapping" className="scaled-image" />
+      <ProjectCaseImage src={tarImage} alt="Target System" className="scaled-image" />
+      <ProjectCaseImage src={gazeImage} alt="Gaze to PID mapping" className="scaled-image" />
       </div>
       <h4>Key Metrics</h4>
       <ul>
@@ -62,8 +64,8 @@ const Project2 = () => {
         <li><strong>Latency:</strong> Gaze system incurs ~50% more latency (15ms vs. 7ms)</li>
         <li><strong>Task Success Rate:</strong> Similar (~85%) in both methods</li>
       </ul>
-      <img src={res1Image} alt="Results 1" className="scaled-image" />
-      <img src={res2Image} alt="Results 2" className="scaled-image" />
+      <ProjectCaseImage src={res1Image} alt="Results 1" className="scaled-image" />
+      <ProjectCaseImage src={res2Image} alt="Results 2" className="scaled-image" />
 
       <h4>Key Insights</h4>
       <ul>

@@ -1,3 +1,4 @@
+import ProjectCaseImage from '../projectdetail/ProjectCaseImage';
 import React from 'react'
 import "./Project1.scss"
 
@@ -18,17 +19,17 @@ const ProjectArucoPoseDetector = () => {
 
       {/* FIRST IMAGE ROW */}
       <div className="image-row">
-        <img
+        <ProjectCaseImage
           src="https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/1._setting_up_aruco.png"
           alt="Setting up ArUco Detection"
           className="scaled-image"
         />
-        <img
+        <ProjectCaseImage
           src="https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/1.png"
           alt="Raw Camera View"
           className="scaled-image"
         />
-        <img
+        <ProjectCaseImage
           src="https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/3.aruco_robot.png"
           alt="ArUco Placement on Robot"
           className="scaled-image"
@@ -47,17 +48,17 @@ const ProjectArucoPoseDetector = () => {
 
       {/* SECOND IMAGE ROW */}
       <div className="image-row">
-        <img
+        <ProjectCaseImage
           src="https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/2.aruco_postion_wr_robot.png"
           alt="ArUco Position w.r.t Robot"
           className="scaled-image"
         />
-        <img
+        <ProjectCaseImage
           src="https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/4.getting_the%20realative_position_.png"
           alt="Relative Pose Calculation"
           className="scaled-image"
         />
-        <img
+        <ProjectCaseImage
           src="https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/5.nav2_map_relative_postion.png"
           alt="Nav2 Map Visualization"
           className="scaled-image"
@@ -69,7 +70,7 @@ const ProjectArucoPoseDetector = () => {
 
       <h4>Results & Visualization</h4>
       <div className="image-row">
-        <img
+        <ProjectCaseImage
           src="https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/6.rviz_relative_position_visualization.png"
           alt="RViz visualization"
           className="scaled-image"

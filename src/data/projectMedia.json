@@ -1,0 +1,639 @@
+{
+  "1": [
+    {
+      "source": "images/research_images/gaze_tel.png",
+      "title": "Gaze-Assisted Teleoperation for Precision UAV Navigation",
+      "caption": "Eye tracking / Webots / Teleoperation",
+      "src": "images/project-showcase/1/b56f2a0cf9ef.webp",
+      "original": "images/project-showcase/1/originals/b56f2a0cf9ef.png",
+      "width": 1548,
+      "height": 705
+    },
+    {
+      "source": "src/assets/research_images/proj_1/2_simulation_setup.png",
+      "title": "Simulation Environment",
+      "caption": "Simulation Environment",
+      "src": "images/project-showcase/1/c54e7e6039f5.webp",
+      "original": "images/project-showcase/1/originals/c54e7e6039f5.png",
+      "width": 1801,
+      "height": 1858
+    },
+    {
+      "source": "src/assets/research_images/proj_1/1_methodology.png",
+      "title": "Methodology Diagram",
+      "caption": "Methodology Diagram",
+      "src": "images/project-showcase/1/705230578647.webp",
+      "original": "images/project-showcase/1/originals/705230578647.png",
+      "width": 2200,
+      "height": 910
+    },
+    {
+      "source": "src/assets/research_images/proj_1/3_target_system.png",
+      "title": "Target System",
+      "caption": "Target System",
+      "src": "images/project-showcase/1/3114491c02b5.webp",
+      "original": "images/project-showcase/1/originals/3114491c02b5.png",
+      "width": 1947,
+      "height": 1355
+    },
+    {
+      "source": "src/assets/research_images/proj_1/6_gaze_pid.png",
+      "title": "Gaze to PID mapping",
+      "caption": "Gaze to PID mapping",
+      "src": "images/project-showcase/1/1379e67a4541.webp",
+      "original": "images/project-showcase/1/originals/1379e67a4541.png",
+      "width": 2055,
+      "height": 1365
+    },
+    {
+      "source": "src/assets/research_images/proj_1/4_res1.png",
+      "title": "Results 1",
+      "caption": "Results 1",
+      "src": "images/project-showcase/1/77fde39d6dbd.webp",
+      "original": "images/project-showcase/1/originals/77fde39d6dbd.png",
+      "width": 2200,
+      "height": 988
+    },
+    {
+      "source": "src/assets/research_images/proj_1/5_res2.png",
+      "title": "Results 2",
+      "caption": "Results 2",
+      "src": "images/project-showcase/1/0066d480bf8c.webp",
+      "original": "images/project-showcase/1/originals/0066d480bf8c.png",
+      "width": 512,
+      "height": 305
+    }
+  ],
+  "2": [
+    {
+      "source": "images/research_images/swarm.png",
+      "title": "Virtual Force-driven Coachbot Swarm Navigation around a Nucleus Point",
+      "caption": "Swarm control / Simulation / Coordination",
+      "src": "images/project-showcase/2/06a8282204cd.webp",
+      "original": "images/project-showcase/2/originals/06a8282204cd.png",
+      "width": 1251,
+      "height": 668
+    }
+  ],
+  "3": [
+    {
+      "source": "images/research_images/res_rbot.png",
+      "title": "Recycling Robot MDP: Solving with Value Iteration and Policy Iteration",
+      "caption": "Reinforcement learning / MDP / Policy iteration",
+      "src": "images/project-showcase/3/33e41bcd8dac.webp",
+      "original": "images/project-showcase/3/originals/33e41bcd8dac.png",
+      "width": 523,
+      "height": 341
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/cleaning_robot_RL_VI-PI/main/pictures/res_1.png",
+      "title": "Value Iteration Convergence",
+      "caption": "Value Iteration Convergence",
+      "src": "images/project-showcase/3/0055186cf8cc.webp",
+      "original": "images/project-showcase/3/originals/0055186cf8cc.png",
+      "width": 554,
+      "height": 455
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/cleaning_robot_RL_VI-PI/main/pictures/res_2.png",
+      "title": "Policy Iteration Convergence",
+      "caption": "Policy Iteration Convergence",
+      "src": "images/project-showcase/3/fd3fc970a9c9.webp",
+      "original": "images/project-showcase/3/originals/fd3fc970a9c9.png",
+      "width": 554,
+      "height": 455
+    }
+  ],
+  "4": [
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/VSLAM_light/main/image/2.png",
+      "title": "VSLAM_light: Lightweight Monocular Visual Odometry with Kalman Smoothing",
+      "caption": "Visual odometry / Kalman filtering / SLAM",
+      "src": "images/project-showcase/4/a1f37030c5c9.webp",
+      "original": "images/project-showcase/4/originals/a1f37030c5c9.png",
+      "width": 1223,
+      "height": 743
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/VSLAM_light/main/image/1.png",
+      "title": "Estimated and ground-truth trajectories",
+      "caption": "Estimated and ground-truth trajectories",
+      "src": "images/project-showcase/4/c8fd2cd506ed.webp",
+      "original": "images/project-showcase/4/originals/c8fd2cd506ed.png",
+      "width": 1332,
+      "height": 548
+    }
+  ],
+  "5": [
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/2.aruco_postion_wr_robot.png",
+      "title": "ArUco Pose Detector  with ROS 2 and opencv",
+      "caption": "ROS2 / OpenCV / Pose estimation",
+      "src": "images/project-showcase/5/1e3a9cfbf20a.webp",
+      "original": "images/project-showcase/5/originals/1e3a9cfbf20a.png",
+      "width": 2200,
+      "height": 1256
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/1._setting_up_aruco.png",
+      "title": "Setting up ArUco Detection",
+      "caption": "Setting up ArUco Detection",
+      "src": "images/project-showcase/5/823a09998951.webp",
+      "original": "images/project-showcase/5/originals/823a09998951.png",
+      "width": 2200,
+      "height": 1188
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/1.png",
+      "title": "Raw Camera View",
+      "caption": "Raw Camera View",
+      "src": "images/project-showcase/5/65e885b08eed.webp",
+      "original": "images/project-showcase/5/originals/65e885b08eed.png",
+      "width": 2200,
+      "height": 1323
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/3.aruco_robot.png",
+      "title": "ArUco Placement on Robot",
+      "caption": "Setup and marker appearance: configuration, camera view, marker on robot.",
+      "src": "images/project-showcase/5/cdb8375df32b.webp",
+      "original": "images/project-showcase/5/originals/cdb8375df32b.png",
+      "width": 670,
+      "height": 554
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/4.getting_the%20realative_position_.png",
+      "title": "Relative Pose Calculation",
+      "caption": "Relative Pose Calculation",
+      "src": "images/project-showcase/5/d59a9958675f.webp",
+      "original": "images/project-showcase/5/originals/d59a9958675f.png",
+      "width": 2200,
+      "height": 1323
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/5.nav2_map_relative_postion.png",
+      "title": "Nav2 Map Visualization",
+      "caption": "Pose calculation and relative mapping: position with respect to robot, relative pose, and map integration.",
+      "src": "images/project-showcase/5/33c8d65ff8f6.webp",
+      "original": "images/project-showcase/5/originals/33c8d65ff8f6.png",
+      "width": 1638,
+      "height": 959
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/aruco_pose_detector/main/image/6.rviz_relative_position_visualization.png",
+      "title": "RViz visualization",
+      "caption": "Final output: Visualized coordinate frames and marker positions in RViz.",
+      "src": "images/project-showcase/5/a3825d8a8952.webp",
+      "original": "images/project-showcase/5/originals/a3825d8a8952.png",
+      "width": 1228,
+      "height": 912
+    }
+  ],
+  "6": [
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/sample_image.png",
+      "title": "Camera Calibration Toolkit (ROS 2)",
+      "caption": "ROS2 / Camera calibration / Camera streaming",
+      "src": "images/project-showcase/6/7effaa80b602.webp",
+      "original": "images/project-showcase/6/originals/7effaa80b602.png",
+      "width": 722,
+      "height": 581
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/2.camera_calibration_process.png",
+      "title": "Detecting checkerboard corners in the calibration process",
+      "caption": "Detecting checkerboard corners in the calibration process",
+      "src": "images/project-showcase/6/4f1118c5335c.webp",
+      "original": "images/project-showcase/6/originals/4f1118c5335c.png",
+      "width": 766,
+      "height": 453
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/2.camera_calibration_process_iii.png",
+      "title": "Checkerboard grid detected and overlaid on input image",
+      "caption": "Checkerboard grid detected and overlaid on input image",
+      "src": "images/project-showcase/6/4750e90a1717.webp",
+      "original": "images/project-showcase/6/originals/4750e90a1717.png",
+      "width": 1821,
+      "height": 1352
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/3.camera_calibration_output_matrices.png",
+      "title": "Calibration results: camera matrix",
+      "caption": "Calibration results: camera matrix",
+      "src": "images/project-showcase/6/6d5376d147b4.webp",
+      "original": "images/project-showcase/6/originals/6d5376d147b4.png",
+      "width": 1746,
+      "height": 1316
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/3.camera_calibration_output_matrices_ii.png",
+      "title": "Calibration results: distortion coefficients",
+      "caption": "Left: Detecting checkerboard patterns during calibration. Middle: Visual feedback showing corner extraction. Right: Output intrinsic matrix and distortion coefficients.",
+      "src": "images/project-showcase/6/702744208a5e.webp",
+      "original": "images/project-showcase/6/originals/702744208a5e.png",
+      "width": 960,
+      "height": 703
+    }
+  ],
+  "7": [
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/4_object_detection_placement_1.png",
+      "title": "Semantic Object Detection & Spatial Memory with YOLOv8 on TurtleBot3 (ROS 2)",
+      "caption": "TurtleBot3 / YOLOv8 / Qdrant",
+      "src": "images/project-showcase/7/d48e3dbe7c25.webp",
+      "original": "images/project-showcase/7/originals/d48e3dbe7c25.png",
+      "width": 583,
+      "height": 492
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/2_object_placement_in_maze.png",
+      "title": "Object placement in maze environment",
+      "caption": "Object placement in maze environment",
+      "src": "images/project-showcase/7/a0c97c65bef9.webp",
+      "original": "images/project-showcase/7/originals/a0c97c65bef9.png",
+      "width": 608,
+      "height": 593
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/3_zoomed_in_placement_1.png",
+      "title": "Zoomed-in: object placement",
+      "caption": "Zoomed-in: object placement",
+      "src": "images/project-showcase/7/0c20e6cc87f0.webp",
+      "original": "images/project-showcase/7/originals/0c20e6cc87f0.png",
+      "width": 1304,
+      "height": 1089
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/5_object_detection_placement_2.png",
+      "title": "Detection: placement 2",
+      "caption": "Detection: placement 2",
+      "src": "images/project-showcase/7/e436d89303f7.webp",
+      "original": "images/project-showcase/7/originals/e436d89303f7.png",
+      "width": 540,
+      "height": 467
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/6_object_detection_placement_3.png",
+      "title": "Detection: placement 3",
+      "caption": "Detection: placement 3",
+      "src": "images/project-showcase/7/9166b6699e20.webp",
+      "original": "images/project-showcase/7/originals/9166b6699e20.png",
+      "width": 538,
+      "height": 470
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/turtlebot_3_ROSnav2__yolov8/main/images/7_detection_logs.png",
+      "title": "Detection logs (ROS 2)",
+      "caption": "Left: Objects arranged for detection in a maze. Center: YOLOv8 model identifies, localizes, and classifies objects at different locations. Right: Detection logs and output topics for downstream semantic mapping.",
+      "src": "images/project-showcase/7/b1d70f4a0152.webp",
+      "original": "images/project-showcase/7/originals/b1d70f4a0152.png",
+      "width": 1001,
+      "height": 592
+    }
+  ],
+  "8": [
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/6.moving_robot-based_on_symantic_locaiton_eg_firehydrant.png",
+      "title": "ROS-LM: Natural Language Robot Assistant",
+      "caption": "ROS2 / Multimodal LLMs / Nav2",
+      "src": "images/project-showcase/8/00c2372a5b7b.webp",
+      "original": "images/project-showcase/8/originals/00c2372a5b7b.png",
+      "width": 1931,
+      "height": 1297
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/1.gui_layout_for_llm_promt_entry.png",
+      "title": "GUI layout for LLM prompt entry",
+      "caption": "Streamlit GUI for entering natural language robot commands",
+      "src": "images/project-showcase/8/193376bc34fc.webp",
+      "original": "images/project-showcase/8/originals/193376bc34fc.png",
+      "width": 813,
+      "height": 1053
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/2.cli_based_entry.png",
+      "title": "CLI-based prompt entry",
+      "caption": "CLI-based natural language interaction interface",
+      "src": "images/project-showcase/8/89bea0f36001.webp",
+      "original": "images/project-showcase/8/originals/89bea0f36001.png",
+      "width": 878,
+      "height": 359
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/3.more_cli_based_output_performing_vision_anysis.png",
+      "title": "Vision analysis CLI output",
+      "caption": "Vision analysis performed from CLI via LLM prompt",
+      "src": "images/project-showcase/8/37d0159f7b7a.webp",
+      "original": "images/project-showcase/8/originals/37d0159f7b7a.png",
+      "width": 897,
+      "height": 885
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/4_system_status_output_with_nats.png",
+      "title": "System status via NATS",
+      "caption": "Live robot system status feedback using NATS messaging",
+      "src": "images/project-showcase/8/c33e23119334.webp",
+      "original": "images/project-showcase/8/originals/c33e23119334.png",
+      "width": 1600,
+      "height": 1270
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/5.some_prompt_samples.png",
+      "title": "Prompt samples",
+      "caption": "Various prompt samples for LLM-driven robot actions",
+      "src": "images/project-showcase/8/fab223041bb9.webp",
+      "original": "images/project-showcase/8/originals/fab223041bb9.png",
+      "width": 820,
+      "height": 1093
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/7.path_planned_based_on_nav2.png",
+      "title": "Nav2-based path planning",
+      "caption": "Path planned using ROS2 Nav2 stack",
+      "src": "images/project-showcase/8/e63e4be118ae.webp",
+      "original": "images/project-showcase/8/originals/e63e4be118ae.png",
+      "width": 997,
+      "height": 1349
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/8.ros2_nats_side_codes.png",
+      "title": "ROS2-NATS code",
+      "caption": "Example: ROS2 and NATS message handling code",
+      "src": "images/project-showcase/8/f45b7a7c729b.webp",
+      "original": "images/project-showcase/8/originals/f45b7a7c729b.png",
+      "width": 1263,
+      "height": 1087
+    },
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/LLM_ROS2_agent/main/images/9.running_nats_receiver_and_ros2_maze.png",
+      "title": "NATS receiver and ROS2 maze",
+      "caption": "Running NATS receiver along with ROS2-based maze navigation",
+      "src": "images/project-showcase/8/5aa66d400d15.webp",
+      "original": "images/project-showcase/8/originals/5aa66d400d15.png",
+      "width": 1551,
+      "height": 792
+    }
+  ],
+  "9": [
+    {
+      "source": "https://raw.githubusercontent.com/oscarpoudel/DL_VitCrackSeg/main/images/image.jpg",
+      "title": "VitCrackSeg: Crack Segmentation Using Vision Transformer",
+      "caption": "Vision Transformer / Crack segmentation / Deep learning",
+      "src": "images/project-showcase/9/e3a1b05d91b4.webp",
+      "original": "images/project-showcase/9/originals/e3a1b05d91b4.jpg",
+      "width": 1144,
+      "height": 367
+    }
+  ],
+  "10": [
+    {
+      "source": "images/research_images/comp_plot_pro10.png",
+      "title": "Comparative Analysis of Neural Sequence Models and BERT-Based Large Language Models for Conversational AI",
+      "caption": "Conversational AI / Transformers / BERT",
+      "src": "images/project-showcase/10/4f4a0a96ebd7.webp",
+      "original": "images/project-showcase/10/originals/4f4a0a96ebd7.png",
+      "width": 580,
+      "height": 296
+    }
+  ],
+  "11": [
+    {
+      "source": "images/research_images/Multiagent_LLM.png",
+      "title": "Multi-Agent LLM Framework for Automated Construction Monitoring and Documentation",
+      "caption": "Multi-agent systems / Construction monitoring / Multimodal AI",
+      "src": "images/project-showcase/11/27778ee270e0.webp",
+      "original": "images/project-showcase/11/originals/27778ee270e0.png",
+      "width": 2200,
+      "height": 1199
+    }
+  ],
+  "12": [
+    {
+      "source": "images/research_images/proj_12_overview.png",
+      "title": "Custom LiDAR Scanner with RGB-D Fusion for Infrastructure Inspection",
+      "caption": "LiDAR / RGB-D / ROS2",
+      "src": "images/project-showcase/12/0209f13a319b.webp",
+      "original": "images/project-showcase/12/originals/0209f13a319b.png",
+      "width": 1811,
+      "height": 605
+    },
+    {
+      "source": "src/assets/research_images/proj_12/9. overview_of_the_system.png",
+      "title": "Overview of the custom LiDAR scanner system and reconstruction pipeline",
+      "caption": "End-to-end workflow from custom scanner design to RGB-D mapping and final 3D model generation",
+      "src": "images/project-showcase/12/fb67f3eaaad0.webp",
+      "original": "images/project-showcase/12/originals/fb67f3eaaad0.png",
+      "width": 1811,
+      "height": 605
+    },
+    {
+      "source": "src/assets/research_images/proj_12/1. 3d_model_design_in_fusion_360_for_the_lidar_scanner.png",
+      "title": "Fusion 360 design of the custom LiDAR scanner",
+      "caption": "Initial Fusion 360 concept showing the Livox sensing head, top camera mounts, I/O cutouts, and handheld form factor",
+      "src": "images/project-showcase/12/6f22d38867b5.webp",
+      "original": "images/project-showcase/12/originals/6f22d38867b5.png",
+      "width": 2200,
+      "height": 585
+    },
+    {
+      "source": "src/assets/research_images/proj_12/2. 3d_desing_and_print_of_the_bottom_and_side_cover.png",
+      "title": "Body and side cover design and fabrication",
+      "caption": "Main chassis and side-cover design translated into printable structural components",
+      "src": "images/project-showcase/12/47d0fd2b938a.webp",
+      "original": "images/project-showcase/12/originals/47d0fd2b938a.png",
+      "width": 2200,
+      "height": 860
+    },
+    {
+      "source": "src/assets/research_images/proj_12/3. 3d_desing_and_print_of_front_cover.png",
+      "title": "Front cover and interface module design",
+      "caption": "Front-panel enclosure designed for a compact display, buttons, and operator-facing feedback interface",
+      "src": "images/project-showcase/12/2c54c0826b2f.webp",
+      "original": "images/project-showcase/12/originals/2c54c0826b2f.png",
+      "width": 2200,
+      "height": 583
+    },
+    {
+      "source": "src/assets/research_images/proj_12/4. internal_component_assembly_lidar_scanner.png",
+      "title": "Internal electronics assembly of the LiDAR scanner",
+      "caption": "Internal packaging of compute, wiring, power, and interface electronics inside the printed enclosure",
+      "src": "images/project-showcase/12/3e9f77c3c67e.webp",
+      "original": "images/project-showcase/12/originals/3e9f77c3c67e.png",
+      "width": 2200,
+      "height": 915
+    },
+    {
+      "source": "src/assets/research_images/proj_12/5. back_panel_assemly_lidar_scanner.png",
+      "title": "Back panel assembly and interface controls",
+      "caption": "Back-panel assembly integrating display, buttons, and local operator control hardware",
+      "src": "images/project-showcase/12/0b0ae62772f0.webp",
+      "original": "images/project-showcase/12/originals/0b0ae62772f0.png",
+      "width": 2200,
+      "height": 774
+    },
+    {
+      "source": "src/assets/research_images/proj_12/6. final_assembled_lidar_scanner.png",
+      "title": "Final assembled custom LiDAR scanner",
+      "caption": "Final integrated scanner with external battery, top-mounted cameras, embedded display, and handheld infrastructure inspection form factor",
+      "src": "images/project-showcase/12/b3001702522c.webp",
+      "original": "images/project-showcase/12/originals/b3001702522c.png",
+      "width": 2200,
+      "height": 1026
+    },
+    {
+      "source": "src/assets/research_images/proj_12/7. raw_rgbd_point_clound.png",
+      "title": "Raw RGBD fused point cloud",
+      "caption": "Early RGB-D fused point-cloud output before post-processing, showing aligned geometry and appearance information",
+      "src": "images/project-showcase/12/625b21a9bdaa.webp",
+      "original": "images/project-showcase/12/originals/625b21a9bdaa.png",
+      "width": 1949,
+      "height": 2200
+    },
+    {
+      "source": "src/assets/research_images/proj_12/8. 3d_post_proccessed_model_of_the_scanned_hallway.png",
+      "title": "Post-processed 3D model generated from the scanned hallway",
+      "caption": "Post-processed indoor model reconstructed from the captured point cloud after Blender-based cleanup and refinement",
+      "src": "images/project-showcase/12/3c583090011b.webp",
+      "original": "images/project-showcase/12/originals/3c583090011b.png",
+      "width": 2200,
+      "height": 845
+    }
+  ],
+  "13": [
+    {
+      "source": "images/research_images/proj_13_hardware.png",
+      "title": "Custom Wearable Eye-Tracking System with Touch, Haptics, and Audio Control",
+      "caption": "Eye tracking / Embedded systems / Haptics",
+      "src": "images/project-showcase/13/797f8f795bcb.webp",
+      "original": "images/project-showcase/13/originals/797f8f795bcb.png",
+      "width": 710,
+      "height": 533
+    },
+    {
+      "source": "src/assets/research_images/proj_13/1. schematic_layout_of_the_system.png",
+      "title": "Schematic layout of the custom eye-tracking system",
+      "caption": "System-level architecture showing the camera module, control module, Raspberry Pi Zero 2 W, and eye-tracking algorithm stack",
+      "src": "images/project-showcase/13/f028dd738b8a.webp",
+      "original": "images/project-showcase/13/originals/f028dd738b8a.png",
+      "width": 2200,
+      "height": 1169
+    },
+    {
+      "source": "src/assets/research_images/proj_13/3. 3d_design_and_printed_frame.png",
+      "title": "3D design and printed frame of the custom eye tracker",
+      "caption": "CAD concept and fabricated frame showing the custom wearable structure for cameras, electronics, and control components",
+      "src": "images/project-showcase/13/db966190d93d.webp",
+      "original": "images/project-showcase/13/originals/db966190d93d.png",
+      "width": 2200,
+      "height": 942
+    },
+    {
+      "source": "src/assets/research_images/proj_13/5. assembled_eye_tracking_hardware.png",
+      "title": "Assembled wearable eye-tracking hardware",
+      "caption": "Fully assembled prototype integrating the printed frame, camera modules, onboard electronics, and embedded compute enclosure",
+      "src": "images/project-showcase/13/fe0d70303e24.webp",
+      "original": "images/project-showcase/13/originals/fe0d70303e24.png",
+      "width": 710,
+      "height": 533
+    },
+    {
+      "source": "src/assets/research_images/proj_13/4. Haptic_feeback_and_touch_sensor_module_implented_in_the_system.png",
+      "title": "Haptic feedback motor and touch sensor in the wearable eye tracker",
+      "caption": "Haptic actuator and capacitive touch sensor integrated into the embedded control hardware",
+      "src": "images/project-showcase/13/11dca885065e.webp",
+      "original": "images/project-showcase/13/originals/11dca885065e.png",
+      "width": 2200,
+      "height": 936
+    },
+    {
+      "source": "src/assets/research_images/proj_13/6. data_transfer_raspberry_pi_to_pc.png",
+      "title": "Streaming from Raspberry Pi eye tracker to a host PC",
+      "caption": "Real-time transfer of eye-tracking streams and diagnostics from the Raspberry Pi Zero 2 W to a workstation using PyZMQ",
+      "src": "images/project-showcase/13/f5ca1deba3a0.webp",
+      "original": "images/project-showcase/13/originals/f5ca1deba3a0.png",
+      "width": 2200,
+      "height": 599
+    },
+    {
+      "source": "src/assets/research_images/proj_13/7. Implementaion_with_pupil_eye_tracking_algorithm.png",
+      "title": "Implementation with Pupil eye-tracking algorithm and runtime windows",
+      "caption": "Runtime integration of the wearable sensing stack with the Pupil Labs software pipeline and real-time monitoring tools",
+      "src": "images/project-showcase/13/2b103ac86ff4.webp",
+      "original": "images/project-showcase/13/originals/2b103ac86ff4.png",
+      "width": 1846,
+      "height": 2200
+    },
+    {
+      "source": "src/assets/research_images/proj_13/8. tracker_ccaptures_eyeball_pupil_locaitons.png",
+      "title": "Detected pupil and eyeball geometry from the Pupil eye-tracking pipeline",
+      "caption": "Eye images and model-based pupil fitting illustrating real-time eyeball and pupil localization",
+      "src": "images/project-showcase/13/88903e1206af.webp",
+      "original": "images/project-showcase/13/originals/88903e1206af.png",
+      "width": 2200,
+      "height": 2060
+    },
+    {
+      "source": "src/assets/research_images/proj_13/2. Prototype_1_and_calibration_setup.png",
+      "title": "Prototype and calibration setup for the custom eye tracker",
+      "caption": "Prototype validation setup showing the calibration target arrangement and early system bring-up",
+      "src": "images/project-showcase/13/60f36ac81374.webp",
+      "original": "images/project-showcase/13/originals/60f36ac81374.png",
+      "width": 2200,
+      "height": 871
+    },
+    {
+      "source": "src/assets/research_images/proj_13/9. tracked_point_calibration_test_errors_calibration_output.png",
+      "title": "Calibration output and angular error results for the eye tracker",
+      "caption": "Calibration and validation results showing tracked fixation behavior, confidence filtering, and angular-accuracy performance",
+      "src": "images/project-showcase/13/e9799680b1a7.webp",
+      "original": "images/project-showcase/13/originals/e9799680b1a7.png",
+      "width": 2200,
+      "height": 798
+    }
+  ],
+  "14": [
+    {
+      "source": "images/research_images/usherscan_home.jfif",
+      "title": "UsherScan: On-device Structural Inspection",
+      "caption": "Android / YOLO / On-device inference",
+      "src": "images/project-showcase/14/ddc8080ffc2f.webp",
+      "original": "images/project-showcase/14/originals/ddc8080ffc2f.jfif",
+      "width": 720,
+      "height": 1560
+    }
+  ],
+  "15": [
+    {
+      "source": "images/research_images/structagent_dashboard.jpg",
+      "title": "StructAgent: Multi-Agent LLM Structural Design & Analysis Tool",
+      "caption": "Multi-agent LLMs / OpenSeesPy / Structural design",
+      "src": "images/project-showcase/15/69b25e6e2036.webp",
+      "original": "images/project-showcase/15/originals/69b25e6e2036.jpg",
+      "width": 2200,
+      "height": 1196
+    }
+  ],
+  "16": [
+    {
+      "source": "images/research_images/buildBIM.png",
+      "title": "buildBIM: Building Models to Engineering Decisions",
+      "caption": "BIM authoring / Structural design / Collaborative review",
+      "src": "images/project-showcase/16/68e54a42b61a.webp",
+      "original": "images/project-showcase/16/originals/68e54a42b61a.png",
+      "width": 960,
+      "height": 540
+    }
+  ],
+  "17": [
+    {
+      "source": "images/research_images/Bim_ifc.png",
+      "title": "BIM IFC Toolkit",
+      "caption": "IFC / Semantic graphs / GNN workflows",
+      "src": "images/project-showcase/17/608c1a332d13.webp",
+      "original": "images/project-showcase/17/originals/608c1a332d13.png",
+      "width": 779,
+      "height": 459
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import ProjectCaseImage from '../projectdetail/ProjectCaseImage';
 import React from 'react'
 import "./Project1.scss"
 
@@ -15,10 +16,10 @@ const ProjectCalibrateCamera = () => {
       </p>
 
       <div className="image-row">
-        <img src="https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/2.camera_calibration_process.png" alt="Detecting checkerboard corners in the calibration process" className="scaled-image"/>
-        <img src="https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/2.camera_calibration_process_iii.png" alt="Checkerboard grid detected and overlaid on input image" className="scaled-image"/>
-        <img src="https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/3.camera_calibration_output_matrices.png" alt="Calibration results: camera matrix" className="scaled-image"/>
-        <img src="https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/3.camera_calibration_output_matrices_ii.png" alt="Calibration results: distortion coefficients" className="scaled-image"/>
+        <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/2.camera_calibration_process.png" alt="Detecting checkerboard corners in the calibration process" className="scaled-image"/>
+        <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/2.camera_calibration_process_iii.png" alt="Checkerboard grid detected and overlaid on input image" className="scaled-image"/>
+        <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/3.camera_calibration_output_matrices.png" alt="Calibration results: camera matrix" className="scaled-image"/>
+        <ProjectCaseImage src="https://raw.githubusercontent.com/oscarpoudel/get_calibrate_camera/main/images/3.camera_calibration_output_matrices_ii.png" alt="Calibration results: distortion coefficients" className="scaled-image"/>
       </div>
       <div className="caption">
         Left: Detecting checkerboard patterns during calibration. Middle: Visual feedback showing corner extraction. Right: Output intrinsic matrix and distortion coefficients.

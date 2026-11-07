@@ -1,0 +1,140 @@
+// Match the page edges used by About and Contact without affecting other routes.
+.container.home-page,
+.container.research-page,
+.container.projects-page {
+  position: fixed;
+  inset: 0 0 0 max(70px, 6vw);
+  width: auto;
+  max-width: none;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 36px clamp(24px, 3.5vw, 66px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  transform-style: flat;
+
+  .page-title {
+    max-width: none;
+    margin: 0 0 28px;
+  }
+}
+
+.container.projects-page .projects-grid {
+  padding: 0;
+  justify-items: stretch;
+
+  .project-card {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
+
+.container.home-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(24px, 3vw, 52px);
+
+  .text-zone {
+    position: static;
+    transform: none;
+    width: auto;
+    max-width: none;
+    max-height: none;
+    float: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+  h2 { width: 100%; overflow-wrap: anywhere; }
+  .home-portrait-group { --portrait-width: clamp(540px, 48vw, 800px); min-width: 0; width: 100%; max-width: var(--portrait-width); align-self: safe center; justify-self: start; }
+  .home-photo-caption {
+    margin: 18px 0 0;
+    padding: 0 12px;
+    box-sizing: border-box;
+    min-width: 0;
+    font: 400 clamp(20px, 2vw, 28px)/1.35 'La Belle Aurore', cursive;
+    letter-spacing: 0;
+    color: #6a7255;
+    text-align: center;
+    transform: rotate(-5deg);
+    span { display: inline-block; max-width: 100%; animation: home-caption-write 1.5s ease 1.3s both; }
+  }
+  .sideImage_home {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    height: calc(var(--portrait-width) * var(--portrait-ratio, 1.058));
+    aspect-ratio: auto;
+    align-self: safe center;
+    justify-self: center;
+    float: none;
+    display: block;
+    scale: 1;
+    transform: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+
+    .image1 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: var(--portrait-width);
+      transform: translateX(-50%);
+      margin: 0;
+      -webkit-mask-image: linear-gradient(to bottom, transparent, #000 5%, #000 91%, transparent);
+      mask-image: linear-gradient(to bottom, transparent, #000 5%, #000 91%, transparent);
+    }
+    img { display: block; width: 100%; height: auto; filter: saturate(.9) contrast(.97); }
+  }
+}
+
+@media (min-width: 601px) {
+  .container.home-page .sideImage_home {
+    .image1 { left: 0; transform: none; }
+  }
+}
+
+@media (max-width: 900px) {
+  .container.home-page { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .container.home-page,
+  .container.research-page,
+  .container.projects-page {
+    inset: 80px 0 0;
+    padding: 28px 20px;
+  }
+  .container.projects-page .projects-grid { grid-template-columns: minmax(0, 1fr); }
+  .container.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 22px;
+    padding-bottom: 110px;
+    .home-portrait-group { --portrait-width: min(56vw, 220px); order: 0; flex: 0 0 auto; align-self: center; width: 100%; max-width: 320px; }
+    .home-photo-caption { font-size: 20px; margin: 12px 0 0; }
+    .sideImage_home { width: var(--portrait-width); max-width: 100%; margin-inline: auto; }
+    .text-zone { order: 1; flex: 0 0 auto; width: 100%; }
+    .flat-button { margin-right: 12px; }
+  }
+}
+
+@keyframes home-caption-write {
+  from { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateY(5px); }
+  to { opacity: 1; clip-path: inset(0 0 0 0); transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .container.home-page .home-photo-caption span { animation: none; }
+}

@@ -1,3 +1,4 @@
+import ProjectCaseImage from '../projectdetail/ProjectCaseImage';
 import React from 'react'
 import './Project1.scss'
 
@@ -22,7 +23,7 @@ const Project9 = () => {
       </p>
 
       <div className="image-row">
-        <img src={projectImage} alt="VitCrackSeg crack segmentation output" className="scaled-image" />
+        <ProjectCaseImage src={projectImage} alt="VitCrackSeg crack segmentation output" className="scaled-image" />
       </div>
 
       <h4>Key Highlights</h4>

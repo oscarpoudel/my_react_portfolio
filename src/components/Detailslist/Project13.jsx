@@ -1,14 +1,16 @@
+import ProjectCaseImage from '../projectdetail/ProjectCaseImage';
 import React from 'react'
-import schematicImage from "../../assets/research_images/proj_13/1. schematic_layout_of_the_system.png"
-import prototypeImage from "../../assets/research_images/proj_13/2. Prototype_1_and_calibration_setup.png"
-import frameImage from "../../assets/research_images/proj_13/3. 3d_design_and_printed_frame.png"
-import hapticImage from "../../assets/research_images/proj_13/4. Haptic_feeback_and_touch_sensor_module_implented_in_the_system.png"
-import hardwareImage from "../../assets/research_images/proj_13/5. assembled_eye_tracking_hardware.png"
-import streamingImage from "../../assets/research_images/proj_13/6. data_transfer_raspberry_pi_to_pc.png"
-import algorithmImage from "../../assets/research_images/proj_13/7. Implementaion_with_pupil_eye_tracking_algorithm.png"
-import pupilImage from "../../assets/research_images/proj_13/8. tracker_ccaptures_eyeball_pupil_locaitons.png"
-import calibrationImage from "../../assets/research_images/proj_13/9. tracked_point_calibration_test_errors_calibration_output.png"
 import "./Project1.scss"
+
+const schematicImage = "src/assets/research_images/proj_13/1. schematic_layout_of_the_system.png";
+const prototypeImage = "src/assets/research_images/proj_13/2. Prototype_1_and_calibration_setup.png";
+const frameImage = "src/assets/research_images/proj_13/3. 3d_design_and_printed_frame.png";
+const hapticImage = "src/assets/research_images/proj_13/4. Haptic_feeback_and_touch_sensor_module_implented_in_the_system.png";
+const hardwareImage = "src/assets/research_images/proj_13/5. assembled_eye_tracking_hardware.png";
+const streamingImage = "src/assets/research_images/proj_13/6. data_transfer_raspberry_pi_to_pc.png";
+const algorithmImage = "src/assets/research_images/proj_13/7. Implementaion_with_pupil_eye_tracking_algorithm.png";
+const pupilImage = "src/assets/research_images/proj_13/8. tracker_ccaptures_eyeball_pupil_locaitons.png";
+const calibrationImage = "src/assets/research_images/proj_13/9. tracked_point_calibration_test_errors_calibration_output.png";
 
 const Project13 = () => {
   return (
@@ -35,7 +37,7 @@ const Project13 = () => {
 
       <div className="image-row">
         <div>
-          <img src={schematicImage} alt="Schematic layout of the custom eye-tracking system" className="scaled-image" />
+          <ProjectCaseImage src={schematicImage} alt="Schematic layout of the custom eye-tracking system" className="scaled-image" />
           <div className="caption">System-level architecture showing the camera module, control module, Raspberry Pi Zero 2 W, and eye-tracking algorithm stack</div>
         </div>
       </div>
@@ -68,11 +70,11 @@ const Project13 = () => {
 
       <div className="image-row">
         <div>
-          <img src={frameImage} alt="3D design and printed frame of the custom eye tracker" className="scaled-image" />
+          <ProjectCaseImage src={frameImage} alt="3D design and printed frame of the custom eye tracker" className="scaled-image" />
           <div className="caption">CAD concept and fabricated frame showing the custom wearable structure for cameras, electronics, and control components</div>
         </div>
         <div>
-          <img src={hardwareImage} alt="Assembled wearable eye-tracking hardware" className="scaled-image" />
+          <ProjectCaseImage src={hardwareImage} alt="Assembled wearable eye-tracking hardware" className="scaled-image" />
           <div className="caption">Fully assembled prototype integrating the printed frame, camera modules, onboard electronics, and embedded compute enclosure</div>
         </div>
       </div>
@@ -102,7 +104,7 @@ const Project13 = () => {
 
       <div className="image-row">
         <div>
-          <img src={hapticImage} alt="Haptic feedback motor and touch sensor in the wearable eye tracker" className="scaled-image" />
+          <ProjectCaseImage src={hapticImage} alt="Haptic feedback motor and touch sensor in the wearable eye tracker" className="scaled-image" />
           <div className="caption">Haptic actuator and capacitive touch sensor integrated into the embedded control hardware</div>
         </div>
       </div>
@@ -126,7 +128,7 @@ const Project13 = () => {
 
       <div className="image-row">
         <div>
-          <img src={streamingImage} alt="Streaming from Raspberry Pi eye tracker to a host PC" className="scaled-image" />
+          <ProjectCaseImage src={streamingImage} alt="Streaming from Raspberry Pi eye tracker to a host PC" className="scaled-image" />
           <div className="caption">Real-time transfer of eye-tracking streams and diagnostics from the Raspberry Pi Zero 2 W to a workstation using PyZMQ</div>
         </div>
       </div>
@@ -155,11 +157,11 @@ const Project13 = () => {
 
       <div className="image-row">
         <div>
-          <img src={algorithmImage} alt="Implementation with Pupil eye-tracking algorithm and runtime windows" className="scaled-image" />
+          <ProjectCaseImage src={algorithmImage} alt="Implementation with Pupil eye-tracking algorithm and runtime windows" className="scaled-image" />
           <div className="caption">Runtime integration of the wearable sensing stack with the Pupil Labs software pipeline and real-time monitoring tools</div>
         </div>
         <div>
-          <img src={pupilImage} alt="Detected pupil and eyeball geometry from the Pupil eye-tracking pipeline" className="scaled-image" />
+          <ProjectCaseImage src={pupilImage} alt="Detected pupil and eyeball geometry from the Pupil eye-tracking pipeline" className="scaled-image" />
           <div className="caption">Eye images and model-based pupil fitting illustrating real-time eyeball and pupil localization</div>
         </div>
       </div>
@@ -182,11 +184,11 @@ const Project13 = () => {
 
       <div className="image-row">
         <div>
-          <img src={prototypeImage} alt="Prototype and calibration setup for the custom eye tracker" className="scaled-image" />
+          <ProjectCaseImage src={prototypeImage} alt="Prototype and calibration setup for the custom eye tracker" className="scaled-image" />
           <div className="caption">Prototype validation setup showing the calibration target arrangement and early system bring-up</div>
         </div>
         <div>
-          <img src={calibrationImage} alt="Calibration output and angular error results for the eye tracker" className="scaled-image" />
+          <ProjectCaseImage src={calibrationImage} alt="Calibration output and angular error results for the eye tracker" className="scaled-image" />
           <div className="caption">Calibration and validation results showing tracked fixation behavior, confidence filtering, and angular-accuracy performance</div>
         </div>
       </div>

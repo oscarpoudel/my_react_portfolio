@@ -1,3 +1,4 @@
+import ProjectCaseImage from '../projectdetail/ProjectCaseImage';
 import React from 'react'
 // import viImage from "../../assets/research_images/proj_recycling/1_value_iteration.png"
 // import piImage from "../../assets/research_images/proj_recycling/2_policy_iteration.png"
@@ -42,8 +43,8 @@ const ProjectRecyclingRobot = () => {
         </li>
         <li><strong>Transition Probabilities:</strong> α (stay in high), β (return to high from low)</li>
       </ul>
-      {/* <img src={graph1} alt="Transition Graph" className="scaled-image" />
-      <img src={graph2} alt="MDP State Diagram" className="scaled-image" /> */}
+      {/* <ProjectCaseImage src={graph1} alt="Transition Graph" className="scaled-image" />
+      <ProjectCaseImage src={graph2} alt="MDP State Diagram" className="scaled-image" /> */}
 
       <h4>Methodology</h4>
       <p>
@@ -77,8 +78,8 @@ const ProjectRecyclingRobot = () => {
           </ul>
         </li>
       </ul>
-      <img src={"https://raw.githubusercontent.com/oscarpoudel/cleaning_robot_RL_VI-PI/main/pictures/res_1.png"} alt="Value Iteration Convergence" className="scaled-image" />
-      <img src={"https://raw.githubusercontent.com/oscarpoudel/cleaning_robot_RL_VI-PI/main/pictures/res_2.png"} alt="Policy Iteration Convergence" className="scaled-image" />
+      <ProjectCaseImage src={"https://raw.githubusercontent.com/oscarpoudel/cleaning_robot_RL_VI-PI/main/pictures/res_1.png"} alt="Value Iteration Convergence" className="scaled-image" />
+      <ProjectCaseImage src={"https://raw.githubusercontent.com/oscarpoudel/cleaning_robot_RL_VI-PI/main/pictures/res_2.png"} alt="Policy Iteration Convergence" className="scaled-image" />
 
       <h4>Key Insights</h4>
       <ul>

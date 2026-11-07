@@ -1,3 +1,4 @@
+import ProjectCaseImage from '../projectdetail/ProjectCaseImage';
 import React from 'react'
 import "./Project1.scss"
 
@@ -16,11 +17,11 @@ const ProjectLLMROS2 = () => {
 
       <div className="image-row">
         <div>
-          <img src={imgBase + "1.gui_layout_for_llm_promt_entry.png"} alt="GUI layout for LLM prompt entry" className="scaled-image" />
+          <ProjectCaseImage src={imgBase + "1.gui_layout_for_llm_promt_entry.png"} alt="GUI layout for LLM prompt entry" className="scaled-image" />
           <div className="caption">Streamlit GUI for entering natural language robot commands</div>
         </div>
         <div>
-          <img src={imgBase + "2.cli_based_entry.png"} alt="CLI-based prompt entry" className="scaled-image" />
+          <ProjectCaseImage src={imgBase + "2.cli_based_entry.png"} alt="CLI-based prompt entry" className="scaled-image" />
           <div className="caption">CLI-based natural language interaction interface</div>
         </div>
       </div>
@@ -36,11 +37,11 @@ const ProjectLLMROS2 = () => {
 
       <div className="image-row">
         <div>
-          <img src={imgBase + "3.more_cli_based_output_performing_vision_anysis.png"} alt="Vision analysis CLI output" className="scaled-image" />
+          <ProjectCaseImage src={imgBase + "3.more_cli_based_output_performing_vision_anysis.png"} alt="Vision analysis CLI output" className="scaled-image" />
           <div className="caption">Vision analysis performed from CLI via LLM prompt</div>
         </div>
         <div>
-          <img src={imgBase + "4_system_status_output_with_nats.png"} alt="System status via NATS" className="scaled-image" />
+          <ProjectCaseImage src={imgBase + "4_system_status_output_with_nats.png"} alt="System status via NATS" className="scaled-image" />
           <div className="caption">Live robot system status feedback using NATS messaging</div>
         </div>
       </div>
@@ -66,7 +67,7 @@ const ProjectLLMROS2 = () => {
 
       <div className="image-row">
         <div>
-          <img src={imgBase + "5.some_prompt_samples.png"} alt="Prompt samples" className="scaled-image" />
+          <ProjectCaseImage src={imgBase + "5.some_prompt_samples.png"} alt="Prompt samples" className="scaled-image" />
           <div className="caption">Various prompt samples for LLM-driven robot actions</div>
         </div>
       </div>
@@ -85,22 +86,22 @@ const ProjectLLMROS2 = () => {
 
       <div className="image-row">
         <div>
-          <img src={imgBase + "6.moving_robot-based_on_symantic_locaiton_eg_firehydrant.png"} alt="Semantic-location navigation" className="scaled-image" />
+          <ProjectCaseImage src={imgBase + "6.moving_robot-based_on_symantic_locaiton_eg_firehydrant.png"} alt="Semantic-location navigation" className="scaled-image" />
           <div className="caption">Moving the robot to a semantic location (e.g., "fire hydrant")</div>
         </div>
         <div>
-          <img src={imgBase + "7.path_planned_based_on_nav2.png"} alt="Nav2-based path planning" className="scaled-image" />
+          <ProjectCaseImage src={imgBase + "7.path_planned_based_on_nav2.png"} alt="Nav2-based path planning" className="scaled-image" />
           <div className="caption">Path planned using ROS2 Nav2 stack</div>
         </div>
       </div>
 
       <div className="image-row">
         <div>
-          <img src={imgBase + "8.ros2_nats_side_codes.png"} alt="ROS2-NATS code" className="scaled-image" />
+          <ProjectCaseImage src={imgBase + "8.ros2_nats_side_codes.png"} alt="ROS2-NATS code" className="scaled-image" />
           <div className="caption">Example: ROS2 and NATS message handling code</div>
         </div>
         <div>
-          <img src={imgBase + "9.running_nats_receiver_and_ros2_maze.png"} alt="NATS receiver and ROS2 maze" className="scaled-image" />
+          <ProjectCaseImage src={imgBase + "9.running_nats_receiver_and_ros2_maze.png"} alt="NATS receiver and ROS2 maze" className="scaled-image" />
           <div className="caption">Running NATS receiver along with ROS2-based maze navigation</div>
         </div>
       </div>

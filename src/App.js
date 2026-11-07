@@ -9,6 +9,9 @@ import Projects from './components/Projects/Projects.js';
 import ProjectDetail from './components/projectdetail/projectdetail.js';
 import Skills from './components/Technicalskills/Technicalskills'
 import ScrollIndicator from './components/ScrollIndicator/ScrollIndicator';
+import Gallery from './components/Gallery/Gallery';
+import './components/Layout/PageSpacing.scss';
+import './components/Layout/PagePresentation.scss';
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
       <Route path='/research' element ={<Research/>}/>
       <Route path='/technicalskills' element ={<Skills/>}/>
       <Route path='/projects' element ={<Projects/>}/>
+      <Route path='/gallery' element={<Gallery/>}/>
       <Route path="/projects/:id" element={<ProjectDetail />} />
 
 

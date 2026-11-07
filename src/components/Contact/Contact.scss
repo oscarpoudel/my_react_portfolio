@@ -180,3 +180,40 @@
         width:40%
     }
   }
+/* Keep the map and form in their own columns, including on short screens. */
+.container.contact-page {
+  position: fixed;
+  inset: 0 0 0 max(70px, 6vw);
+  width: auto;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 36px clamp(24px, 3.5vw, 66px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 64px);
+  align-items: center;
+  transform-style: flat;
+  animation: fadeIn 1s both;
+  .text-zone { position: static; transform: none; display: block; width: auto; max-width: none; max-height: none; padding: 0; margin: 0; }
+  h1 { left: 0; font-size: clamp(34px, 3.5vw, 50px); }
+  h2 { width: 100%; font-size: 15px; line-height: 1.6; letter-spacing: .2px; }
+  .map-wrap { position: relative; display: block; float: none; margin: 0; width: 100%; height: clamp(380px, 67vh, 640px); isolation: isolate; background: #dbe4df; overflow: hidden; }
+  .leaflet-container { width: 100%; height: 100%; font-family: Helvetica, sans-serif; letter-spacing: 0; }
+  .info-map { display: block; position: absolute; z-index: 500; right: 14px; top: 14px; bottom: auto; left: auto; width: auto; max-width: calc(100% - 28px); box-sizing: border-box; padding: 14px 16px; background: #20231deF; color: #fff; font-size: 13px; line-height: 1.6; letter-spacing: .1px; span { font-size: 12px; } a { display: block; color: #ffd700; margin-top: 8px; font-size: 11px; } }
+}
+@media (max-width: 900px) {
+  .container.contact-page { grid-template-columns: minmax(0, 1fr); align-items: start; .map-wrap { height: 360px; } }
+}
+@media (max-width: 600px) {
+  .container.contact-page { inset: 80px 0 0; padding: 28px 20px; gap: 28px; .map-wrap { height: 320px; } .info-map { top: 12px; right: 12px; padding: 10px 12px; } }
+}
+.container.contact-page .contact-form {
+  input:disabled, textarea:disabled { opacity: .65; cursor: wait; }
+  .flat-button:disabled { cursor: wait; background: #e2e7d9; color: #5c6a52; }
+  .contact-feedback { clear: both; margin: 16px 0 0; padding: 14px 17px; border-left: 4px solid #617a4c; background: #e0ead6; color: #30482c; font: 400 14px/1.65 Helvetica, sans-serif; letter-spacing: 0; strong { font-weight: 600; } p { margin: 3px 0 0; color: inherit; font: inherit; animation: none; } &.is-error { background: #f4e4da; color: #743c2c; border-color: #ae634d; } &.is-sending { background: #e6e8db; color: #475a3b; } &:focus { outline: 2px solid #81936d; outline-offset: 3px; } }
+  .contact-direct { clear: both; font: 400 13px/1.6 Helvetica, sans-serif; letter-spacing: 0; color: #53634a; margin: 16px 0 0; a { color: #29482e; text-underline-offset: 3px; overflow-wrap: anywhere; } }
+}
