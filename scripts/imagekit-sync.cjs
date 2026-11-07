@@ -187,7 +187,7 @@ function refresh(manifest, files) {
   const projectData = readJson('src/data/projects.json', { projects: [] });
   const knownProjects = new Set([...Object.keys(manifest.projects), ...(Array.isArray(projectData) ? projectData : projectData.projects || []).map((project) => String(project.id))]);
   for (const file of [...files].sort((a, b) => (a.createdAt || '').localeCompare(b.createdAt || ''))) {
-    if (used.has(file.fileId) || !/\.(jpe?g|png|webp|gif|svg|mp4|webm|mov|m4v)$/i.test(file.name)) continue;
+    if (used.has(file.fileId) || file.tags?.includes('portfolio-managed') || !/\.(jpe?g|png|webp|gif|svg|mp4|webm|mov|m4v)$/i.test(file.name)) continue;
     const relative = file.filePath.slice(folder.length + 1);
     if (relative.startsWith('gallery/') && !relative.slice(8).includes('/')) {
       const isVideo = /\.(mp4|webm|mov|m4v)$/i.test(file.name);

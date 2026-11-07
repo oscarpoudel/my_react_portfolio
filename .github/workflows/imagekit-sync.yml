@@ -25,6 +25,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Check media-index discovery
+        run: node --test scripts/imagekit-sync.test.cjs
       - name: Refresh the public ImageKit media index
         env:
           IMAGEKIT_PRIVATE_KEY: ${{ secrets.IMAGEKIT_PRIVATE_KEY }}
