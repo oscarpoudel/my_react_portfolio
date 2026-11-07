@@ -52,7 +52,7 @@ const Contact = () => {
         const form = refForm.current
         if (!form.reportValidity()) return
         if (!emailConfig.publicKey) {
-            setErrorMessage('Email sending is temporarily unavailable. Please email me directly below.')
+            setErrorMessage('Email sending is temporarily unavailable. Please email opoudel27@gmail.com.')
             setStatus('error')
             return
         }
@@ -65,7 +65,7 @@ const Contact = () => {
             form.reset()
             setStatus('success')
         } catch {
-            setErrorMessage('Your message could not be sent. Please try again, or email me directly below.')
+            setErrorMessage('Your message could not be sent. Please try again, or email opoudel27@gmail.com.')
             setStatus('error')
         } finally {
             sending.current = false
@@ -108,7 +108,6 @@ const Contact = () => {
                 {status === 'success' && <><strong>Email sent successfully.</strong><p>Thank you for reaching out. I’ll contact you shortly.</p></>}
                 {status === 'error' && <p>{errorMessage}</p>}
             </div>}
-            <p className='contact-direct'>You can also email me at <a href='mailto:opoudel27@gmail.com'>opoudel27@gmail.com</a>.</p>
         </div>
     </div>
 
