@@ -31,7 +31,7 @@
     "media:sync": "node scripts/imagekit-sync.cjs --refresh",
     "gallery:sync": "node scripts/sync-gallery.js",
     "prestart": "npm run gallery:sync",
-    "prebuild": "npm run gallery:sync",
+    "prebuild": "npm run gallery:sync && node scripts/verify-pdfs.cjs",
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
