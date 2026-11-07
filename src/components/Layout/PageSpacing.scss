@@ -116,6 +116,8 @@
     padding: 28px 20px;
   }
   .container.projects-page .projects-grid { grid-template-columns: minmax(0, 1fr); }
+  .container.projects-page, .container.research-page { padding: 16px 14px; }
+  .container.research-page .page-title { margin-bottom: 12px; }
   .container.home-page {
     display: flex;
     flex-direction: column;

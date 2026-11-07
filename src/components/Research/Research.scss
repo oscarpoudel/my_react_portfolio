@@ -33,7 +33,12 @@
   }
 }
 @media (max-width: 600px) {
-  .container.research-page .page-title { font-size: clamp(28px, 7vw, 36px); }
-  .container.research-page { .research-topic-buttons { gap: 6px; button { padding: 8px 10px; font-size: 10px; } } .research-filter-bottom { align-items: start; flex-direction: column; gap: 10px; label { width: 100%; justify-content: space-between; } } }
+  .container.research-page .page-title { font-size: clamp(23px, 6.6vw, 28px); line-height: 1.12; margin: 0 0 12px; }
+  .container.research-page {
+    .research-filters { padding: 8px 0; margin-bottom: 12px; }
+    .research-filter-bottom { align-items: center; flex-direction: row; gap: 8px; margin-top: 8px; font-size: 12px; > span { white-space: nowrap; } label { min-width: 0; width: auto; flex: 0 1 190px; margin-left: auto; > span { display: none; } } select { width: 100%; padding: 6px 8px; font-size: 12px; min-height: 32px; } }
+    .citation-box { font-size: 13px; line-height: 1.6; padding: 12px; }
+    .research-list { gap: 12px; }
+  }
   .container.research-page .citation-box .paper-link { display: block; width: fit-content; margin: 8px 0 0; }
 }

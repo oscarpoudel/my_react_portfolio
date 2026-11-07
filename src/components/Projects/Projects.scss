@@ -43,7 +43,17 @@
   .container.projects-page .projects-grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 600px) {
-  .container.projects-page { .projects-header { flex-direction: column; align-items: start; gap: 14px; } .projects-header .page-title { font-size: clamp(29px, 7.5vw, 38px); } .projects-intro { font-size: 13px; } .projects-github { padding: 9px 13px; font-size: 12px; } .project-card-content { padding: 16px; } .project-card-media .project-visual { height: 140px; } .project-results { font-size: 13px; } }
+  .container.projects-page {
+    .projects-header { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 10px; margin-bottom: 12px; > div { min-width: 0; } }
+    .projects-header .page-title { font-size: clamp(23px, 6.4vw, 27px); line-height: 1.12; margin: 0 0 6px; }
+    .projects-intro { font-size: 12px; line-height: 1.45; text-align: left; }
+    .projects-github { margin-top: 1px; padding: 7px 10px; font-size: 11px; gap: 6px; svg { font-size: 16px; } > span { display: none; } }
+    .project-filters { padding: 8px 0; }
+    .project-card-content { padding: 14px; }
+    .projects-grid { gap: 18px; .project-card h2 { font-size: 17px; } .project-card p { font-size: 13px; line-height: 1.5; } }
+    .project-card-media .project-visual { height: 140px; }
+    .project-results { min-height: 36px; font-size: 12px; button { font-size: 11px; } }
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .container.projects-page .projects-grid .project-card, .container.projects-page .project-card-media .project-visual { transition: none; transform: none; }

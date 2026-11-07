@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { resolveGalleryMedia, useMediaLibrary } from '../../media/mediaLibrary';
 import './Gallery.scss';
 
@@ -72,7 +73,7 @@ function Collection({ items, playing, onOpen }) {
       </button>
       <div className="collection-controls">
         <div className="collection-description"><span>{String(index + 1).padStart(2, '0')} / {items.length}{item.type === 'video' ? ' · FILM' : ''}</span><h2>{item.title}</h2></div>
-        <div className="collection-arrows"><button onClick={() => advance(-1)} aria-label="Previous slide">←</button><button onClick={() => advance(1)} aria-label="Next slide">→</button></div>
+        <div className="collection-arrows"><button onClick={() => advance(-1)} aria-label="Previous slide"><FiArrowLeft aria-hidden="true" /></button><button onClick={() => advance(1)} aria-label="Next slide"><FiArrowRight aria-hidden="true" /></button></div>
       </div>
     </div>
     <div className="collection-browser" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onFocusCapture={() => setFocused(true)} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}>
@@ -106,7 +107,7 @@ function Viewer({ items, index, onClose, onNavigate }) {
       <div className="viewer-media" key={item.file}>
         {item.type === 'video' ? <video src={mediaUrl(item.playback || item.file)} controls autoPlay playsInline /> : <img src={mediaUrl(item.file)} alt={item.alt || item.title} />}
       </div>
-      <div className="viewer-bottom"><div><h2>{item.title}</h2><p>{item.tags.join(' / ') || 'From my personal archive'}</p></div><div className="viewer-arrows"><button onClick={() => onNavigate(-1)} aria-label="Previous moment">←</button><button onClick={() => onNavigate(1)} aria-label="Next moment">→</button></div></div>
+      <div className="viewer-bottom"><div><h2>{item.title}</h2><p>{item.tags.join(' / ') || 'From my personal archive'}</p></div><div className="viewer-arrows"><button onClick={() => onNavigate(-1)} aria-label="Previous moment"><FiArrowLeft aria-hidden="true" /></button><button onClick={() => onNavigate(1)} aria-label="Next moment"><FiArrowRight aria-hidden="true" /></button></div></div>
     </div>
   </dialog>;
 }
@@ -232,7 +233,6 @@ export default function Gallery() {
       <div className={`gallery-wall ${mode}`} ref={wallRef}>
         {displayed.map((item, index) => <button className={`gallery-card ${leaving.includes(index) ? 'is-leaving' : ''}`} key={mode === 'showcase' ? index : item.file} onClick={() => setOpenFile(item.file)} aria-label={`Open ${item.type === 'video' ? 'video' : 'photo'}: ${item.title}`} >
           <div className="gallery-card-media" key={item.file}>{item.type === 'video' ? <MotionVideo item={item} active={playing} /> : <img src={mediaUrl(item.preview || item.file, 1200)} alt={item.alt || item.title} width={item.width} height={item.height} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />}</div>
-          <span className="gallery-card-number">{String(moments.indexOf(item) + 1).padStart(2, '0')}</span>
           {item.type === 'video' && <span className="gallery-video-badge">▶ FILM</span>}
           <span className="gallery-caption"><span>{item.tags[0] || (item.type === 'video' ? 'IN MOTION' : 'LIFE & THE PHD')}</span><strong>{item.title}</strong></span>
           <span className="gallery-open" aria-hidden="true">↗</span>

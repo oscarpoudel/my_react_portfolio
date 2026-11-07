@@ -111,8 +111,10 @@
 @media (max-width: 600px) {
   .container.projects-page .project-topics,
   .container.research-page .research-topic-buttons {
-    gap: 3px;
-    button { padding: 10px 12px; gap: 7px; font-size: 13px; span { font-size: 11px; } }
+    width: 100%; flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; gap: 3px; padding: 3px; scroll-padding-inline: 6px; scrollbar-width: thin;
+    &::-webkit-scrollbar { height: 3px; }
+    &::-webkit-scrollbar-thumb { background: #aab69a; border-radius: 3px; }
+    button { flex: 0 0 auto; white-space: nowrap; min-height: 32px; padding: 7px 10px; gap: 6px; font-size: 12px; span { font-size: 10px; } }
   }
 }
 @media (prefers-reduced-motion: reduce) {
