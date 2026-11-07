@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { refresh, titleFromName } = require('./imagekit-sync.cjs');
+const { refresh, titleFromName, indexContent } = require('./imagekit-sync.cjs');
 const file = (id, filePath, extra = {}) => ({ fileId: id, filePath, name: filePath.split('/').pop(), url: `https://ik.imagekit.io/test${filePath}`, tags: [], width: 1200, height: 800, ...extra });
 const base = () => ({ schema: 1, gallery: [], projects: { 18: [] }, assets: {} });
 
@@ -36,4 +36,13 @@ test('existing local mappings receive remote edits and deleted slides disappear'
 test('caption derivation removes migration hashes without damaging names', () => {
   assert.equal(titleFromName('Life_at_NJIT--abc123def456.jpg'), 'Life at NJIT');
   assert.equal(titleFromName('My_robot_build.png'), 'My robot build');
+});
+
+test('unchanged syncs do not require publishing a new manifest version', () => {
+  const files = [file('a', '/portfolio/gallery/photo.jpg')];
+  const manifest = refresh(base(), files);
+  const before = indexContent(manifest);
+  manifest.updatedAt = 'a different timestamp';
+  refresh(manifest, files);
+  assert.equal(indexContent(manifest), before);
 });

@@ -25,6 +25,7 @@ const mimeTypes = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/
 const manifestPath = `${folder}/index/media.json`;
 const manifestUrl = `${endpoint}${manifestPath}`;
 const titleFromName = (name) => path.posix.parse(name).name.replace(/--[a-f0-9]{12}$/, '').replace(/[_\s]+/g, ' ').trim();
+const indexContent = (manifest) => JSON.stringify({ ...manifest, updatedAt: undefined });
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 let uploaded = 0;
 
@@ -191,13 +192,13 @@ function refresh(manifest, files) {
     const relative = file.filePath.slice(folder.length + 1);
     if (relative.startsWith('gallery/') && !relative.slice(8).includes('/')) {
       const isVideo = /\.(mp4|webm|mov|m4v)$/i.test(file.name);
-      manifest.assets[file.url] = { url: file.url, fileId: file.fileId, filePath: file.filePath };
+      manifest.assets[file.url] = { url: file.url, fileId: file.fileId, filePath: file.filePath, width: file.width, height: file.height };
       manifest.gallery.push({ file: file.url, title: file.customMetadata?.portfolioTitle || titleFromName(file.name), alt: file.customMetadata?.portfolioCaption || titleFromName(file.name), tags: publicTags(file.tags), type: isVideo ? 'video' : 'image', width: file.width || 1200, height: file.height || 800, ...(isVideo ? { playback: `${file.url}?tr=f-mp4,q-80`, poster: `${file.url}/ik-thumbnail.jpg` } : { preview: `${file.url}?tr=w-1600,q-85` }) });
       used.add(file.fileId);
     }
     const match = relative.match(/^projects\/(\d+)\/[^/]+$/);
     if (match && knownProjects.has(match[1]) && /\.(jpe?g|png|webp|gif|svg)$/i.test(file.name)) {
-      manifest.assets[file.url] = { url: file.url, fileId: file.fileId, filePath: file.filePath };
+      manifest.assets[file.url] = { url: file.url, fileId: file.fileId, filePath: file.filePath, width: file.width, height: file.height };
       const figures = manifest.projects[match[1]] || (manifest.projects[match[1]] = []);
       figures.push({ src: file.url, original: file.url, title: file.customMetadata?.portfolioTitle || titleFromName(file.name), caption: file.customMetadata?.portfolioCaption || '', width: file.width, height: file.height }); used.add(file.fileId);
     }
@@ -211,6 +212,8 @@ async function main() {
   if (!privateKey || !endpoint.startsWith('https://') || !/^\/[a-zA-Z0-9_/-]+$/.test(folder) || folder.includes('..')) throw new Error('Set IMAGEKIT_PRIVATE_KEY and IMAGEKIT_URL_ENDPOINT in .env.local or server environment variables.');
   let files = await listFiles();
   let manifest;
+  let previousContent;
+  let previousUpdatedAt;
   if (process.argv.includes('--upload')) {
     await setupFields(); manifest = await uploadLocal(files); files = await listFiles();
   } else {
@@ -219,9 +222,18 @@ async function main() {
     const response = await fetch(`${index.url}?updatedAt=${Date.now()}`, { signal: AbortSignal.timeout(30000) });
     if (!response.ok) throw new Error('Could not fetch the current public media index.');
     manifest = await response.json();
+    previousContent = indexContent(manifest);
+    previousUpdatedAt = manifest.updatedAt;
   }
   manifest = refresh(manifest, files);
   if (!manifest.gallery.length || !Object.keys(manifest.projects).length) throw new Error('Refusing to publish an unexpectedly empty media index.');
+  if (previousContent === indexContent(manifest)) {
+    manifest.updatedAt = previousUpdatedAt;
+    writeJson(snapshotFile, manifest);
+    writeJson(configFile, { enabled: true, manifestUrl, refreshIntervalMs: 300000 });
+    console.log(`ImageKit index already current: ${manifest.gallery.length} moments, ${Object.keys(manifest.projects).length} projects. No new cloud version needed.`);
+    return;
+  }
   const previousIndex = files.find((file) => file.filePath === manifestPath);
   if (previousIndex && !previousIndex.tags?.includes('portfolio-index')) throw new Error('The chosen index path is occupied by an unmanaged file. Choose a different IMAGEKIT_ROOT_FOLDER.');
   await upload(Buffer.from(JSON.stringify(manifest)), 'media.json', `${folder}/index`, ['portfolio-index'], {}, true);
@@ -230,5 +242,5 @@ async function main() {
   writeJson(configFile, { enabled: true, manifestUrl, refreshIntervalMs: 300000 });
   console.log(`ImageKit sync complete: ${manifest.gallery.length} moments, ${Object.keys(manifest.projects).length} projects, ${Object.keys(manifest.assets).length} media assets.`);
 }
-module.exports = { refresh, titleFromName };
+module.exports = { refresh, titleFromName, indexContent };
 if (require.main === module) main().catch((error) => { console.error(privateKey ? error.message.replaceAll(privateKey, '[redacted]') : error.message); process.exitCode = 1; });
