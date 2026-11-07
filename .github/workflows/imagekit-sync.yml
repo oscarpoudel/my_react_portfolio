@@ -1,0 +1,33 @@
+name: Sync ImageKit media
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: imagekit-media-sync
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            src/data
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Refresh the public ImageKit media index
+        env:
+          IMAGEKIT_PRIVATE_KEY: ${{ secrets.IMAGEKIT_PRIVATE_KEY }}
+          IMAGEKIT_URL_ENDPOINT: ${{ secrets.IMAGEKIT_URL_ENDPOINT }}
+          IMAGEKIT_ROOT_FOLDER: ${{ secrets.IMAGEKIT_ROOT_FOLDER }}
+        run: node scripts/imagekit-sync.cjs --refresh
