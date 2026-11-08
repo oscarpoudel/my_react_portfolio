@@ -7,6 +7,7 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faOrcid,faLinkedin,faGithub,faYoutube } from '@fortawesome/free-brands-svg-icons';
 // 'C','i','v','i','l',' '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FiGrid, FiArrowUpRight } from 'react-icons/fi';
 import useScrollNavigation from '../../hooks/useScrollNavigation';
 
 const Home = () => {
@@ -27,9 +28,9 @@ const Home = () => {
     return (
         <>
         <Link to='/gallery' className='gallery-launcher' aria-label='Explore my life and PhD gallery'>
-            <span className='gallery-launcher-icon' aria-hidden='true'>▦</span>
+            <span className='gallery-launcher-icon' aria-hidden='true'><FiGrid /></span>
             <span><strong>My gallery</strong><small>Life beyond the research</small></span>
-            <span aria-hidden='true'>↗</span>
+            <FiArrowUpRight aria-hidden='true' />
         </Link>
         <div className='container home-page'>
          

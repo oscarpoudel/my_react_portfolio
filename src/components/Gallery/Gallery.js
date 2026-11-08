@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import { FiArrowLeft, FiArrowRight, FiArrowUpRight, FiFilm, FiGrid, FiPause, FiPlay, FiSun, FiX } from 'react-icons/fi';
 import { resolveGalleryMedia, useMediaLibrary } from '../../media/mediaLibrary';
 import './Gallery.scss';
 
@@ -76,12 +76,12 @@ function Collection({ items, playing, onOpen }) {
         <div className="collection-arrows"><button onClick={() => advance(-1)} aria-label="Previous slide"><FiArrowLeft aria-hidden="true" /></button><button onClick={() => advance(1)} aria-label="Next slide"><FiArrowRight aria-hidden="true" /></button></div>
       </div>
     </div>
-    <div className="collection-browser" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onFocusCapture={() => setFocused(true)} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}>
+    <div className="collection-browser" onPointerEnter={(event) => { if (event.pointerType === 'mouse') setHovered(true); }} onPointerLeave={() => setHovered(false)} onFocusCapture={(event) => { if (event.target.matches(':focus-visible')) setFocused(true); }} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}>
     <div className="collection-browser-heading"><span>Explore the collection</span><span>{items.length} moments</span></div>
     <div className="collection-thumbnails" ref={thumbnailGrid} aria-label="Select a moment">
       {items.map((moment, position) => <button key={moment.file} className="collection-thumbnail" aria-label={`Show moment: ${moment.title}`} aria-pressed={position === index} onClick={() => setIndex(position)} title={moment.title}>
-        {moment.type === 'video' && !moment.poster ? <span aria-hidden="true">▶</span> : <img src={mediaUrl(moment.type === 'video' ? moment.poster : moment.preview || moment.file, 280)} alt="" loading="eager" />}
-        {moment.type === 'video' && <span className="thumbnail-film" aria-hidden="true">▶</span>}
+        {moment.type === 'video' && !moment.poster ? <FiPlay aria-hidden="true" /> : <img src={mediaUrl(moment.type === 'video' ? moment.poster : moment.preview || moment.file, 280)} alt="" loading="eager" />}
+        {moment.type === 'video' && <span className="thumbnail-film" aria-hidden="true"><FiPlay /></span>}
         <span className="thumbnail-number" aria-hidden="true">{String(position + 1).padStart(2, '0')}</span>
       </button>)}
     </div>
@@ -103,7 +103,7 @@ function Viewer({ items, index, onClose, onNavigate }) {
     if (event.key === 'ArrowLeft') { event.preventDefault(); onNavigate(-1); }
   }} aria-label="Full-size gallery viewer">
     <div className="viewer-content">
-      <div className="viewer-top"><span>{String(index + 1).padStart(2, '0')} / {items.length}</span><button autoFocus onClick={onClose} aria-label="Close viewer">Close ×</button></div>
+      <div className="viewer-top"><span>{String(index + 1).padStart(2, '0')} / {items.length}</span><button className="viewer-close" autoFocus onClick={onClose} aria-label="Close viewer">Close <FiX aria-hidden="true" /></button></div>
       <div className="viewer-media" key={item.file}>
         {item.type === 'video' ? <video src={mediaUrl(item.playback || item.file)} controls autoPlay playsInline /> : <img src={mediaUrl(item.file)} alt={item.alt || item.title} />}
       </div>
@@ -129,7 +129,9 @@ export default function Gallery() {
   const [openFile, setOpenFile] = useState(null);
   const tags = ['All', ...new Set(moments.flatMap((item) => item.tags))];
   const filtered = useMemo(() => moments.filter((item) => tag === 'All' || item.tags.includes(tag)), [moments, tag]);
-  const playing = !paused && !hidden && !reduced && !openFile;
+  // Reduced motion removes the wall's spatial rearrangement, not its slideshow.
+  // The visible pause control must always be able to stop and resume rotation.
+  const playing = !paused && !hidden && !openFile;
 
   useEffect(() => {
     setSlots((current) => {
@@ -224,8 +226,8 @@ export default function Gallery() {
       </header>
 
       <div className="gallery-toolbar">
-        <div className="gallery-switch" aria-label="Gallery layout"><button aria-pressed={mode === 'showcase'} onClick={() => setMode('showcase')}>✦ Living wall</button><button aria-pressed={mode === 'collection'} onClick={() => setMode('collection')}>▦ All moments</button></div>
-        <button className="gallery-pause" aria-pressed={paused} onClick={() => setPaused(!paused)}>{paused ? '▶ Resume motion' : 'Ⅱ Pause motion'}</button>
+        <div className="gallery-switch" aria-label="Gallery layout"><button aria-pressed={mode === 'showcase'} onClick={() => setMode('showcase')}><FiSun aria-hidden="true" /> Living wall</button><button aria-pressed={mode === 'collection'} onClick={() => setMode('collection')}><FiGrid aria-hidden="true" /> All moments</button></div>
+        <button className="gallery-pause" aria-pressed={paused} onClick={() => setPaused(!paused)}>{paused ? <FiPlay aria-hidden="true" /> : <FiPause aria-hidden="true" />}{paused ? 'Resume motion' : 'Pause motion'}</button>
       </div>
       {tags.length > 1 && <div className="gallery-filters" aria-label="Filter by tag">{tags.map((value) => <button key={value} aria-pressed={tag === value} onClick={() => chooseTag(value)}>{value}</button>)}</div>}
 
@@ -233,14 +235,14 @@ export default function Gallery() {
       <div className={`gallery-wall ${mode}`} ref={wallRef}>
         {displayed.map((item, index) => <button className={`gallery-card ${leaving.includes(index) ? 'is-leaving' : ''}`} key={mode === 'showcase' ? index : item.file} onClick={() => setOpenFile(item.file)} aria-label={`Open ${item.type === 'video' ? 'video' : 'photo'}: ${item.title}`} >
           <div className="gallery-card-media" key={item.file}>{item.type === 'video' ? <MotionVideo item={item} active={playing} /> : <img src={mediaUrl(item.preview || item.file, 1200)} alt={item.alt || item.title} width={item.width} height={item.height} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />}</div>
-          {item.type === 'video' && <span className="gallery-video-badge">▶ FILM</span>}
+          {item.type === 'video' && <span className="gallery-video-badge"><FiFilm aria-hidden="true" /> FILM</span>}
           <span className="gallery-caption"><span>{item.tags[0] || (item.type === 'video' ? 'IN MOTION' : 'LIFE & THE PHD')}</span><strong>{item.title}</strong></span>
-          <span className="gallery-open" aria-hidden="true">↗</span>
+          <span className="gallery-open" aria-hidden="true"><FiArrowUpRight /></span>
         </button>)}
       </div>
       </div>}
       {!displayed.length && <p className="gallery-empty">More moments coming soon.</p>}
-      <footer className="gallery-footer"><span>Collected along the way. Still unfolding.</span><Link to="/">Back to my world ↗</Link></footer>
+      <footer className="gallery-footer"><span>Collected along the way. Still unfolding.</span><Link to="/">Back to my world <FiArrowUpRight aria-hidden="true" /></Link></footer>
     </div>
     {openIndex >= 0 && <Viewer items={filtered} index={openIndex} onClose={() => setOpenFile(null)} onNavigate={(direction) => setOpenFile(filtered[(openIndex + direction + filtered.length) % filtered.length].file)} />}
   </main>;

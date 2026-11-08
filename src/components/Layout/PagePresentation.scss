@@ -124,12 +124,12 @@
   .container.projects-page,
   .container.contact-page,
   .gallery-page {
-    .text-animate { animation: none; opacity: 1; }
+    .text-animate { animation-name: page-content-enter; animation-duration: .6s; }
     .text-zone > p, .text-zone > h2, .expertise-carousel, .skills-columns,
     .research-filters, .research-list, .projects-intro, .projects-github,
     .project-filters, .project-results, .projects-grid, .contact-form, .map-wrap,
     .gallery-header, .gallery-toolbar, .gallery-filters, .gallery-stage,
-    .gallery-collection, .gallery-footer { animation: none; }
+    .gallery-collection, .gallery-footer { animation-name: page-content-enter; animation-duration: .6s; }
   }
   .container.project-summary-page,
   .container.project-detail-page {
@@ -138,7 +138,8 @@
     .project-header > .project-action-pill, .project_detail-title,
     .project-subtitle, .project-url, .divider, .project-body,
     .summary-case-study .styled-project, .project-content > .styled-project {
-      animation: none;
+      animation-name: page-content-enter;
+      animation-duration: .6s;
     }
   }
 }
