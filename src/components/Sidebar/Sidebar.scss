@@ -451,6 +451,25 @@
     }
 }
 
+// Keep the name inside the narrow rail in both iPad orientations. Use the
+// bundled font so iPadOS does not substitute a wider system fantasy font.
+@media (min-width: 601px) and (max-width: 1366px) {
+  .nav-bar .logo {
+    width: 100%;
+
+    .myName {
+      max-width: calc(100% - 12px);
+      margin: 8px auto 12px;
+      font: 400 clamp(10px, .9vw, 12px)/1.3 'Coolvetica', Helvetica, sans-serif;
+      letter-spacing: .08em;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+
+      span { display: block; }
+    }
+  }
+}
+
 @keyframes slideAbove {
     from {
         margin-top: 0%;
